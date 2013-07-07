@@ -1,67 +1,11 @@
-<!DOCTYPE html>
-<html>
-<title>404</title>
-
-<xmp style="display:none;">
-# How I Learned How to Use Apple Notes Properly #
-
-I love the way Apple Notes looks. Sorry Mr Ive, but I do. I'm a minimalist and I truly appreciate simplicity, but removing the notepad look from Notes is a shame.
-In iOS 6, and earlier, notes look like this:
-![notes-ios6][]
-
-Whereas, in iOS 7 notes has been polarised and looks like this:
-![notes-ios7][]
-
-There's something charming about the yellow page with lines and a margin. I really enjoy it.  
-If the argument is *lack* of simplicity, then you're obviously not using the notes app like I am.
-
-## Some History ##
-
-Notes used to live inside the Mail app, and was a bit difficult to use. I try to use every feature of something I own, so I really tried with notes in Mail.
-
-## Write Everything in Notes ##
-
-This is a sweeping generalisation, because sometimes you need something like Pages to make a Word document, but in recent years many people have been moving back to plain text because, for them at least, most of the writing they do does *not* require bold headers or pretty fonts. So enamoured with plain text, these people have created ways of marking the plain text to signify formatting choices which can be applied once the writing has finished.
-
-Markup syntax even exists for writing whole [screenplays][] in plain text.
-
-Because the iOS Notes doesn't let me make things bold, italic or anything else like that, it is a **minimal text creator**. Not only that, it also does not (easily) have a folder system to get lost in, or a file naming system, or any system aside from text entry. It couldn't be much more minimal.
-
-There are many minimal text editors on the App Store but most of these editors are not actually as minimal as Notes is.  
-I was using one for a long time, until it updated to a version I didn't like as much as the previous. It was, in my opinion, the best [MultiMarkdown][mmd] editor because it stays true to the syntax, including the header information many others lack. It also allowed for different fonts, light or dark themes, exporting in PDF, HTML or others, there is iCloud and Dropbox integration, and of course the "preview" of the document with the translated [Markdown][mmd].
-
-That's not very minimal at all.
-
-Notes only lets you change one setting. You can choose from three predefined fonts. That's it.  
-There's no [Markdown][mmd] support at all, no colours or PDFs or anything. Just writing text.
-
-It's not all a bed of roses though. I would love the ability to import and export ".txt" files. Notes is a text *creator*, not a text editor.
-
-## So How the Heck Does One Make Use of this Simplicity? ##
-
-It took me a while to figure out the best method for using Notes, but it's so simple that I'm surprised it took so long. Necessity is the mother of invention I suppose.
-
-1. If you have a text file you constantly update and review, or a note that you will reference a lot, give it a top line that says what it is.  
-Examples: "Work Passwords", "Books to Read", "Gift Ideas"
-2. On the second line "tag" the note with hash-tags.  
-Example: `#password #follow-up #dayjob`
-3. Use [Markdown][mmd]. You might not need it, but when you want to make something bold it's useful and easier than inventing your own way of marking font styles.
-4. If you are just making a note or writing a draft, make the first line of the note the date and time. This is borrowed from [Pile of Index Cards][poic] and allows you to reference the note with this unique "name".  
-Example: `2013-06-11 14:45`
-5. If making a note or draft (as with 4) make the first hash-tag an "@" tag. Indicating where this note or draft should go once it's finished. I think of this sometimes as a separate notebook.  
-Examples: `@blog`, `@household`, `@meetings`
-
-With this approach you can easily search for `@blog` drafts with `#productivity` tags. All the metadata is at the top, plus you can convert the [Markdown][mmd] quickly with a converter[^1] without having to manually go through the document and format one-by-one.
-
-[^1]: I use these [service tools][tools] on my Mac to convert from plain text in any app, including notes.
-
-[notes-ios6]: https://www.apple.com/iphone/built-in-apps/images/more_notes_image.jpg
-[notes-ios7]: http://images.apple.com/ios/ios7/design/images/design_see_screen_notes.jpg
-[mmd]: https://en.wikipedia.org/wiki/MultiMarkdown
-[screenplays]: http://fountain.io
-[poic]: http://pileofindexcards.org
-[tools]: http://brettterpstra.com/projects/markdown-service-tools
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
+---
+layout: default
+title: Blog Example
+---
+    <h1>{{ page.title }}</h1>
+    {% for post in site.posts %}
+      <div>
+        <p><h2>{{ post.title }}</h2>{{ post.date | date_to_string }}</p>
+        <p>{{ post.content }}</p>
+      </div>
+    {% endfor %}

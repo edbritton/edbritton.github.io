@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ed's Blog
+title: Articles
 ---
 # {{ page.title }}
 

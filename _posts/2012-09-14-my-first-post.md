@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "First Post!"
-catagory: blog
+categories: blog
 ---
 
 This is the first post

@@ -4,10 +4,8 @@ title: Ed's Blog
 ---
 # {{ page.title }}
 
-<dl>
 {% for post in site.posts %}
-    <dt>{{ post.date | date_to_string }}</dt>
-    <dd>[{{ post.title }}]({{ post.url }})</dd>
-    <dd>{{ post.content }}</dd>
+
+- [{{ post.date | date_to_string }}]({{ post.url }}) &middot; {{ post.title }}<br/>{{ post.content }}
+
 {% endfor %}
-</dl>

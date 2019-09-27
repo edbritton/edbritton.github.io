@@ -2,25 +2,7 @@ title: Ed Britton
 description: 
 google_analytics: 
 show_downloads: true
-lang: en_GB
-author:
-  twitter: edbritton
-twitter:
-  username: edbritton
-  card: summary
-social:
-  name: Ed Britton
-  links:
-    - https://twitter.com/edbritton
-    - https://imdb.com/name/nm10740536
+theme: jekyll-theme-midnight
 
-permalink: /:categories/:short_year:y_day/
-
-plugins:
+gems:
   - jekyll-mentions
-  - jekyll-seo-tag
-  - jekyll-optional-front-matter
-
-jekyll-mentions: https://twitter.com
-
-theme: jekyll-theme-cayman

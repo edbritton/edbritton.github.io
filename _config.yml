@@ -3,11 +3,15 @@ description:
 google_analytics: 
 show_downloads: false
 lang: en_GB
+remote_theme: broccolini/swiss
+
 author:
   twitter: edbritton
+
 twitter:
   username: edbritton
   card: summary
+
 social:
   name: Ed Britton
   links:

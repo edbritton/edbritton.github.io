@@ -3,7 +3,6 @@ description:
 google_analytics: 
 show_downloads: false
 lang: en_GB
-remote_theme: y7kim/agency-jekyll-theme
 
 author:
   name: Ed Britton

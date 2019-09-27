@@ -20,8 +20,4 @@ plugins:
   - jekyll-mentions
   - jekyll-seo-tag
 
-theme: jekyll-swiss
-
 jekyll-mentions: https://twitter.com
-
-remote_theme: broccolini/swiss

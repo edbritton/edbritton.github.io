@@ -22,4 +22,4 @@ plugins:
 
 jekyll-mentions: https://twitter.com
 
-theme: jekyll-swiss
+remote_theme: broccolini/swiss

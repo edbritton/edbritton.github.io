@@ -23,3 +23,5 @@ plugins:
   - jekyll-ical-tag
 
 jekyll-mentions: https://twitter.com
+
+theme: jekyll-theme-cayman

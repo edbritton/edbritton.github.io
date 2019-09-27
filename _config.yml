@@ -21,6 +21,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-optional-front-matter
 
+remote_theme: broccolini/swiss
+
 jekyll-mentions: https://twitter.com
 
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman

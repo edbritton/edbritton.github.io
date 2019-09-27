@@ -19,7 +19,8 @@ permalink: /:categories/:short_year:y_day/
 plugins:
   - jekyll-mentions
   - jekyll-seo-tag
-  - jekyll-swiss
+
+theme: jekyll-swiss
 
 jekyll-mentions: https://twitter.com
 

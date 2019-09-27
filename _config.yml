@@ -4,7 +4,7 @@ google_analytics:
 show_downloads: true
 #theme: jekyll-theme-minimal
 
-permalink: /:categories/:year:y_day/
+permalink: /:categories/:short_year:y_day/
 
 plugins:
   - jekyll-mentions

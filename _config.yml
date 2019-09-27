@@ -20,5 +20,6 @@ plugins:
   - jekyll-mentions
   - jekyll-seo-tag
   - jekyll-autolink_email
+  - jekyll-ical-tag
 
 jekyll-mentions: https://twitter.com

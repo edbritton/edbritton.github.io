@@ -29,9 +29,9 @@ length: 1m 80cm
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css');
-/* if not page.neon
+{% if page.neon == nil %}
 h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
-endif */
+{% endif %}
 
   .container > div {
     display: grid;
@@ -145,7 +145,7 @@ endif */
     <section>
       <article itemscope itemtype="http://schema.org/Article">
 
-        <!--% if not page.title %--><h1 itemprop="headline">{{site.title}}</h1><!--% endif %-->
+        {% if page.title == nil %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 

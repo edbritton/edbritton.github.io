@@ -167,7 +167,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
     </div>
     
     {% if site.author.twitter %}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
-        {block:hide}<h3 class="font-weight-normal"><a href="https://twitter.com/{{site.author.twitter}}"><strong>Ed&nbsp;Britton</strong>&nbsp;<span class="text-muted text-decoration-none">@edbritton</span></a></h3>{/block:hide}
+        {block:hide}<h3 class="font-weight-normal"><a href="https://twitter.com/{{site.author.twitter}}"><strong>{{site.author.name}}</strong>&nbsp;<span class="text-muted text-decoration-none">@{{site.author.twitter}}</span></a></h3>{/block:hide}
 
         <ul id="tweets" class="list-group list-group-flush px-2"></ul>
     </div>
@@ -236,7 +236,7 @@ recent_tweets = function(data) {
   //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{/block:hide}
 };
     </script>
-    <script type="text/javascript" src="/tweets.js"></script>{% endif %}
+    <script type="text/javascript" src="https://edbritton.tumblr.com/tweets.js"></script>{% endif %}
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://www.kthornbloom.com/textfit/js/textfit.js"></script>
     <script src="https://getbootstrap.com/dist/js/ie10-viewport-bug-workaround.js"></script>

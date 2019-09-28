@@ -21,7 +21,7 @@ greentext: 92% British
 length: 1m 80cm
 classification: MA 15+
 
-shortdescription: Actor, comedian, writer, donut.
+shortdescription: Comedian, actor, a very unstable genius.
 ---
 
 Ed Britton, the gentleman <span itemprop="jobTitle">comedian</span>. A Brit who’s been in Australia since 2009. Originally trained in musical theatre and improv, Ed has performance in his blood, due to a mix-up at the blood bank.

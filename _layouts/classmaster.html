@@ -20,15 +20,15 @@ background-position: center;
 background-attachment: fixed;
 background-repeat: no-repeat;
 
-background-image: -webkit-radial-gradient(top, rgba(12,12,12,0.1), rgba(12,12,12,1) 50%, #000), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+background-image: -webkit-radial-gradient(top, rgba(12,12,12,0.1), rgba(12,12,12,1) 50%, #000), url('{{page.headerimage}}');
 
-background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}');
 
-background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}');
 
-background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}');
 
-background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}');
 
 max-width: 99%;
 max-width: 99vw;
@@ -75,7 +75,7 @@ min-height: 99vh;
 
 <footer class="pt-5">
 {% if site.author.twitter %}<a class="text-light" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
-{% if page.instagram %}<a class="text-light" href="{{page.instagram}}" target="_blank"><i class="fab fa-imdb"></i></a>{% endif %}
+{% if page.imdb %}<a class="text-light" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i></a>{% endif %}
 </footer>
 
 </body>

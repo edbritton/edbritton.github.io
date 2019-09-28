@@ -3,6 +3,8 @@ layout: notflex
 
 title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
 
+neon: true
+
 producer:
 - The Internet
 - presents

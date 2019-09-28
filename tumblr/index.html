@@ -2,7 +2,9 @@
 title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
 description: Ed Britton, the gentleman <span itemprop="jobTitle">comedian</span>. A Brit who’s been in Australia since 2009. Originally trained in musical theatre and improv, Ed has performance in his blood, due to a mix-up at the blood bank.
 neon: true
-producer: The Internet
+producer:
+- An Internet
+- Original
 showname: Trying to <span class="blink">make you</span> laugh
 homepage: true
 imdb: https://imdb.com/name/nm10740536
@@ -129,7 +131,7 @@ endif */
   <body class="container bg-dark text-light minh-100">
   <div>
       <header class="mt-5">{% if page.producer %}
-            <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{production}</span>{% endif %}
+            <span class="text-uppercase"><span class="font-weight-bold">{{page.producer[0]}}</span>{{page.producer[1]}}</span>{% endif %}
             <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}<!--% if not page.title %-->{{site.title}}<!-- % endif %--></nobr></h2>{% if showname %}
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">

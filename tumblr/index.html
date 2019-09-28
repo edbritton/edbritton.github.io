@@ -144,8 +144,8 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
   <div>
       {block:homepage}<header class="mt-5">{% if producer %}
             <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{{ production }}</span>{% endif %}
-            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{block:iftitlereplacement}{text:title replacement}{/block:iftitlereplacement}{block:ifnottitlereplacement}{title}{/block:ifnottitlereplacement}</nobr></h2>{block:ifshowname}
-            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{text:show name}</nobr></h1>{/block:ifshowname}
+            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{block:iftitlereplacement}{text:title replacement}{/block:iftitlereplacement}{block:ifnottitlereplacement}{title}{/block:ifnottitlereplacement}</nobr></h2>{% if showname %}
+            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{ page.showname }}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 <span class="text-success font-weight-bold mx-1">{text:green text}</span>
                 <!--block:homepage-->{block:posts}{block:post1}<a href="/archive" class="mx-1 text-reset text-decoration-none">{year}</a>{/block:post1}{/block:posts}<!--/block:homepage-->
@@ -163,7 +163,7 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
 
           <figure class="d-none d-print-block"><img itemprop="image" width="100%" src="https://pbs.twimg.com/profile_banners/14079688/1524477294/600x200" alt="Our guy, live on stage holding a microphone in his right hand and the stand in his left. We see the backs of audience members' heads."><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
 
-          <p>{description}</p>
+          <p>{{ page.description }}</p>
           
           {block:date}<footer class="feature-allcaps" {block:homepage}hidden{/block:homepage}>
           {block:twitter}<a href="https://twitter.com/{twitterusername}" itemprop="author">@{twitterusername}</a>&nbsp;&middot;&nbsp;</a>{/block:twitter}<time datetime="{Timestamp}" itemprop="datePublished" title="{24hourwithzero}:{minutes} &middot; {dayofmonth} {shortmonth} {year}"><a href="/{block:indexpage}{PostID}{/block:indexpage}{block:permalinkpage}day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}{/block:permalinkpage}">{TimeAgo}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}#<a href="{tagurl}">{tag}</a>&nbsp;{/block:tags}{/block:hastags}

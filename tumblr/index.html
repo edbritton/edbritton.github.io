@@ -167,7 +167,7 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
           <p>{{ page.description }}</p>
           
           {block:date}<footer class="feature-allcaps" {% if page.homepage %}hidden{% endif %}>
-          {block:twitter}<a href="https://twitter.com/{twitterusername}" itemprop="author">@{twitterusername}</a>&nbsp;&middot;&nbsp;</a>{/block:twitter}<time datetime="{Timestamp}" itemprop="datePublished" title="{24hourwithzero}:{minutes} &middot; {dayofmonth} {shortmonth} {year}"><a href="/{block:indexpage}{PostID}{/block:indexpage}{block:permalinkpage}day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}{/block:permalinkpage}">{TimeAgo}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}#<a href="{tagurl}">{tag}</a>&nbsp;{/block:tags}{/block:hastags}
+          {% if site.author.twitter %}<a href="https://twitter.com/{{site.author.twitter}}" itemprop="author">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{% endif %}<time datetime="{Timestamp}" itemprop="datePublished" title="{24hourwithzero}:{minutes} &middot; {dayofmonth} {shortmonth} {year}"><a href="/{block:indexpage}{PostID}{/block:indexpage}{block:permalinkpage}day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}{/block:permalinkpage}">{TimeAgo}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}#<a href="{tagurl}">{tag}</a>&nbsp;{/block:tags}{/block:hastags}
         </footer>{/block:date}
 
         </main>
@@ -184,7 +184,7 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
             <div class="media-body"><h5 class="my-0 d-sm-none" {block:text}hidden{/block:text}>[{posttype}] </h5>{block:text}<h5 class="my-0">{title}</h5>{/block:text}
                 <p>{plaintextbody}{plaintextcaption}<br>{block:date}
                 <small class="feature-allcaps text-muted"> {block:hide}
-                    <a href="https://twitter.com/{twitterusername}" itemprop="author" class="text-reset">@{twitterusername}</a>&nbsp;&middot;&nbsp;</a>{/block:hide}<time datetime="{timestamp}" itemprop="datePublished"><a href="/{postid}" alt="" class="stretched-link text-reset text-decoration-none">{block:daypage}{24hourwithzero}:{minutes}<span hidden> {/block:daypage}{dayofmonthwithzero}.{monthnumberwithzero}.{year}{block:daypage}</span>{/block:daypage}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}" class="text-reset">#{tag}</a> {/block:tags}{/block:hastags}
+                    <a href="https://twitter.com/{{site.author.twitter}}" itemprop="author" class="text-reset">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{/block:hide}<time datetime="{timestamp}" itemprop="datePublished"><a href="/{postid}" alt="" class="stretched-link text-reset text-decoration-none">{block:daypage}{24hourwithzero}:{minutes}<span hidden> {/block:daypage}{dayofmonthwithzero}.{monthnumberwithzero}.{year}{block:daypage}</span>{/block:daypage}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}" class="text-reset">#{tag}</a> {/block:tags}{/block:hastags}
                 </small>{/block:date}</p>
             </div>
         </div>
@@ -208,14 +208,14 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
 
         {block:date}<small class="feature-allcaps">
         <a href="/archive">&#x2726;</a>
-          {block:twitter}<a href="https://twitter.com/{twitterusername}" itemprop="author">@{twitterusername}</a>&nbsp;&middot;&nbsp;</a>{/block:twitter}<time datetime="{Timestamp}" itemprop="datePublished"><a href="/day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}" class="text-nowrap">{dayofmonth}.{monthnumber}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}">#{tag}</a> {/block:tags}{/block:hastags}
+          {% if site.author.twitter %}<a href="https://twitter.com/{{site.author.twitter}}" itemprop="author">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{% endif %}<time datetime="{Timestamp}" itemprop="datePublished"><a href="/day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}" class="text-nowrap">{dayofmonth}.{monthnumber}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}">#{tag}</a> {/block:tags}{/block:hastags}
         </small>{/block:date}
 
       </article>{/block:posts}{/block:permalinkpage}{% if page.homepage %}-->{% endif %}
     </section>{% if page.homepage %}
 
-    <footer class="lead">{block:twitter}
-      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/edbritton" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{/block:twitter}{block:ifinstagramusername}
+    <footer class="lead">{% if site.author.twitter %}
+      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/edbritton" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{block:ifinstagramusername}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{text:instagram username}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{/block:ifinstagramusername}{block:ifimdb}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{text:imdb}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{/block:ifimdb}{block:iflinkblog}
               <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="/archive" target="_blank"><i class="far fa-compass"></i><span class="d-none d-sm-inline pl-2">  Blog</span></a>{/block:iflinkblog}
@@ -223,8 +223,8 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
     
     </div>
     
-    {% if page.homepage %}{block:Twitter}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
-        {block:hide}<h3 class="font-weight-normal"><a href="https://twitter.com/{TwitterUsername}"><strong>Ed&nbsp;Britton</strong>&nbsp;<span class="text-muted text-decoration-none">@edbritton</span></a></h3>{/block:hide}
+    {% if page.homepage %}{% if site.author.twitter %}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
+        {block:hide}<h3 class="font-weight-normal"><a href="https://twitter.com/{{site.author.twitter}}"><strong>Ed&nbsp;Britton</strong>&nbsp;<span class="text-muted text-decoration-none">@edbritton</span></a></h3>{/block:hide}
 
         <ul id="tweets" class="list-group list-group-flush px-2"></ul>
     </div>
@@ -249,8 +249,8 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
         #twitter li {
             background: transparent !important;
         }
-    </style>{/block:twitter}{% endif %}
-    {block:twitter}
+    </style>{% endif %}{% endif %}
+    {% if site.author.twitter %}
     <script type="text/javascript" id="tweets">
 var linkify, recent_tweets;
 
@@ -293,7 +293,7 @@ recent_tweets = function(data) {
   //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{/block:hide}
 };
     </script>
-    <script type="text/javascript" src="/tweets.js"></script>{/block:Twitter}
+    <script type="text/javascript" src="/tweets.js"></script>{% endif %}
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://www.kthornbloom.com/textfit/js/textfit.js"></script>
     <script src="https://getbootstrap.com/dist/js/ie10-viewport-bug-workaround.js"></script>

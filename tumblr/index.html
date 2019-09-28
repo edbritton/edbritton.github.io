@@ -92,9 +92,6 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(8em, 1fr) );
       grid-gap: 0.5em;
-      /*grid-template-areas:
-        "cta cta cta"
-        ".   .   ."*/
     }
   }
 
@@ -110,46 +107,36 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
   }
 
   /* Large */
-  @media (min-width:992px) { {% if page.homepage %}/*{% endif %}
-    .container > div > section {
-      display: grid;
-      grid-template-columns: 3fr 7fr;
-      grid-template-columns: calc(2.5rem * 3) auto;
-      grid-gap: 2rem;
-      row-gap: 0;
-      grid-template-areas:
-        "header main"
-    }{% if page.homepage %}*/
+  @media (min-width:992px) {
     .container > div {
       grid-template-columns: 5fr 1fr 6fr;
       grid-template-areas:
         "header .      ."
         "main   main   ."
         "footer footer ."
-    }{% endif %}
+    }
   }
 
-  /*body           { grid-area: section }*/
   .container > * >  header { grid-area: header  }
   .container > * >     nav { grid-area: nav     }
-  .container > * > section /*> article >   main*/ { grid-area: main    }
+  .container > * > section { grid-area: main    }
   .container > * >  footer { grid-area: footer  }
 </style>
   </head>
 
   <body class="container bg-dark text-light minh-100">
   <div>
-      {% if page.homepage %}<header class="mt-5">{% if page.producer %}
+      <header class="mt-5">{% if page.producer %}
             <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{production}</span>{% endif %}
             <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title = "false" %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
-            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{ page.showname }}</nobr></h1>{% endif %}
+            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
-                <span class="text-success font-weight-bold mx-1">{text:green text}</span>
-                <!--block:homepage-->{block:posts}{block:post1}<a href="/archive" class="mx-1 text-reset text-decoration-none">{year}</a>{/block:post1}{/block:posts}<!--/block:homepage-->
-                <span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{select:Classification}</span>{block:iflength}
-                <span class="mx-1">{text:length}</span>{/block:iflength}
+                <span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>
+                <a href="/archive" class="mx-1 text-reset text-decoration-none">{site.time | date: "%Y"}</a>
+                <span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>
+                <span class="mx-1">{{page.length}}</span>
             </p>
-        </header>{% endif %}
+        </header>
 
     <section>
       <article itemscope itemtype="http://schema.org/Article">

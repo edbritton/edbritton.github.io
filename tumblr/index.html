@@ -145,7 +145,7 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
   <div>
       {% if page.homepage %}<header class="mt-5">{% if page.producer %}
             <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{production}</span>{% endif %}
-            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title = false %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
+            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title = "false" %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{ page.showname }}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 <span class="text-success font-weight-bold mx-1">{text:green text}</span>
@@ -155,63 +155,20 @@ h1,.h1 { font-family: {block:ifignoretumblrtitlefont}SFSerif-Text, Charter, Merr
             </p>
         </header>{% endif %}
 
-    <section {% if page.homepage %}no-{% endif %}class="py-4">{% if page.homepage %}
+    <section>
       <article itemscope itemtype="http://schema.org/Article">
 
-        {% if page.title = false %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
+        {% if page.title = "false" %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 
           <figure class="d-none d-print-block"><img itemprop="image" width="100%" src="https://pbs.twimg.com/profile_banners/14079688/1524477294/600x200" alt="Our guy, live on stage holding a microphone in his right hand and the stand in his left. We see the backs of audience members' heads."><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
 
           <p>{{page.description}}</p>
-          
-          {block:date}<footer class="feature-allcaps" {% if page.homepage %}hidden{% endif %}>
-          {% if site.author.twitter %}<a href="https://twitter.com/{{site.author.twitter}}" itemprop="author">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{% endif %}<time datetime="{Timestamp}" itemprop="datePublished" title="{24hourwithzero}:{minutes} &middot; {dayofmonth} {shortmonth} {year}"><a href="/{block:indexpage}{PostID}{/block:indexpage}{block:permalinkpage}day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}{/block:permalinkpage}">{TimeAgo}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}#<a href="{tagurl}">{tag}</a>&nbsp;{/block:tags}{/block:hastags}
-        </footer>{/block:date}
 
         </main>
       </article>
       
-      <!--{% endif %}{block:indexpage}
-      <h1 itemprop="headline" class="border-top mt-2 overflow-hidden" style="grid-row:2">{block:tagpage}#{tag}{/block:tagpage}{block:searchpage}{searchquery}{block:searchpage}{block:daypage}{dayofmonthwithzero}.{monthnumberwithzero}.{year}{/block:daypage}</h1>
-      
-      <ul class="list-group list-group-flush" style="grid-row:2">{block:posts}
-      <li class="list-group-item bg-dark text-light border-0">
-        <div class="media">{block:VideoThumbnail}
-          <img src="{VideoThumbnailURL}" class="mr-3 mt-1 rounded d-none d-sm-block" width="75px" alt="">{/block:VideoThumbnail}{block:photo}
-            <img src="{photourl-75sq}" class="mr-3 mt-1 rounded d-none d-sm-block" alt="">{/block:photo}
-            <div class="media-body"><h5 class="my-0 d-sm-none" {block:text}hidden{/block:text}>[{posttype}] </h5>{block:text}<h5 class="my-0">{title}</h5>{/block:text}
-                <p>{plaintextbody}{plaintextcaption}<br>{block:date}
-                <small class="feature-allcaps text-muted"> {block:hide}
-                    <a href="https://twitter.com/{{site.author.twitter}}" itemprop="author" class="text-reset">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{/block:hide}<time datetime="{timestamp}" itemprop="datePublished"><a href="/{postid}" alt="" class="stretched-link text-reset text-decoration-none">{block:daypage}{24hourwithzero}:{minutes}<span hidden> {/block:daypage}{dayofmonthwithzero}.{monthnumberwithzero}.{year}{block:daypage}</span>{/block:daypage}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}" class="text-reset">#{tag}</a> {/block:tags}{/block:hastags}
-                </small>{/block:date}</p>
-            </div>
-        </div>
-      </li>{/block:posts}
-      </ul>{block:Pagination}
-      <aside class="text-right feature-allcaps" style="grid-column:1;grid-row:1">{block:JumpPagination length="500000"}{block:CurrentPage}<span class="p-3 text-muted">{PageNumber}</span>{/block:CurrentPage}{block:JumpPage}<a href="{URL}" class="p-3">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}</aside>{/block:Pagination}{/block:indexpage}
-      
-      {block:permalinkpage}{block:posts}{block:text}{block:posttitle}<h1 itemprop="headline" class="border-top mt-2 overflow-hidden">{title}</h1>{/block:posttitle}{/block:text}
-        
-      <article itemscope itemtype="http://schema.org/Article" style="grid-column:2">
-
-        <main itemprop="articleBody" class="text-justify clearfix">
-
-          {block:photo}{linkopentag}<figure class="pt-2 pr-2">
-          <img itemprop="image" class="rounded img-fluid" src="{photourl-highres}"></figure>{linkclosetag}{/block:photo}{block:video}
-          <div class="mt-2 rounded">{videoembed-700}</div>{/block:video}
-          {block:contentsource}<!-- figcaption class="text-muted feature-allcaps"><a href="{sourceurl}">{block:sourcelogo}<img src="{blacklogourl}">&nbsp;{/block:sourcelogo}{sourcetitle}</a></figcaption -->{/block:contentsource}
-          <p>{body}{caption}</p>
-
-        </main>
-
-        {block:date}<small class="feature-allcaps">
-        <a href="/archive">&#x2726;</a>
-          {% if site.author.twitter %}<a href="https://twitter.com/{{site.author.twitter}}" itemprop="author">@{{site.author.twitter}}</a>&nbsp;&middot;&nbsp;</a>{% endif %}<time datetime="{Timestamp}" itemprop="datePublished"><a href="/day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}" class="text-nowrap">{dayofmonth}.{monthnumber}</a></time>{block:hastags}&nbsp;&middot;&nbsp;{block:tags}<a href="{tagurl}">#{tag}</a> {/block:tags}{/block:hastags}
-        </small>{/block:date}
-
-      </article>{/block:posts}{/block:permalinkpage}{% if page.homepage %}-->{% endif %}
     </section>{% if page.homepage %}
 
     <footer class="lead">{% if site.author.twitter %}

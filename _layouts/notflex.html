@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui" name="viewport" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>{{site.title}} · Comedian, actor, a very unstable genius.</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% if page.neon %}
+    <style id="neon">@font-face{font-family:neontubes;src:url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot);src:url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix) format("embedded-opentype"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2) format("woff2"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff) format("woff"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:neoneon;src:url(https://www.dropbox.com/s/kvmamtgrail9iar/Neoneon.otf) format("opentype");src:url(https://dl.dropboxusercontent.com/s/kvmamtgrail9iar/Neoneon.otf?dl=0) format("opentype");font-weight:400;font-style:normal}.h1,.h2,.neon{margin-left:-5px!important}h1.neon{font-family:neoneon,neontubes,'News Gothic FS',sans-serif;color:#ffd9e2;text-shadow:5px 10px 10px #000,0 0 0 transparent,0 0 10px #ff003c,0 0 20px rgba(255,0,60,.5),0 0 40px #ff003c,0 0 100px #ff003c,0 0 200px #ff003c,0 0 300px #ff003c,0 0 500px #ff003c,0 0 1000px #ff003c;padding-bottom:.2em}h2.neon{font-family:neontubes;color:#d4eaff;text-shadow:5px 10px 10px #000,0 0 0 transparent,0 0 10px #2695ff,0 0 20px rgba(38,149,255,.5),0 0 40px #2695ff,0 0 100px #2695ff,0 0 200px #2695ff,0 0 300px #2695ff,0 0 500px #2695ff}h1.neon{-webkit-animation:turnon 5s ease-in normal;animation:turnon 5s ease-in normal}.blink{-webkit-animation:blink 4s infinite 5s alternate;animation:blink 4s infinite 5s alternate}.blink+.blink{-webkit-animation:blink 5s infinite 5s alternate;animation:blink 5s infinite 5s alternate}.blink+.blink+.blink{-webkit-animation:blink 3s infinite 5s alternate;animation:blink 3s infinite 5s alternate}.buzz,.h2{-webkit-animation:buzz 1ms infinite alternate;animation:buzz 1ms infinite alternate}@-webkit-keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}@keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}@-webkit-keyframes buzz{70%{opacity:.8}}@keyframes buzz{70%{opacity:.8}}@-webkit-keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}@keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}</style>
+{% endif %}
+
+<style>
+@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css');
+@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css');
+@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css');
+{% if page.neon == nil %}
+h1 { font-family: SFSerif-Text, Charter, serif !important; }
+{% endif %}
+
+  .container > div {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "footer"
+  }
+  
+  * { cursor: default; text-rendering: optimizeLegibility; font-feature-settings: "kern", "ss01", "ss07"; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none }
+  
+  a, a * { cursor: pointer; color: var(--light) }
+  a:hover { color: var(--gray) }
+  
+  body { background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); max-width: 99%; max-width: 99vw; width:100%;height:100%; font-family: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important; }
+  
+  header h2.h1, header h1.h2 { line-height: 0.9 }
+  header .lead span { margin: 0 2px }
+  
+  blockquote { border-left: solid; padding-left: 1rem }
+  
+  .bg-blur{ -webkit-backdrop-filter: saturate(180%) blur(20px); -ms-backdrop-filter: saturate(180%) blur(20px); -moz-backdrop-filter: saturate(180%) blur(20px); -o-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+  a.bg-blur:hover { background-color: rgba(255,255,255,0.3); color: rgba(255,255,255,1); }
+  
+  .text-justify { hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; }
+  .feature-allcaps, .feature-allcaps * { font-feature-settings: "c2sc", "smcp" }
+  
+  .minh-100 { min-height: 100%; min-height: 100vh }
+  
+  .btn { margin: 0.1em 0 }
+  
+  #cta { grid-area: cta; margin-bottom: 0.3em }
+  
+  .embed-responsive {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 200%;
+    min-height: 200%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  #tweets { -webkit-hyphens: auto; hyphens: auto; }
+  
+  /* Extra small */
+  @media (max-width: 575.98px) {
+    *, * *, .container, body > div { max-width: 93% !important; max-width: 93vw !important; }
+    body { text-shadow: 1px 1px 3px #222; }
+  }
+
+  /* Small */
+  @media (min-width:576px) {
+    .container > div > footer {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(8em, 1fr) );
+      grid-gap: 0.5em;
+    }
+  }
+
+  /* Medium */
+  @media (min-width:768px) {
+    .container > div {
+      grid-template-columns: 7fr 5fr;
+      grid-template-areas:
+        "header ."
+        "main   main"
+        "footer footer"
+    }
+  }
+
+  /* Large */
+  @media (min-width:992px) {
+    .container > div {
+      grid-template-columns: 5fr 1fr 6fr;
+      grid-template-areas:
+        "header .      ."
+        "main   main   ."
+        "footer footer ."
+    }
+  }
+
+  .container > * >  header { grid-area: header  }
+  .container > * >     nav { grid-area: nav     }
+  .container > * > section { grid-area: main    }
+  .container > * >  footer { grid-area: footer  }
+</style>
+  </head>
+
+  <body class="container bg-dark text-light minh-100">
+  <div>
+      <header class="mt-5">{% if page.producer %}
+            <span class="text-uppercase"><span class="font-weight-bold">{{page.producer[0]}}</span>&nbsp;{{page.producer[1]}}</span>{% endif %}
+            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title == nil %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
+            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
+            <p class="lead my-3">
+                <span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>
+                <a href="/archive" class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</a>
+                <span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>
+                <span class="mx-1">{{page.length}}</span>
+            </p>
+        </header>
+
+    <section>
+      <article itemscope itemtype="http://schema.org/Article">
+
+        {% if page.title == nil %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
+
+        <main itemprop="articleBody" class="lead text-justify my-3">
+
+          <figure class="d-none d-print-block"><img itemprop="image" width="100%" src="https://pbs.twimg.com/profile_banners/14079688/1524477294/600x200" alt="Our guy, live on stage holding a microphone in his right hand and the stand in his left. We see the backs of audience members' heads."><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
+
+          <p>{{page.description}}</p>
+
+        </main>
+      </article>
+      
+    </section>
+
+    <footer class="lead">{% if site.author.twitter %}
+      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/edbritton" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
+      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}{% if page.imdb %}
+      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}
+    </footer>
+    
+    </div>
+    
+    {% if site.author.twitter %}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
+
+        <ul id="tweets" class="list-group list-group-flush px-2"></ul>
+    </div>
+    
+    <style>
+        #twitter {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 20%;
+            min-width: 272px;
+            height: 100%;
+            overflow: auto;
+            background: rgba(0,0,0,0.6);
+            transform: translateX(95%);
+            transition: transform .5s ease-in 3s;
+        }
+        #twitter:hover {
+            transform: translateX(0%);
+            transition: transform .5s ease-in 0s;
+        }
+        #twitter li {
+            background: transparent !important;
+        }
+    </style>{% endif %}
+    {% if site.author.twitter %}
+    <script type="text/javascript" id="tweets">
+var linkify, recent_tweets;
+
+linkify = function(text) {
+  var i = 0, patterns;
+  patterns = {
+      link: { find: /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, replace: '<a href="$1" target="_blank">$1</a>' },
+     user: { find: /(^|\s)@(\w+)/g, replace: '$1<a href="http://twitter.com/$2" target="_blank">@$2</a>' },
+    hash: { find: /(^|\s)#(\w+)/g, replace: '$1<a href="https://twitter.com/search?q=from:edbritton%20%23$2" target="_blank">#$2</a>' }
+  };
+  return text.replace(patterns.link.find, patterns.link.replace)
+  .replace(patterns.user.find, patterns.user.replace)
+  .replace(patterns.hash.find, patterns.hash.replace);
+};
+
+recent_tweets = function(data) {
+  var i = 0, tweetText, user = data[0].user, tweetsWithHashtags = [], tweetsWithSpecificHashtag = [], notReplies = [];
+  while (i < data.length) {
+    if (data[i].entities.hashtags[0]) {
+      var j = 0;
+      tweetsWithHashtags.push(i);
+      var hashtags = (data[i].entities.hashtags[0] ? data[i].entities.hashtags : null);
+      while (j < (hashtags ? hashtags.length : 0)) { if (hashtags[j].text === 'joke') tweetsWithSpecificHashtag.push(i); j++; }
+    }
+    if (!data[i].in_reply_to_user_id) notReplies.push(i);
+    //if (tweetsWithSpecificHashtag.indexOf(i) > -1) alert('Got hashtag?');
+    if (notReplies.indexOf(i) > -1) {
+      tweetText = ((!data[i].entities.urls[0]) ? linkify(data[i].text) : linkify(data[i].text).replace('>' + data[i].entities.urls[0].url + '<', '>' + data[i].entities.urls[0].display_url + '<'));
+      tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '"></div>' : '');
+      document.getElementById('tweets').innerHTML = document.getElementById('tweets').innerHTML + '<li class="list-group-item"><div>' + tweetText + '</div></li>';
+    };
+    i++;
+  };
+  //{block:hide}document.getElementById('name').innerHTML = user.name;
+  //document.getElementById('username').innerHTML = '@'+user.screen_name;{/block:hide}
+  document.getElementById('followers').innerHTML = user.followers_count;
+  //{block:hide}document.getElementById('following').innerHTML = user.friends_count;
+  //document.getElementById('profilepic').src = user.profile_image_url_https;
+  //document.getElementById('description').innerHTML = user.description;
+  //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{/block:hide}
+};
+    </script>
+    <script type="text/javascript" src="https://edbritton.tumblr.com/tweets.js"></script>{% endif %}
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://www.kthornbloom.com/textfit/js/textfit.js"></script>
+    <script src="https://getbootstrap.com/dist/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+     }, 1000);
+});
+    </script>
+
+  </body>
+
+</html>

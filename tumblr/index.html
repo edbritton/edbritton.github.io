@@ -2,11 +2,13 @@
 title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
 description: Ed Britton, the gentleman <span itemprop="jobTitle">comedian</span>. A Brit who’s been in Australia since 2009. Originally trained in musical theatre and improv, Ed has performance in his blood, due to a mix-up at the blood bank.
 neon: true
-producer: Natflax
+producer: The Internet
 showname: Trying to <span class="blink">make you</span> laugh
 homepage: true
 imdb: https://imdb.com/name/nm10740536
 headerimage: https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/NjBptftbm/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg
+greentext: 92% British
+length: 1m 80cm
 ---
 <!doctype html>
 <html lang="en">
@@ -25,7 +27,7 @@ headerimage: https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css');
-{% if page.neon = "false" %}
+{% if not page.neon %}
 h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
 {% endif %}
 
@@ -43,7 +45,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
   a, a * { cursor: pointer; color: var(--light) }
   a:hover { color: var(--gray) }
   
-  body { background-size: {% if page.homepage %}cover{% endif %}; background-position: center; background-attachment: fixed; background-repeat: no-repeat; {% if page.homepage %}background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}');{% endif %} max-width: 99%; max-width: 99vw; width:100%;height:100%; font-family: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important; }
+  body { background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); max-width: 99%; max-width: 99vw; width:100%;height:100%; font-family: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important; }
   
   header h2.h1, header h1.h2 { line-height: 0.9 }
   header .lead span { margin: 0 2px }
@@ -128,11 +130,11 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
   <div>
       <header class="mt-5">{% if page.producer %}
             <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{production}</span>{% endif %}
-            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title = "false" %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
+            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if not page.title %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 <span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>
-                <a href="/archive" class="mx-1 text-reset text-decoration-none">{site.time | date: "%Y"}</a>
+                <a href="/archive" class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</a>
                 <span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>
                 <span class="mx-1">{{page.length}}</span>
             </p>
@@ -141,7 +143,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
     <section>
       <article itemscope itemtype="http://schema.org/Article">
 
-        {% if page.title = "false" %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
+        {% if not page.title %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 
@@ -152,17 +154,17 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
         </main>
       </article>
       
-    </section>{% if page.homepage %}
+    </section>
 
     <footer class="lead">{% if site.author.twitter %}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/edbritton" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}{% if page.imdb %}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}
-    </footer>{% endif %}
+    </footer>
     
     </div>
     
-    {% if page.homepage %}{% if site.author.twitter %}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
+    {% if site.author.twitter %}<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
         {block:hide}<h3 class="font-weight-normal"><a href="https://twitter.com/{{site.author.twitter}}"><strong>Ed&nbsp;Britton</strong>&nbsp;<span class="text-muted text-decoration-none">@edbritton</span></a></h3>{/block:hide}
 
         <ul id="tweets" class="list-group list-group-flush px-2"></ul>
@@ -188,7 +190,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
         #twitter li {
             background: transparent !important;
         }
-    </style>{% endif %}{% endif %}
+    </style>{% endif %}
     {% if site.author.twitter %}
     <script type="text/javascript" id="tweets">
 var linkify, recent_tweets;

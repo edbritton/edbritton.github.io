@@ -121,10 +121,10 @@ h1 { font-family: SFSerif-Text, Charter, serif !important; }
             <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if page.title == nil %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
-                <span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>
-                <span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>
-                <span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>
-                <span class="mx-1">{{page.length}}</span>
+                {% if page.greentext %}<span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>{% endif %}
+                {% if page.greentext and page.classification and page.length %}<span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>{% endif %}
+                {% if page.classification %}<span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>{% endif %}
+                {% if page.length %}<span class="mx-1">{{page.length}}</span>{% endif %}
             </p>
         </header>
 

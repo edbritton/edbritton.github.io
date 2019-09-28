@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/alternategothic/stylesheet.css?v=3">
+
+<style>
+.bg-black {
+  background-color: var(--dark);/*#1b1b1b*/
+  color: var(--light);/*#f2f2f2*/
+}
+
+body  {
+
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+
+background-image: -webkit-radial-gradient(top, rgba(12,12,12,0.1), rgba(12,12,12,1) 50%, #000), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+
+background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+
+background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+
+background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+
+background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/C9Vp7mt3g/tumblr_static_tumblr_static_19uw8xhcthq80ssg00osww0ss_focused_v3.jpg');
+
+max-width: 99%;
+max-width: 99vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+h1 {
+  font-family: "Alternate Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: rgba(255,255,255,0.3);
+}
+
+.text-uppercase {
+  letter-spacing: 0.12em;
+}
+
+main { max-width: 80rem; }
+
+footer { font-size: 3em }
+
+:root { margin: auto }
+
+:root, body {
+font-size: 15px;
+min-height: 99%;
+min-height: 99vh;
+}
+</style>
+
+</head>
+
+<body class="text-center bg-black ntext-light pb-5">
+
+<header class="text-uppercase">
+<h1 class="display-1 text-nowrap text-truncate">{% if page.title == nil %}{{site.title}}{% endif %}{% if page.title %}{{page.title}}{% endif %}</h1>
+{% if page.shortdescription %}<h2 class="text-muted font-weight-light">{{page.shortdescription}}</h2>{% endif %}
+</header>
+
+<main class="w-75 lead text-justify mx-auto">
+{{content}}
+</main>
+
+<footer class="pt-5">
+{% if site.author.twitter %}<a class="text-light" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
+{% if page.instagram %}<a class="text-light" href="{{page.instagram}}" target="_blank"><i class="fab fa-imdb"></i></a>{% endif %}
+</footer>
+
+</body>
+
+</html>

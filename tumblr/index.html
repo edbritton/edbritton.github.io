@@ -27,9 +27,9 @@ length: 1m 80cm
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css');
 @import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css');
-{% if not page.neon %}
+/* if not page.neon
 h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
-{% endif %}
+endif */
 
   .container > div {
     display: grid;
@@ -130,7 +130,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
   <div>
       <header class="mt-5">{% if page.producer %}
             <span class="text-uppercase"><span class="font-weight-bold">{{ page.producer }}</span>{production}</span>{% endif %}
-            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}{% if not page.title %}{{site.title}}{% endif %}</nobr></h2>{% if showname %}
+            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% endif %}<!--% if not page.title %-->{{site.title}}<!-- % endif %--></nobr></h2>{% if showname %}
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 <span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>
@@ -143,7 +143,7 @@ h1, .h1 { font-family: SFSerif-Text, Charter, serif !important; }
     <section>
       <article itemscope itemtype="http://schema.org/Article">
 
-        {% if not page.title %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
+        <!--% if not page.title %--><h1 itemprop="headline">{{site.title}}</h1><!--% endif %-->
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 

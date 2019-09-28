@@ -187,7 +187,7 @@ linkify = function(text) {
   patterns = {
       link: { find: /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, replace: '<a href="$1" target="_blank">$1</a>' },
      user: { find: /(^|\s)@(\w+)/g, replace: '$1<a href="http://twitter.com/$2" target="_blank">@$2</a>' },
-    hash: { find: /(^|\s)#(\w+)/g, replace: '$1<a href="https://twitter.com/search?q=from:edbritton%20%23$2" target="_blank">#$2</a>' }
+    hash: { find: /(^|\s)#(\w+)/g, replace: '$1<a href="https://twitter.com/search?q=from:{{site.author.twitter}}%20%23$2" target="_blank">#$2</a>' }
   };
   return text.replace(patterns.link.find, patterns.link.replace)
   .replace(patterns.user.find, patterns.user.replace)
@@ -207,18 +207,18 @@ recent_tweets = function(data) {
     //if (tweetsWithSpecificHashtag.indexOf(i) > -1) alert('Got hashtag?');
     if (notReplies.indexOf(i) > -1) {
       tweetText = ((!data[i].entities.urls[0]) ? linkify(data[i].text) : linkify(data[i].text).replace('>' + data[i].entities.urls[0].url + '<', '>' + data[i].entities.urls[0].display_url + '<'));
-      tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '"></div>' : '');
+      tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '" class="img-fluid"></div>' : '');
       document.getElementById('tweets').innerHTML = document.getElementById('tweets').innerHTML + '<li class="list-group-item"><div>' + tweetText + '</div></li>';
     };
     i++;
   };
-  //{block:hide}document.getElementById('name').innerHTML = user.name;
-  //document.getElementById('username').innerHTML = '@'+user.screen_name;{/block:hide}
+  //{% if hide %}document.getElementById('name').innerHTML = user.name;
+  //document.getElementById('username').innerHTML = '@'+user.screen_name;{% endif %}
   document.getElementById('followers').innerHTML = user.followers_count;
-  //{block:hide}document.getElementById('following').innerHTML = user.friends_count;
+  //{% if hide %}document.getElementById('following').innerHTML = user.friends_count;
   //document.getElementById('profilepic').src = user.profile_image_url_https;
   //document.getElementById('description').innerHTML = user.description;
-  //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{/block:hide}
+  //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{% endif %}
 };
     </script>
     <script type="text/javascript" src="https://edbritton.tumblr.com/tweets.js"></script>{% endif %}

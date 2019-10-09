@@ -1,0 +1,22 @@
+#twitter {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20%;
+  min-width: 272px;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateX(95%);
+  transition: transform .5s ease-in 3s;
+
+  &:hover {
+    transform: translateX(0%);
+    transition: transform .5s ease-in 0s;
+  }
+
+  li {
+    background: transparent !important;
+  }
+
+}

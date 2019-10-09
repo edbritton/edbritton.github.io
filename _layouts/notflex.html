@@ -4,115 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <!meta content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui" name="viewport" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    {% comment %}<!-- meta content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui" name="viewport" / -->{% endcomment %}
     <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {% if page.neon %}
-    <style id="neon">@font-face{font-family:neontubes;src:url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot);src:url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix) format("embedded-opentype"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2) format("woff2"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff) format("woff"),url(https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:neoneon;src:url(https://www.dropbox.com/s/kvmamtgrail9iar/Neoneon.otf) format("opentype");src:url(https://dl.dropboxusercontent.com/s/kvmamtgrail9iar/Neoneon.otf?dl=0) format("opentype");font-weight:400;font-style:normal}.h1,.h2,.neon{margin-left:-5px!important}h1.neon{font-family:neoneon,neontubes,'News Gothic FS',sans-serif;color:#ffd9e2;text-shadow:5px 10px 10px #000,0 0 0 transparent,0 0 10px #ff003c,0 0 20px rgba(255,0,60,.5),0 0 40px #ff003c,0 0 100px #ff003c,0 0 200px #ff003c,0 0 300px #ff003c,0 0 500px #ff003c,0 0 1000px #ff003c;padding-bottom:.2em}h2.neon{font-family:neontubes;color:#d4eaff;text-shadow:5px 10px 10px #000,0 0 0 transparent,0 0 10px #2695ff,0 0 20px rgba(38,149,255,.5),0 0 40px #2695ff,0 0 100px #2695ff,0 0 200px #2695ff,0 0 300px #2695ff,0 0 500px #2695ff}h1.neon{-webkit-animation:turnon 5s ease-in normal;animation:turnon 5s ease-in normal}.blink{-webkit-animation:blink 4s infinite 5s alternate;animation:blink 4s infinite 5s alternate}.blink+.blink{-webkit-animation:blink 5s infinite 5s alternate;animation:blink 5s infinite 5s alternate}.blink+.blink+.blink{-webkit-animation:blink 3s infinite 5s alternate;animation:blink 3s infinite 5s alternate}.buzz,.h2{-webkit-animation:buzz 1ms infinite alternate;animation:buzz 1ms infinite alternate}@-webkit-keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}@keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}@-webkit-keyframes buzz{70%{opacity:.8}}@keyframes buzz{70%{opacity:.8}}@-webkit-keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}@keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}</style>
-{% endif %}
-
-<style>
-@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css');
-@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css');
-@import url('https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css');
-{% if page.neon == nil %}
-h1 { font-family: SFSerif-Text, Charter, serif !important; }
-{% endif %}
-
-  .container > div {
-    display: grid;
-    grid-template-areas:
-      "nav"
-      "header"
-      "main"
-      "footer"
-  }
-  
-  * { cursor: default; text-rendering: optimizeLegibility; font-feature-settings: "kern", "ss01", "ss07"; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none }
-  
-  a, a * { cursor: pointer; color: var(--light) }
-  a:hover { color: var(--gray) }
-  
-  body { background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); max-width: 99%; max-width: 99vw; width:100%;height:100%; font-family: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important; }
-  
-  header h2.h1, header h1.h2 { line-height: 0.9 }
-  header .lead span { margin: 0 2px }
-  
-  blockquote { border-left: solid; padding-left: 1rem }
-  
-  .bg-blur{ -webkit-backdrop-filter: saturate(180%) blur(20px); -ms-backdrop-filter: saturate(180%) blur(20px); -moz-backdrop-filter: saturate(180%) blur(20px); -o-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
-  a.bg-blur:hover { background-color: rgba(255,255,255,0.3); color: rgba(255,255,255,1); }
-  
-  .text-justify { hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; }
-  .feature-allcaps, .feature-allcaps * { font-feature-settings: "c2sc", "smcp" }
-  
-  .minh-100 { min-height: 100%; min-height: 100vh }
-  
-  .btn { margin: 0.1em 0 }
-  
-  #cta { grid-area: cta; margin-bottom: 0.3em }
-  
-  .embed-responsive {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 200%;
-    min-height: 200%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
-  
-  #tweets { -webkit-hyphens: auto; hyphens: auto; }
-  
-  /* Extra small */
-  @media (max-width: 575.98px) {
-    *, * *, .container, body > div { max-width: 93% !important; max-width: 93vw !important; }
-    body { text-shadow: 1px 1px 3px #222; }
-  }
-
-  /* Small */
-  @media (min-width:576px) {
-    .container > div > footer {
-      margin-bottom: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(8em, 1fr) );
-      grid-gap: 0.5em;
-    }
-  }
-
-  /* Medium */
-  @media (min-width:768px) {
-    .container > div {
-      grid-template-columns: 7fr 5fr;
-      grid-template-areas:
-        "header ."
-        "main   main"
-        "footer footer"
-    }
-  }
-
-  /* Large */
-  @media (min-width:992px) {
-    .container > div {
-      grid-template-columns: 5fr 1fr 6fr;
-      grid-template-areas:
-        "header .      ."
-        "main   main   ."
-        "footer footer ."
-    }
-  }
-
-  .container > * >  header { grid-area: header  }
-  .container > * >     nav { grid-area: nav     }
-  .container > * > section { grid-area: main    }
-  .container > * >  footer { grid-area: footer  }
-</style>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
 
   <body class="container bg-dark text-light minh-100">

@@ -1,12 +1,11 @@
 ---
 ---
 
-$sf-family: 'https://windyboy1704.github.io/San-Francisco-family/website_resources/css/';
 $sans-serif-stack: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
-@import url("#{$sf-family+'sfpro-text.css'}");
-@import url("#{$sf-family+'sfpro-display.css'}");
-@import url("#{$sf-family+'sfserif-text.css'}");
+@import url("https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-text.css");
+@import url("https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfpro-display.css");
+@import url("https://windyboy1704.github.io/San-Francisco-family/website_resources/css/sfserif-text.css");
 
 @mixin agents($property, $value) {
   $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';

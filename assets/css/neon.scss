@@ -10,6 +10,15 @@
     url(#{$url + '.ttf'}) format("truetype");
 }
 
+@mixin keyframes($value) {
+@-wekbit-keyframes #{$value}
+@keyframes #{$value}
+}
+
+@include keyframes("turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}")
+@include keyframes("buzz{70%{opacity:.8}}")
+@include keyframes("blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}")
+
 @font-face{
   font-family:neontubes;
   @include font-face-src('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont');
@@ -32,9 +41,9 @@ h1.neon{-webkit-animation:turnon 5s ease-in normal;animation:turnon 5s ease-in n
 .blink+.blink{-webkit-animation:blink 5s infinite 5s alternate;animation:blink 5s infinite 5s alternate}
 .blink+.blink+.blink{-webkit-animation:blink 3s infinite 5s alternate;animation:blink 3s infinite 5s alternate}
 .buzz,.h2{-webkit-animation:buzz 1ms infinite alternate;animation:buzz 1ms infinite alternate}
-@-webkit-keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}
+/*@-webkit-keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}
 @keyframes turnon{0%{opacity:.2}48%{opacity:.1}50%{opacity:.8}52%{opacity:.2}54%{opacity:1}}
 @-webkit-keyframes buzz{70%{opacity:.8}}
 @keyframes buzz{70%{opacity:.8}}
 @-webkit-keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}
-@keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}
+@keyframes blink{40%{opacity:1}42%{opacity:.8}43%{opacity:1}45%{opacity:.2}46%{opacity:1}}*/

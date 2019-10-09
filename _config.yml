@@ -25,3 +25,6 @@ plugins:
   - jekyll-seo-tag
 
 jekyll-mentions: https://twitter.com
+
+sass:
+    style: compressed

@@ -18,16 +18,36 @@
   
   body { background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: -o-linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); background-image: linear-gradient(left, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 100%), url('{{page.headerimage}}'); max-width: 99%; max-width: 99vw; width:100%;height:100%; font-family: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important; }
   
-  header h2.h1, header h1.h2 { line-height: 0.9 }
-  header .lead span { margin: 0 2px }
+  header {
+    h2.h1, h1.h2 { line-height: 0.9 }
+    .lead span { margin: 0 2px }
+  }
   
   blockquote { border-left: solid; padding-left: 1rem }
   
-  .bg-blur{ -webkit-backdrop-filter: saturate(180%) blur(20px); -ms-backdrop-filter: saturate(180%) blur(20px); -moz-backdrop-filter: saturate(180%) blur(20px); -o-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
-  a.bg-blur:hover { background-color: rgba(255,255,255,0.3); color: rgba(255,255,255,1); }
+@mixin agents($property, $value) {
+  $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
+  @each $agent in $agents {
+    #{$agent+$property}: $value;
+  }
+}
+
+@mixin backdrop-filter($filters) {
+  @include agents(backdrop-filter, $filters)
+}
+
+.bg-blur {
+  @include backdrop-filter(saturate(180%) blur(20px));
+}
+
+a.bg-blur:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
   
   .text-justify { hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; }
-  .feature-allcaps, .feature-allcaps * { font-feature-settings: "c2sc", "smcp" }
+  
+.feature-allcaps { &, * { font-feature-settings: "c2sc", "smcp" } }
   
   .minh-100 { min-height: 100%; min-height: 100vh }
   
@@ -44,10 +64,7 @@
     width: auto;
     height: auto;
     z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    @include agents(transform, translateX(-50%) translateY(-50%));
   }
   
   #tweets { -webkit-hyphens: auto; hyphens: auto; }
@@ -90,7 +107,9 @@
     }
   }
 
-  .container > * >  header { grid-area: header  }
-  .container > * >     nav { grid-area: nav     }
-  .container > * > section { grid-area: main    }
-  .container > * >  footer { grid-area: footer  }
+.container > * > {
+ header { grid-area: header  }
+    nav { grid-area: nav     }
+section { grid-area: main    }
+ footer { grid-area: footer  }
+}

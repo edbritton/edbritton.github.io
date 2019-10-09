@@ -10,9 +10,7 @@ $sans-serif-stack: -apple-system,BlinkMacSystemFont,SFPro-Display,"Segoe UI",Rob
 
 @mixin agents($property, $value) {
   $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
-  @each $agent in $agents {
-    #{$agent+$property}: $value;
-  }
+  @each $agent in $agents { #{$agent+$property}: $value; }
 }
   
 * {
@@ -27,9 +25,7 @@ a {
     cursor: pointer;
     color: var(--light);
   }
-  &:hover {
-    color: var(--gray);
-  }
+  &:hover { color: var(--gray); }
 }
   
 body {
@@ -58,9 +54,7 @@ header {
 
 blockquote { border-left: solid; padding-left: 1rem }
 
-.bg-blur {
-  @include agents(backdrop-filter, saturate(180%) blur(20px));
-}
+.bg-blur { @include agents(backdrop-filter, saturate(180%) blur(20px)); }
 
 a.bg-blur:hover {
   background-color: rgba(255, 255, 255, 0.3);

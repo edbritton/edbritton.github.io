@@ -3,4 +3,4 @@
 
 /*@import "goodtype";*/
 
-.not-real{ {{ page.layout }} }
+@import "{{ page.layout }}";

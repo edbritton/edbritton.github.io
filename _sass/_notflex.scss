@@ -1,11 +1,9 @@
-@use "_mixins" as *;
+@use "mixins" as *;
 
 $sf-family: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
 $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
 
-@import url("#{$sf-family}sfpro-text.css");
-@import url("#{$sf-family}sfpro-display.css");
-@import url("#{$sf-family}sfserif-text.css");
+@import "#{$sf-family}sfpro-text.css", "#{$sf-family}sfpro-display.css", "#{$sf-family}sfserif-text.css";
   
 * {
   cursor: default;

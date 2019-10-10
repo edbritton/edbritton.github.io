@@ -9,9 +9,9 @@ $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resou
   $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
   @each $agent in $agents {
     @if $invalue {
-      #{$property}: #{$agent}$value+'('+$invalue+')'
+      #{$property}: #{$agent}$value+'('+$invalue+')';
     } @else {
-      #{$agent}$property: $value
+      #{$agent+$property}: $value;
     }
   }
 }

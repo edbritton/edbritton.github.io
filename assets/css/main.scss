@@ -4,7 +4,7 @@
 @import "mixins", "twitter";
 
 {% if page.layout == "notflex" %}
-.big-plan-{{ layout. }} {
-  color: blue;
+body {
+  background: blue !important;
 }
 {% endif %}

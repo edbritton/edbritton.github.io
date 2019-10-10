@@ -3,6 +3,8 @@
 
 @import "mixins", "twitter";
 
-.big-plan-{{ page.layout }} {
+{% if page.layout == "notflex" %}
+.big-plan-{{ layout. }} {
   color: blue;
 }
+{% endif %}

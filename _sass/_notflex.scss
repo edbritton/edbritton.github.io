@@ -9,7 +9,7 @@ $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resou
   $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
   @each $agent in $agents {
     @if $invalue {
-      #{$property}: #{$agent}$value+'('+$invalue+')';
+      #{$property}: #{$agent}$value+$invalue;
     } @else {
       #{$agent+$property}: $value;
     }
@@ -37,7 +37,7 @@ body {
     position: center;
     attachment: fixed;
     repeat: no-repeat;
-    @include agents(image,linear-gradient,"left, black 20%, transparent 100%), url($headerimage");
+    @include agents(image,linear-gradient,"(left, black 20%, transparent 100%), url($headerimage)");
   }
   max-width: 99%;
   max-width: 99vw;
@@ -84,64 +84,55 @@ a.bg-blur:hover {
   
 #tweets { @include agents(hyphens, auto); }
 
-.container > div {
-  display: grid;
-  grid-template-areas:
-    "nav"
-    "header"
-    "main"
-    "footer"
-}
-  
 /* Extra small */
 @media (max-width: 575.98px) {
   *, * *, .container, body > div { max-width: 93% !important; max-width: 93vw !important; }
   body { text-shadow: 1px 1px 3px #222; }
 }
 
-/* Small */
-@media (min-width:576px) {
-  .container > div > footer {
-    margin-bottom: 0;
+.container {
+  > * > {
+     header { grid-area: header  }
+        nav { grid-area: nav     }
+    section { grid-area: main    }
+     footer { grid-area: footer  }
+  }
+  > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8em, 1fr) );
-    grid-gap: 0.5em;
-  }
-}
-
-/* Medium */
-@media (min-width:768px) {
-  .container > div {
-    grid: {
-      template: {
-        columns: 7fr 5fr;
-        areas:
-          "header ."
-          "main   main"
-          "footer footer"
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "footer";
+    > footer {
+      @media (min-width:576px) { /* Small */
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8em, 1fr) );
+        grid-gap: 0.5em;
+      }
+    }
+    @media (min-width:768px) { /* Medium */
+      grid: {
+        template: {
+          columns: 7fr 5fr;
+          areas:
+            "header ."
+            "main   main"
+            "footer footer";
+        }
+      }
+    }
+    @media (min-width:992px) { /* Large */
+      grid: {
+        template: {
+          columns: 5fr 1fr 6fr;
+          areas:
+            "header .      ."
+            "main   main   ."
+            "footer footer ."
+        }
       }
     }
   }
-}
-
-/* Large */
-@media (min-width:992px) {
-  .container > div {
-    grid: {
-      template: {
-        columns: 5fr 1fr 6fr;
-        areas:
-          "header .      ."
-          "main   main   ."
-          "footer footer ."
-      }
-    }
-  }
-}
-
-.container > * > {
-   header { grid-area: header  }
-      nav { grid-area: nav     }
-  section { grid-area: main    }
-   footer { grid-area: footer  }
 }

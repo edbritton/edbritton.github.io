@@ -1,9 +1,4 @@
-@import "mixins";
-
-$sf-family: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
-@import "#{$sf-family}sfpro-text.css";
-@import "#{$sf-family}sfpro-display.css";
-@import "#{$sf-family}sfserif-text.css";
+@import "mixins", "sanfrancisco";
 
 $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
   

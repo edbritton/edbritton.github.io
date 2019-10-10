@@ -1,4 +1,7 @@
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     {% comment %}<!-- meta content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui" name="viewport" / -->{% endcomment %}
+    {% if layout.css %}{% for css in layout.css %}
+    <link rel="stylesheet" href="{{ css }}" />{% endfor %}{% endif %}
     <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>

@@ -1,0 +1,10 @@
+@mixin agents($property, $value, $invalue: false) {
+  $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
+  @each $agent in $agents {
+    @if $invalue {
+      #{$property}: #{$agent}$value+$invalue;
+    } @else {
+      #{$agent+$property}: $value;
+    }
+  }
+}

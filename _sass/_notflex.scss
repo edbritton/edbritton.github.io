@@ -1,4 +1,5 @@
 $sf-family: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
+$headerimage: "{{page.headerimage}}"
 
 @import url("#{$sf-family}sfpro-text.css");
 @import url("#{$sf-family}sfpro-display.css");
@@ -36,7 +37,7 @@ body {
     position: center;
     attachment: fixed;
     repeat: no-repeat;
-    @include agents(image,linear-gradient,"left, black 20%, transparent 100%), url({{page.headerimage}}");
+    @include agents(image,linear-gradient,"left, black 20%, transparent 100%), url($headerimage");
   }
   max-width: 99%;
   max-width: 99vw;

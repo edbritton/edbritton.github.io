@@ -4,9 +4,15 @@ $sf-family: "https://windyboy1704.github.io/San-Francisco-family/website_resourc
 @import url("#{$sf-family}sfpro-display.css");
 @import url("#{$sf-family}sfserif-text.css");
 
-@mixin agents($property, $value) {
+@mixin agents($property, $value, $invalue: false) {
   $agents: '-webkit-' '-moz-' '-ms-' '-o-' '';
-  @each $agent in $agents { #{$agent+$property}: $value; }
+  @each $agent in $agents {
+    @if $invalue {
+      #{$property}: #{$agent}$value+'('+$invalue+')'
+    } @else {
+      #{$agent}$property: $value
+    }
+  }
 }
   
 * {
@@ -30,11 +36,7 @@ body {
     position: center;
     attachment: fixed;
     repeat: no-repeat;
-    image: -webkit-linear-gradient(left, black 20%, transparent 100%), url("{{page.headerimage}}");
-    image: -moz-linear-gradient(left, black 20%, transparent 100%), url("{{page.headerimage}}");
-    image: -ms-linear-gradient(left, black 20%, transparent 100%), url("{{page.headerimage}}");
-    image: -o-linear-gradient(left, black 20%, transparent 100%), url("{{page.headerimage}}");
-    image: linear-gradient(left, black 20%, transparent 100%), url("{{page.headerimage}}");
+    @include agents(image,linear-gradient,"left, black 20%, transparent 100%), url({{page.headerimage}}");
   }
   max-width: 99%;
   max-width: 99vw;

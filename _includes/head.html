@@ -1,7 +1,15 @@
+{% comment %}<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">{% endcomment %}
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     {% comment %}<!-- meta content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui" name="viewport" / -->{% endcomment %}
     {% if layout.css %}{% for css in layout.css %}
-    <link rel="stylesheet" href="{{ css }}" />{% endfor %}{% endif %}
+    <link rel="stylesheet" href="{{ css }}" />{% endfor %}{% endif %}{% if page.neon %}
+    <link rel="stylesheet" href="{{ '/assets/css/neon.css' | relative_url }}" />
+    {% else %}
+    <style>h1 { font-family: SFSerif-Text, Charter, serif !important; }</style>
+    {% endif %}
     <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>
+  </head>

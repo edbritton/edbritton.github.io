@@ -67,8 +67,6 @@ a.bg-blur:hover {
   z-index: -100;
   @include agents(transform, translateX(-50%) translateY(-50%));
 }
-  
-#tweets { @include agents(hyphens, auto); }
 
 /* Extra small */
 @media (max-width: 575.98px) {

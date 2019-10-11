@@ -48,7 +48,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
     </div>
     
 {% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}
-{% include scripts.html %}
+{% include scripts.html | indent: 4 %}
   </body>
 
 </html>

@@ -3,8 +3,6 @@
 
 @import "mixins", "sanfrancisco", "twitter", "sendtoback";
 
-$headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
-  
 * {
   cursor: default;
   text-rendering: optimizeLegibility;
@@ -73,7 +71,7 @@ a.bg-blur:hover {
   body { text-shadow: 1px 1px 3px #222; }
 }
 
-.container {
+body {
   > * > {
      header { grid-area: header  }
         nav { grid-area: nav     }

@@ -2,7 +2,6 @@
 ---
 
 @import "mixins", "sanfrancisco", "neon", "twitter";
-{% if layout.css %}@import {% for css in layout.css %}"{{ css }}",{% endfor %};{% endif %}
 
 $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
   

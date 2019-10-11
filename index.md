@@ -7,7 +7,7 @@ producer:
 - The Internet
 - presents
 
-headline: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
+title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
 
 showname: Trying to <span class="blink">make you</span> laugh
 
@@ -18,8 +18,6 @@ headerimage: https://static.tumblr.com/f0fcb0eebd0de2e2d3075b27186fc9a8/azp7omv/
 greentext: 92% British
 length: 1m 80cm
 classification: MA 15+
-
-title: Ed Britton &middot; Comedian, actor, a very unstable genius.
 ---
 
 Ed Britton, the gentleman <span itemprop="jobTitle">comedian</span>. A Brit who’s been in Australia since 2009. Originally trained in musical theatre and improv, Ed has performance in his blood, due to a mix-up at the blood bank.

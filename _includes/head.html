@@ -4,10 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="/assets/css/{{ page.layout }}.css" />
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
-    {% endfor %}{% endif %}
-    <style>{% if page.neon %}
-      @import "neon";{% else %}
-      h1 { font-family: SFSerif-Text, Charter, serif !important; }{% endif %}
-    </style>
-    <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>
+    {% endfor %}{% endif %}{% if page.neon %}<link rel="stylesheet" href="{{ '/assets/css/neon.css' | relative_url }}" />{% else %}
+    <style>h1 { font-family: SFSerif-Text, Charter, serif !important; }</style>{% endif %}
+    <title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
   </head>

@@ -1,6 +1,4 @@
-/* { z-index: 0; } */
-
-[itemprop="image"], img.sendtoback {
+[itemprop="image"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,7 +12,7 @@
 }
 
 body::before {
-  @extend img.sendtoback;
+  @extend [itemprop="image"];
   z-index: -1;
   content: '';
   background: rgba(0,0,0,0.5) -webkit-radial-gradient(80% 0, circle, rgba(0,0,0,0) 50vmin, rgba(0,0,0,1) 100vw);

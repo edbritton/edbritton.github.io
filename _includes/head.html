@@ -6,7 +6,7 @@
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
     {% endfor %}{% endif %}
     <style>{% if page.neon %}
-      {{ "@import 'neon';" | sassify }}{% else %}
+      @import "neon";{% else %}
       h1 { font-family: SFSerif-Text, Charter, serif !important; }{% endif %}
     </style>
     <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>

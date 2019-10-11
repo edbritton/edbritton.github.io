@@ -4,5 +4,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="/assets/css/{{ page.layout }}.css" />
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
-    {% endfor %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
+    {% endfor %}{% endif %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
   </head>

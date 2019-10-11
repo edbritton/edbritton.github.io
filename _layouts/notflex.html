@@ -3,6 +3,7 @@ css:
   - //use.fontawesome.com/releases/v5.0.10/css/all.css
   - //stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 js: //www.kthornbloom.com/textfit/js/textfit.js
+image: default.gif
 ---
 <!doctype html>
 <html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
@@ -30,7 +31,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 
-          <figure><img itemprop="image" width="100%" src="{% if page.image %}{{ page.image }}{% else %}/assets/img/default.jpg{% endif %}"><figcaption class="d-none d-print"><a href="https://twitter.com/edbritton">@edbritton</a></figcaption></figure>
+          <figure><img itemprop="image" width="100%" src="/assets/img/{% if page.image %}{{ page.image }}{% else %}default.jpg{% endif %}"><figcaption class="d-none d-print"><a href="https://twitter.com/edbritton">@edbritton</a></figcaption></figure>
 
           <p>{{content}}</p>
 

@@ -7,7 +7,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 <!doctype html>
 <html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 
-{% if page.neon %}{% include head.html neon=true %}{% else %}{% include head.html %}{% endif %}
+{% if page.neon %}{% include head.html neon="true" %}{% else %}{% include head.html %}{% endif %}
 
   <body class="container bg-dark text-light minh-100">
   <div>

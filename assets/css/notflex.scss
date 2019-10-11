@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "sanfrancisco", "neon", "twitter";
+@import "mixins", "sanfrancisco", "twitter"; #importing neon later
 
 $headerimage: "https://windyboy1704.github.io/San-Francisco-family/website_resources/css/";
   
@@ -39,6 +39,10 @@ header {
   h2.h1, h1.h2 { line-height: 0.9 }
   .lead span { margin: 0 2px }
 }
+
+h1 { font-family: SFSerif-Text, Charter, serif; }
+
+@import "neon";
 
 blockquote { border-left: solid; padding-left: 1rem }
 

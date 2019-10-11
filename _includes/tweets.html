@@ -43,4 +43,5 @@ recent_tweets = function(data) {
   //document.getElementById('description').innerHTML = user.description;
   //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{% endif %}
 };
-    </script>
+    </script>{% if include.js %}
+<script type="text/javascript" src="{{ include.js }}"></script>{% endif %}

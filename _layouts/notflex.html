@@ -30,7 +30,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 
-          <figure><img itemprop="image" width="100%" src="{% if page.image %}{{ page.image }}{% else %}/assets/img/default.jpg{% endif %}"><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
+          <figure><img itemprop="image" width="100%" src="{% if page.image %}{{ page.image }}{% else %}/assets/img/default.jpg{% endif %}"><figcaption class="d-none d-print"><a href="https://twitter.com/edbritton">@edbritton</a></figcaption></figure>
 
           <p>{{content}}</p>
 

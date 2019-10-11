@@ -13,7 +13,7 @@ showname: Trying to <span class="blink">make you</span> laugh
 
 imdb: https://imdb.com/name/nm10740536
 
-image: default.gif
+image: default.jpg
 
 greentext: 92% British
 length: 1m 80cm

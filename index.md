@@ -15,6 +15,7 @@ imdb: https://imdb.com/name/nm10740536
 
 image: default.jpg
 
+genre: MICF
 greentext: 92% British
 length: 1m 80cm
 classification: MA 15+

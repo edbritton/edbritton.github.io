@@ -68,8 +68,8 @@ a.bg-blur:hover {
 }
 
 /* Extra small */
-@media (max-width: 575.98px) {
-  *, * *, .container, body > div { max-width: 93% !important; max-width: 93vw !important; }
+@media (max-width: 575.98px) {/*
+  *, * *, .container, body > div { max-width: 93% !important; max-width: 93vw !important; }*/
   body { text-shadow: 1px 1px 3px #222; }
 }
 

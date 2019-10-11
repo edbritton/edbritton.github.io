@@ -6,5 +6,5 @@
     <link rel="stylesheet" href="/assets/css/neon.css" />{% endif %}
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
     {% endfor %}{% endif %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
-    {% seo title=false %}
+{% seo title=false %}
   </head>

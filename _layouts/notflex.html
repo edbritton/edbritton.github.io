@@ -30,7 +30,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 
         <main itemprop="articleBody" class="lead text-justify my-3">
 
-          <figure class="d-none d-print-block"><img itemprop="image" width="100%" src="https://pbs.twimg.com/profile_banners/14079688/1524477294/600x200" alt="Our guy, live on stage holding a microphone in his right hand and the stand in his left. We see the backs of audience members' heads."><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
+          <figure><img itemprop="image" width="100%" src="{% if page.image %}{{ page.image }}{% else %}/assets/img/default.jpg{% endif %}"><figcaption><a href="https://twitter.com/edbritton">@edbritton</a></figure>
 
           <p>{{content}}</p>
 
@@ -48,7 +48,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
     </div>
     
 {% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}
-{% include scripts.html | indent: 4 %}
+{% include scripts.html %}
   </body>
 
 </html>

@@ -42,8 +42,6 @@ header {
 
 h1 { font-family: SFSerif-Text, Charter, serif; }
 
-@import "neon";
-
 blockquote { border-left: solid; padding-left: 1rem }
 
 .bg-blur { @include agents(backdrop-filter, saturate(180%) blur(20px)); }

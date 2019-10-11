@@ -15,10 +15,6 @@ body::before {
   @extend [itemprop="image"];
   z-index: -1;
   content: '';
-  background-image: -webkit-radial-gradient(80% 0, circle, transparent, black 100vmin);
-  background-image: radial-gradient(80% 0, circle, transparent, black 100vmin);
-}
-
-body {
-  background-color: #000 !important;
+  background-image: -webkit-radial-gradient(top, transparent, black 100vmin);
+  background-image: radial-gradient(top, transparent, black 100vmin);
 }

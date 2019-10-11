@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/assets/css/{{ page.layout }}.css" />
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
     {% endfor %}{% endif %}{% if page.neon %}
-    <link rel="stylesheet" href="{{ '/assets/css/neon.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/_sass/neon.css' | relative_url }}" />
     {% else %}<style>h1 { font-family: SFSerif-Text, Charter, serif !important; }</style>{% endif %}
     <title>{{site.title}}{% if page.shortdescription %} · {{page.shortdescription}}{% endif %}</title>
   </head>

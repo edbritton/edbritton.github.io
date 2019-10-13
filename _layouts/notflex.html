@@ -10,41 +10,33 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 {% if page.neon %}{% include head.html neon="true" %}{% else %}{% include head.html %}{% endif %}
 
   <body class="container text-light minh-100">
-  <div>
+    <div>
       <header class="mt-5">{% if page.producer %}
-            <span class="text-uppercase"><span class="font-weight-bold">{{page.producer}}</span>&nbsp;presents</span>{% endif %}
-            <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
-            <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
-            <p class="lead my-3">
-                {% if page.greentext %}<span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>{% endif %}
-                {% if page.greentext and page.classification and page.duration %}<span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>{% endif %}
-                {% if page.classification %}<span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>{% endif %}
-                {% if page.duration %}<span class="mx-1">{{page.duration}}</span>{% endif %}
-            </p>
-        </header>
+        <span class="text-uppercase"><span class="font-weight-bold">{{page.producer}}</span>&nbsp;presents</span>{% endif %}
+        <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
+        <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
+        <p class="lead my-3">
+          {% if page.greentext %}<span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>{% endif %}
+          {% if page.greentext and page.classification and page.duration %}<span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>{% endif %}
+          {% if page.classification %}<span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>{% endif %}
+          {% if page.duration %}<span class="mx-1">{{page.duration}}</span>{% endif %}
+        </p>
+      </header>
 
-    <section>
-      <article itemscope itemtype="http://schema.org/Article">
+      <section>
+        <article itemscope itemtype="http://schema.org/Article">
+          <main itemprop="articleBody" class="lead text-justify my-3">
+            <figure><img itemprop="image" width="100%" src="/assets/img/{% if page.image %}{{ page.image }}{% else %}default.jpg{% endif %}"><figcaption class="d-none d-print"></figcaption></figure>
+            <p>{{content}}</p>
+          </main>
+        </article>
+      </section>
 
-        {% if page.title == nil %}<h1 itemprop="headline">{{site.title}}</h1>{% endif %}
-
-        <main itemprop="articleBody" class="lead text-justify my-3">
-
-          <figure><img itemprop="image" width="100%" src="/assets/img/{% if page.image %}{{ page.image }}{% else %}default.jpg{% endif %}"><figcaption class="d-none d-print"><a href="https://twitter.com/edbritton">@edbritton</a></figcaption></figure>
-
-          <p>{{content}}</p>
-
-        </main>
-      </article>
-      
-    </section>
-
-    <footer class="lead">{% if site.author.twitter %}
-      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
-      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}{% if page.imdb %}
-      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}
-    </footer>
-    
+      <footer class="lead">{% if site.author.twitter %}
+        <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
+        <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}{% if page.imdb %}
+        <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}
+      </footer>
     </div>
     
 {% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}

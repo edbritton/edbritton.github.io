@@ -11,7 +11,6 @@ showname: Trying to <span class="blink">make you</span> laugh
 
 image: default.jpg
 
-genre: MICF
 greentext: 92% British
 duration: 1m&nbsp;80cm
 classification: MA 15+

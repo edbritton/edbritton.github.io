@@ -10,6 +10,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 {% if page.neon %}{% include head.html neon="true" %}{% else %}{% include head.html %}{% endif %}
 
   <body class="container text-light minh-100">
+    <div>
       <header class="mt-5">{% if page.producer %}
         <span class="text-uppercase"><span class="font-weight-bold">{{page.producer}}</span>&nbsp;presents</span>{% endif %}
         <h1 itemprop="headline" class="m-0 neon textfit"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
@@ -37,7 +38,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
         {% for link in site.social.links %}
         {% if link contains "imdb" %}<a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
       </footer>
-    
+    </div>
 {% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}
 {% include scripts.html %}
   </body>

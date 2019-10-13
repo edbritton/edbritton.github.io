@@ -17,9 +17,9 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 {% if page.greentext %}<span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>{% endif %}
-                {% if page.greentext and page.classification and page.length %}<span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>{% endif %}
+                {% if page.greentext and page.classification and page.duration %}<span class="mx-1 text-reset text-decoration-none">{{% if page.year %}{{page.year}}{% else %}{{site.time | date: "%Y"}}{% endif %}</span>{% endif %}
                 {% if page.classification %}<span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>{% endif %}
-                {% if page.length %}<span class="mx-1">{{page.length}}</span>{% endif %}
+                {% if page.duration %}<span class="mx-1">{{page.duration}}</span>{% endif %}
             </p>
         </header>
 
@@ -40,7 +40,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
     </section>
 
     <footer class="lead">{% if site.author.twitter %}
-      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/edbritton" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
+      <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}{% if page.imdb %}
       <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{page.imdb}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}
     </footer>

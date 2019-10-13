@@ -3,9 +3,7 @@ layout: notflex
 
 neon: true
 
-producer:
-- The Internet
-- presents
+producer: The Internet
 
 title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
 
@@ -17,7 +15,7 @@ image: default.jpg
 
 genre: MICF
 greentext: 92% British
-length: 1m 80cm
+duration: 1m&nbsp;80cm
 classification: MA 15+
 ---
 

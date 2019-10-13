@@ -35,7 +35,8 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
       <footer class="lead">{% if site.author.twitter %}
         <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left d-inline-flex align-items-baseline" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i><span class="d-none d-sm-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-none d-sm-inline">137</span></a>{% endif %}{% if page.instagram %}
         <a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-none d-sm-inline pl-2"> Instagram</span></a>{% endif %}
-        {% for link in site.author.links %}{% if link contains "imdb" %}<a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
+        {% for link in site.author.links %}
+        {% if link contains "imdb" %}<a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
       </footer>
     </div>
     

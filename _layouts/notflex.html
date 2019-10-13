@@ -17,7 +17,7 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
             <h2 itemprop="description" class="m-0 neon textfit font-weight-lighter"><nobr>{{page.showname}}</nobr></h1>{% endif %}
             <p class="lead my-3">
                 {% if page.greentext %}<span class="text-success font-weight-bold mx-1">{{page.greentext}}</span>{% endif %}
-                {% if page.year or page.greentext and page.classification and page.duration %}<span class="mx-1 text-reset text-decoration-none">{% endif %}{{% if page.year %}}{{page.year}}{% else %}{{site.time | date: "%Y"}}{% endif %}{% if page.year or page.greentext and page.classification and page.duration %}</span>{% endif %}
+                {% if page.greentext and page.classification and page.duration %}<span class="mx-1 text-reset text-decoration-none">{{site.time | date: "%Y"}}</span>{% endif %}
                 {% if page.classification %}<span class="badge badge-dark font-weight-light align-text-top px-3 text-uppercase">{{page.classification}}</span>{% endif %}
                 {% if page.duration %}<span class="mx-1">{{page.duration}}</span>{% endif %}
             </p>

@@ -9,8 +9,6 @@ title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class=
 
 showname: Trying to <span class="blink">make you</span> laugh
 
-imdb: https://imdb.com/name/nm10740536
-
 image: default.jpg
 
 genre: MICF

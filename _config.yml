@@ -33,7 +33,7 @@ jekyll-mentions: https://twitter.com
 defaults:
   -
     scope:
-      path: "/themes/" # an empty string here means all files in the project
+      path: "themes" # an empty string here means all files in the project
       type: "pages"
     values:
       producer: The Internet

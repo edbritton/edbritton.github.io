@@ -1,47 +1,5 @@
-<div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
-
-        <ul id="tweets" class="list-group list-group-flush px-2"></ul>
+    <div id="twitter" class="bg-blur d-none d-lg-block" style="display:none;">
+      <ul id="tweets" class="list-group list-group-flush px-2"></ul>
     </div>
-    <script type="text/javascript" id="tweets">
-var linkify, recent_tweets;
-
-linkify = function(text) {
-  var i = 0, patterns;
-  patterns = {
-      link: { find: /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, replace: '<a href="$1" target="_blank">$1</a>' },
-     user: { find: /(^|\s)@(\w+)/g, replace: '$1<a href="http://twitter.com/$2" target="_blank">@$2</a>' },
-    hash: { find: /(^|\s)#(\w+)/g, replace: '$1<a href="https://twitter.com/search?q=from:{{site.author.twitter}}%20%23$2" target="_blank">#$2</a>' }
-  };
-  return text.replace(patterns.link.find, patterns.link.replace)
-  .replace(patterns.user.find, patterns.user.replace)
-  .replace(patterns.hash.find, patterns.hash.replace);
-};
-
-recent_tweets = function(data) {
-  var i = 0, tweetText, user = data[0].user, tweetsWithHashtags = [], tweetsWithSpecificHashtag = [], notReplies = [];
-  while (i < data.length) {
-    if (data[i].entities.hashtags[0]) {
-      var j = 0;
-      tweetsWithHashtags.push(i);
-      var hashtags = (data[i].entities.hashtags[0] ? data[i].entities.hashtags : null);
-      while (j < (hashtags ? hashtags.length : 0)) { if (hashtags[j].text === 'joke') tweetsWithSpecificHashtag.push(i); j++; }
-    }
-    if (!data[i].in_reply_to_user_id) notReplies.push(i);
-    //if (tweetsWithSpecificHashtag.indexOf(i) > -1) alert('Got hashtag?');
-    if (notReplies.indexOf(i) > -1) {
-      tweetText = ((!data[i].entities.urls[0]) ? linkify(data[i].text) : linkify(data[i].text).replace('>' + data[i].entities.urls[0].url + '<', '>' + data[i].entities.urls[0].display_url + '<'));
-      tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '" class="img-fluid"></div>' : '');
-      document.getElementById('tweets').innerHTML = document.getElementById('tweets').innerHTML + '<li class="list-group-item"><div>' + tweetText + '</div></li>';
-    };
-    i++;
-  };
-  //{% if hide %}document.getElementById('name').innerHTML = user.name;
-  //document.getElementById('username').innerHTML = '@'+user.screen_name;{% endif %}
-  document.getElementById('followers').innerHTML = user.followers_count;
-  //{% if hide %}document.getElementById('following').innerHTML = user.friends_count;
-  //document.getElementById('profilepic').src = user.profile_image_url_https;
-  //document.getElementById('description').innerHTML = user.description;
-  //document.getElementById('description').innerHTML += '</p><p><a href="' + user.url + '" title="' + user.entities.url.urls[0].expanded_url + '">' + user.entities.url.urls[0].display_url + '</a>';{% endif %}
-};
-    </script>{% if include.js %}
+    <script src="/assets/js/tweets.js"></script>{% if include.js %}
     <script type="text/javascript" src="{{ include.js }}"></script>{% endif %}

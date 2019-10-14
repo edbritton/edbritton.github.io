@@ -10,10 +10,10 @@
       <span>{{page.producer}}</span>{% endif %}
       <h1 itemprop="headline"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
       <h2><nobr>{{page.showname}}</nobr></h1>{% endif %}
-      <p class="lead my-3">
-        {% if page.genre %}<span>{{page.genre}}</span>{% endif %}
-        {% if page.year %}<span>{{page.year | date: "%Y"}}</span>{% endif %}
-        {% if page.duration %}<span>{{page.duration}}.</span>{% endif %}
+      <p>{% if page.genre %}
+        <span>{{page.genre}}</span>{% endif %}{% if page.year %}
+        <span>{{page.year | date: "%Y"}}</span>{% endif %}{% if page.duration %}
+        <span>{{page.duration}}.</span>{% endif %}
       </p>
     </header>
 
@@ -22,7 +22,7 @@
         <p itemprop="description"></p>
         <main itemprop="articleBody">{% if page.image %}
           <figure><img itemprop="image" width="100%" src="/assets/img/{{ page.image }}"><figcaption></figcaption></figure>{% endif %}
-          {{content}}
+          {{content | rstrip}}
         </main>
       </article>
     </section>

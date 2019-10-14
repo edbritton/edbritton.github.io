@@ -25,8 +25,8 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 
       <section>
         <article itemscope itemtype="http://schema.org/Article">
-          <main itemprop="articleBody" class="lead text-justify my-3">
-            <figure><img itemprop="image" width="100%" src="/assets/img/{% if page.image %}{{ page.image }}{% else %}default.jpg{% endif %}"><figcaption class="d-none d-print"></figcaption></figure>
+          <main itemprop="articleBody" class="lead text-justify my-3">{% if page.image %}
+            <figure><img itemprop="image" width="100%" src="/assets/img/{{ page.image }}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
             <p>{{content}}</p>
           </main>
         </article>

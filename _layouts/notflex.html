@@ -39,8 +39,8 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
         {% if link contains "imdb" %}<a class="btn btn-outline-light border-0 btn-lg bg-blur text-left" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-none d-sm-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
       </footer>
     </div>
-{% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}
 {% include scripts.html %}
+{% if site.author.twitter %}{% include tweets.html js="//edbritton.com/tweets.js" %}{% endif %}
   </body>
 
 </html>

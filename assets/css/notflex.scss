@@ -8,7 +8,11 @@
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern", "ss01", "ss07";
   @include agents(user-select, none);
-}  
+}
+
+html {
+  background: #000;
+}
 
 a {
   &, * {

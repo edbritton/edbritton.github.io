@@ -10,10 +10,6 @@
   @include agents(user-select, none);
 }
 
-html {
-  background: #000;
-}
-
 a {
   &, * {
     cursor: pointer;

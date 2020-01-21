@@ -34,10 +34,10 @@ js: //www.kthornbloom.com/textfit/js/textfit.js
 
       <footer class="lead d-flex flex-column flex-sm-row align-items-start" itemscope itemtype="http://schema.org/Organization">{% if site.author.twitter %}
         <a itemprop="sameAs" class="btn btn-outline-light btn-lg btn-block border-0 bg-blur text-left mt-sm-0 mr-sm-1 d-inline-flex align-items-baseline" href="https://twitter.com/{{site.author.twitter}}" target="_blank"><i class="fab fa-twitter"></i><span class="d-inline px-2 flex-grow-1">  Twitter</span><span id="followers" class="badge badge-pill badge-dark d-inline">137</span></a>{% endif %}{% if page.instagram %}
-        <a itemprop="sameAs" class="btn btn-outline-light border-0 btn-lg bg-blur text-left mt-sm-0 mr-sm-1" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-inline pl-2"> Instagram</span></a>{% endif %}
+        <a itemprop="sameAs" class="btn btn-outline-light btn-lg btn-block border-0 bg-blur text-left mt-sm-0 mr-sm-1" href="https://instagram.com/{{page.instagram}}" target="_blank"><i class="fab fa-instagram"></i><span class="d-inline pl-2"> Instagram</span></a>{% endif %}
         {% for link in site.social.links %}
-        {% if link contains "youtu" %}<a itemprop="sameAs" class="btn btn-outline-light border-0 btn-lg bg-blur text-left mt-sm-0 mr-sm-1" href="{{link}}" target="_blank"><i class="fab fa-youtube"></i><span class="d-inline pl-2">  YouTube</span></a>{% endif %}
-        {% if link contains "imdb" %}<a itemprop="sameAs" class="btn btn-outline-light border-0 btn-lg bg-blur text-left mt-sm-0 mr-sm-1" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
+        {% if link contains "youtu" %}<a itemprop="sameAs" class="btn btn-outline-light btn-lg btn-block border-0 bg-blur text-left mt-sm-0 mr-sm-1" href="{{link}}" target="_blank"><i class="fab fa-youtube"></i><span class="d-inline pl-2">  YouTube</span></a>{% endif %}
+        {% if link contains "imdb" %}<a itemprop="sameAs" class="btn btn-outline-light btn-lg btn-block border-0 bg-blur text-left mt-sm-0 mr-sm-1" href="{{link}}" target="_blank"><i class="fab fa-imdb"></i><span class="d-inline pl-2">  IMDb</span></a>{% endif %}{% endfor %}
       </footer>
     </div>{% if site.author.twitter %}
 {% include tweets.html js="//tumblr.edbritton.com/tweets.js" %}{% endif %}

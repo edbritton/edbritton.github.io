@@ -28,6 +28,7 @@ plugins:
   - jekyll-mentions
   - jekyll-seo-tag
   - jekyll-coffeescript
+  - jekyll-redirect-from
 
 jekyll-mentions: https://twitter.com
 

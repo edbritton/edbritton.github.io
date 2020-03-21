@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "sanfrancisco", "twitter", "sendtoback";
+@import "mixins", "variables", "sanfrancisco", "twitter";
 
 * {
   cursor: default;
@@ -17,9 +17,13 @@ a {
   }
   &:hover { color: var(--gray); }
 }
+
+html {
+  background: black
+}
   
 body {
-  background: black !important;
+  //background: darkgrey !important;
   max-width: 100%;
   max-width: 100vw;
   width: 100%;
@@ -30,6 +34,11 @@ body {
 header {
   h2.h1, h1.h2 { line-height: 0.9 }
   .lead span { margin: 0 2px }
+  background: darkgreen;
+  &, section {
+    height: 100vmin;
+    width: 100vmin;
+  }
 }
 
 h1 { font-family: $serif; }

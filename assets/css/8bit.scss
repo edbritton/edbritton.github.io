@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "sanfrancisco", "twitter";
+@import "mixins", "variables", "sanfrancisco", "twitter", google-font("Press+Start+2P&display=swap");
 
 * {
   cursor: default;
@@ -28,17 +28,20 @@ body {
   max-width: 100vw;
   width: 100%;
   height: 100%;
-  font-family: $sans-serif !important;
+  font-family: "Press Start 2P", $sans-serif !important;
+  font-size: calc(18px + (24 - 18) * ((100vw - 520px) / (1000 - 520)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 520px)/(100 - 520)));
+}
+
+header, section {
+  height: 100vmin;
+  width: 100vmin;
 }
 
 header {
   h2.h1, h1.h2 { line-height: 0.9 }
   .lead span { margin: 0 2px }
   background: darkgreen;
-  &, section {
-    height: 100vmin;
-    width: 100vmin;
-  }
 }
 
 h1 { font-family: $serif; }

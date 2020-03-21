@@ -1,0 +1,33 @@
+---
+Producer: Nintendo
+---
+<!doctype html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
+
+{% include head.html %}
+
+  <body>
+    <header>
+      <h1 itemprop="headline"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
+      <h2><nobr>{{page.showname}}</nobr></h1>{% endif %}
+      <p>{% if page.genre %}
+        <span>{{page.genre}}</span>{% endif %}{% if page.year %}
+        <span>{{page.year | date: "%Y"}}</span>{% endif %}{% if page.duration %}
+        <span>{{page.duration}}.</span>{% endif %}
+      </p>
+      <p>&copy;&nbsp;{% if page.year %}{{page.year | date: "%Y"}}{% else %}1984{% endif %}{% if page.producer %} {{page.producer}}{% endif %}</p>
+    </header>
+
+    <section>
+      <article itemscope itemtype="http://schema.org/Article">
+        <p itemprop="description"></p>
+        <main itemprop="articleBody">{% if page.image %}
+          <figure><img itemprop="image" width="100%" src="/assets/img/{{ page.image }}"><figcaption></figcaption></figure>{% endif %}
+          {{content | rstrip}}
+        </main>
+      </article>
+    </section>
+{% include scripts.html %}
+  </body>
+
+</html>

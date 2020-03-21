@@ -1,7 +1,13 @@
 ---
 ---
 
-@import "mixins", "variables", "sanfrancisco", "twitter", google-font("Press+Start+2P&display=swap");
+@import "mixins", "variables", "sanfrancisco", "twitter", url("https://raw.github.com/daneden/animate.css/master/animate.css");
+@include google-font("Press+Start+2P&display=swap");
+
+$min_width: 520px;
+$max_width: 1000px;
+$min_font: 18px;
+$max_font: 24px;
 
 * {
   cursor: default;
@@ -29,8 +35,9 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Press Start 2P", $sans-serif !important;
-  font-size: calc(18px + (24 - 18) * ((100vw - 520px) / (1000 - 520)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 520px)/(100 - 520)));
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  //font-size: calc(18px + (24 - 18) * ((100vw - 520px) / (1000 - 520)));
+  //line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 520px)/(100 - 520)));
 }
 
 header, section {

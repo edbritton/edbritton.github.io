@@ -7,8 +7,15 @@
 
   <body>
     <header>
-      <h1 itemprop="headline" class="slideInDown"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h2>{% if page.showname %}
-      <h2><nobr>{{page.showname}}</nobr></h1>{% endif %}
+
+<svg viewBox="0 0 100 18">
+  <text x="0" y="15">
+<h1 itemprop="headline" class="slideInDown"><nobr>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</nobr></h1>
+  </text>
+</svg>
+
+      {% if page.showname %}
+      <h2><nobr>{{page.showname}}</nobr></h2>{% endif %}
       <p>{% if page.genre %}
         <span>{{page.genre}}</span>{% endif %}{% if page.year %}
         <span>{{page.year | date: "%Y"}}</span>{% endif %}{% if page.duration %}

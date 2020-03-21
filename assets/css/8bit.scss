@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "sanfrancisco", "twitter", url("https://raw.github.com/daneden/animate.css/master/animate.css");
+@import "mixins", "variables", "sanfrancisco", "twitter", "animate", url("https://yarnpkg.com/en/package/normalize.css");
 @include google-font("Press+Start+2P&display=swap");
 
 $min_width: 520px;

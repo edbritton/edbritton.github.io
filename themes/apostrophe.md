@@ -1,9 +1,9 @@
 ---
 layout: apostrophe
 embed:
-	url: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
-	caption: My latest vlog.
-	cite: https://youtube.com/edbritton
+	- url: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+	- caption: My latest vlog.
+	- cite: https://youtube.com/edbritton
 title: Ed’s website
 ---
 

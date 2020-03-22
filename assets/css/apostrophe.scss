@@ -15,6 +15,8 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
+a { &, * { cursor: pointer; } }
+
 /*html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }*/

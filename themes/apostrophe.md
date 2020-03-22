@@ -11,4 +11,4 @@ G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can 
 
 There is a something I do which is kind of halfway between those – live stand-up comedy. It's a physical thing you have to leave the house to partake, plus your being there may even affect the end result!
 
-If that sounds like a thing you'd be into then follow me on Twitter you jolly loon.
+If that sounds like a thing you'd be into then follow me on Twitter you crazy thing.

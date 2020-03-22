@@ -1,0 +1,11 @@
+    <script>
+
+var recent_tweets;
+
+recent_tweets = function(data) {
+  var user = data[0].user;
+  document.getElementById('followers').innerHTML = user.followers_count;
+};
+    
+    </script>{% if include.js %}
+    <script type="text/javascript" src="{{ include.js }}"></script>{% endif %}

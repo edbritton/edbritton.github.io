@@ -1,19 +1,10 @@
 ---
-layout: notflex
-
-neon: true
-
-producer: The Internet
-
-title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class="blink">t</span>on
-
-showname: Trying to <span class="blink">make you</span> laugh
-
-image: default.jpg
-
-greentext: 92% British
-duration: 1m&nbsp;80cm
-classification: MA 15+
+layout: apostrophe
+title: Ed’s website
 ---
 
-Ed Britton, the gentleman <span itemprop="jobTitle">comedian</span>. A Brit who’s been in Australia since 2009. Originally trained in musical theatre and improv, Ed has performance in his blood, due to a mix-up at the blood bank.
+G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess the only IRL stuff I make are things you can ingest.
+
+There is a something I do which is kind of halfway between those – live stand-up comedy. It's a physical thing you have to leave the house to partake, plus your being there may even affect the end result!
+
+If that sounds like a thing you'd be into then follow me on Twitter you crazy thing.

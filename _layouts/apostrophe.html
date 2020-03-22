@@ -23,9 +23,9 @@
   <main itemprop="articleBody">
   <!-- figure><img itemprop="image" width="100%" src="https://edbritton.com/assets/img/default.jpg"><figcaption class="d-none d-print"></figcaption></figure -->
 
-  <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>
+  <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed %}
 
-  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-ns">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
+  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption || page.embed.cite %}<figcaption class="flex justify-between ph1 ph0-l">{{page.embed.caption}}{% if page.embed.cite %} <cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: "^.*://", ""}}</a></cite>{% endif %}</figcaption>{% endif %}</figure>{% endif %}
 
   <p class="dn-ns tc b f3 tracked-tight">Fantastic Tweets and where to find them</p>
   <ul class="list pl0 measure-ns bt bn-ns center f3 f3-ns f2-l b--dark-gray tc b-ns">{% for link in site.social.links %}

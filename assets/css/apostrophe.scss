@@ -1,0 +1,58 @@
+---
+---
+
+@import "mixins", "variables", "twitter", "sendtoback";
+
+$min_width: 520px;
+$max_width: 1000px;
+$min_font: 20px;
+$max_font: 27px;
+
+* {
+  cursor: default;
+  text-rendering: optimizeLegibility;
+  @include agents(user-select, none);
+}
+
+
+body {
+  background-image: url('https://edbritton.com/assets/img/default.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  font-family: ProxiNova, $sans-serif !important;
+}
+
+p { @include agents(hyphens, auto); }
+
+body::before {
+  position: fixed; /* normally absolute */
+}
+
+h1,.f1 { font-weight: 900 }
+
+.f-headline { 
+  font-size: 14vw;
+  font-size: calc(70px + (96 - 70) * ((100vw - 520px) / (1000 - 520)));
+  @include fluid-type($min_width, $max_width, 70px, 96px);
+}
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  
+.embed-responsive {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 200%;
+  min-height: 200%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  @include agents(transform, translateX(-50%) translateY(-50%));
+}

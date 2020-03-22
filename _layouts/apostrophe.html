@@ -4,6 +4,7 @@ css:
   - //unpkg.com/tachyons@4.10.0/css/tachyons.min.css
 ---
 <!doctype html>
+<!doctype html>
 <html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 
 {% include head.html %}
@@ -13,7 +14,7 @@ css:
 <body class="white bg-black">
 
 <header class="pa3 pa4-ns">
-  <h1 class="f1 f-headline-l lh-title tc fw9 ma0"><a class="link color-inherit" href="#" title="Home">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</a></h1>
+  <h1 class="f1 f-headline-ns lh-title tc fw9 ma0"><a class="link color-inherit" href="#" title="Home">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</a></h1>
   <!-- div class="tc pb3">
     <a class="link dim gray f6 f5-ns dib mr3" href="https://youtube.com/edbritton" title="Vlog">Vlog</a>
     <a class="link dim gray f6 f5-ns dib mr3" href="https://twitter.com/" title="Jokes">Jokes</a>
@@ -26,12 +27,13 @@ css:
   <main itemprop="articleBody">
   <!-- figure><img itemprop="image" width="100%" src="https://edbritton.com/assets/img/default.jpg"><figcaption class="d-none d-print"></figcaption></figure -->
 
-  <div class="measure ph4 center f4 f2-l">{{content}}</div>{% if page.embed.url %}
+  <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed.url %}
 
-  <figure class="center w-100 w-50-l"><div class='embed-container'><iframe src='{{page.embed.url}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption || page.embed.cite %}<figcaption class="flex justify-between ph1 ph0-l">{{page.embed.caption}}{% if page.embed.cite %} <cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: "^.*://", ""}}</a></cite>{% endif %}</figcaption>{% endif %}</figure>{% endif %}
+  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.url}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption || page.embed.cite %}<figcaption class="flex justify-between ph1 ph0-l">{{page.embed.caption}}{% if page.embed.cite %} <cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: "^.*://", ""}}</a></cite>{% endif %}</figcaption>{% endif %}</figure>{% endif %}
 
-  <ul class="list pl0 measure-l bt-m center f4 f2-l b-l b--dark-gray tc">{% for link in site.social.links %}
-    <li class="lh-copy ba bn-l bl-0 bt-0 br-0 b--dark-gray dib-l"><a itemprop="sameAs" class="link db-m pa3 color-inherit bg-animate hover-bg-blue hover-near-white" href="{{link}}">{% if link contains "twitter" %}Twitter{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+  <p class="dn-ns tc b f3 tracked-tight">Fantastic Tweets and where to find them</p>
+  <ul class="list pl0 measure-ns bt bn-ns center f3 f3-ns f2-l b--dark-gray tc b-ns">{% for link in site.social.links %}
+    <li class="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns"><a itemprop="sameAs" class="link db pa3 color-inherit bg-animate hover-bg-blue hover-near-white" href="{{link}}">{% if link contains "twitter" %}Twitter{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
   </ul>
 
   </main>
@@ -39,14 +41,15 @@ css:
 
 
 <footer class="pv4 ph3 ph5-ns tc moon-gray">{% if site.author.twitter %}
-  <a itemprop="sameAs" class="link dib nh2 w2 br-100 color-inherit" href="https://twitter.com/{{site.author.twitter}}" title="">
-    <svg data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor" width="2em">
+  <a itemprop="sameAs" class="link dib nh2 nw2 br-100 color-inherit" href="https://twitter.com/{{site.author.twitter}}" title="">
+    <svg class="dn" data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor" width="2em">
       <title>@{{site.author.twitter}}</title>
       <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
     </svg>
+    <img class="dib dib-ns br-100 h3 w3" src="https://avatars.io/twitter/{{site.author.twitter}}">
   </a>{% endif %}
 
-  <p><small class="f5-l f3 db tc">&copy; {{site.time | date: "%Y"}} Ed Britton{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+  <p><small class="f5 f3-l db tc">&copy; {{site.time | date: "%Y"}} Ed Britton{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
 </footer>
 
 </body>

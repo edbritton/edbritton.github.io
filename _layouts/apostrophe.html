@@ -29,10 +29,10 @@ published: true
 
   <div class="measure ph4 center f4 f2-l">{{content}}</div>
 
-  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-l">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
+  <figure class="center w-100 w-50-ns"><div class='embed-container'><iframe src='https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-l">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
 
-  <ul class="list pl0 measure-l bt-m center f4 f2-l b-l b--dark-gray tc">{% for link in site.social.links %}
-    <li class="lh-copy ba bn-l bl-0 bt-0 br-0 b--dark-gray dib-l"><a itemprop="sameAs" class="link db-m pa3 pv4 pv3-m color-inherit bg-animate hover-bg-blue hover-near-white" href="{{link}}">{% if link contains "twitter" %}Twitter{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+  <ul class="list pl0 measure-l bt center f4 f2-l b-l b--dark-gray tc">{% for link in site.social.links %}
+    <li class="lh-copy ba bn-l bl-0 bt-0 br-0 b--dark-gray dib-l"><a itemprop="sameAs" class="link db-ns pa3 pt4 pt3-ns color-inherit bg-animate hover-bg-blue hover-near-white" href="{{link}}">{% if link contains "twitter" %}Twitter{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
   </ul>
 
   </main>

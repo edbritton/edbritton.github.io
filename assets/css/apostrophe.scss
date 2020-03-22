@@ -14,9 +14,9 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
-nhtml {
+/*html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-}
+}*/
 
 body {
   background-image: url('/assets/img/default.jpg');

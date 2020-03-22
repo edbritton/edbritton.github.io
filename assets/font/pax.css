@@ -4,7 +4,6 @@
          url('pax-black-webfont.woff') format('woff');
     font-weight: 900;
     font-style: normal;
-
 }
 
 @font-face {
@@ -13,7 +12,6 @@
          url('pax-blackit-webfont.woff') format('woff');
     font-weight: 900;
     font-style: italic;
-
 }
 
 @font-face {
@@ -22,7 +20,6 @@
          url('pax-extrabld-webfont.woff') format('woff');
     font-weight: 800;
     font-style: normal;
-
 }
 
 @font-face {
@@ -31,7 +28,6 @@
          url('pax-extrabldit-webfont.woff') format('woff');
     font-weight: 800;
     font-style: italic;
-
 }
 
 @font-face {
@@ -40,7 +36,6 @@
          url('pax-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
-
 }
 
 
@@ -50,7 +45,6 @@
          url('pax-boldit-webfont.woff') format('woff');
     font-weight: 700;
     font-style: italic;
-
 }
 
 
@@ -60,7 +54,6 @@
          url('pax-semibold-webfont.woff') format('woff');
     font-weight: 600;
     font-style: normal;
-
 }
 
 @font-face {
@@ -78,7 +71,6 @@
          url('pax-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-
 }
 
 @font-face {
@@ -87,7 +79,6 @@
          url('pax-regularit-webfont.woff') format('woff');
     font-weight: 400;
     font-style: italic;
-
 }
 
 @font-face {
@@ -96,7 +87,6 @@
          url('pax-light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-
 }
 
 @font-face {
@@ -105,7 +95,6 @@
          url('pax-lightit-webfont.woff') format('woff');
     font-weight: 300;
     font-style: italic;
-
 }
 
 @font-face {
@@ -114,7 +103,6 @@
          url('paxt-thin-webfont.woff') format('woff');
     font-weight: 100;
     font-style: normal;
-
 }
 
 @font-face {
@@ -123,5 +111,4 @@
          url('pax-thinit-webfont.woff') format('woff');
     font-weight: 100;
     font-style: italic;
-
 }

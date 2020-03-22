@@ -14,9 +14,12 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
+nhtml {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
 
 body {
-  background-image: url('https://edbritton.com/assets/img/default.jpg');
+  background-image: url('/assets/img/default.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -37,9 +40,7 @@ h1,.f1 { font-weight: 900 }
   @include fluid-type($min_width, $max_width, 70px, 96px);
 }
 
-html {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-}
+.user-mention { color: inherit; text-decoration: none; }
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 

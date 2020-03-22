@@ -8,11 +8,7 @@ css:
 
 {% include head.html %}
 
-<style>
-
-body { background-image: url('https://edbritton.com/assets/img/default.jpg'); }
-
-</style>
+<style>body { background-image: url('/assets/img/{{ page.image }}'); }</style>
 
 <body class="white bg-black">
 
@@ -27,16 +23,12 @@ body { background-image: url('https://edbritton.com/assets/img/default.jpg'); }
 </header>
 
 <article class="pa0" itemscope="" itemtype="http://schema.org/Article">
-          <main itemprop="articleBody">
-            <!-- figure><img itemprop="image" width="100%" src="https://edbritton.com/assets/img/default.jpg"><figcaption class="d-none d-print"></figcaption></figure -->
+  <main itemprop="articleBody">
+  <!-- figure><img itemprop="image" width="100%" src="https://edbritton.com/assets/img/default.jpg"><figcaption class="d-none d-print"></figcaption></figure -->
 
-    <div class="measure ph4 center f2">{{content}}</div>
+  <div class="measure ph4 center f2">{{content}}</div>
 
-            <p class="measure ph4 center f2">G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess the only IRL stuff I make are things you can ingest.</p>
-            <p class="measure ph4 center f2">There is a half-way thing which you might like – me doing live stand-up comedy. It's a physical thing you have to leave the house to partake in, plus you being there may affect the end result!
-            <p class="measure ph4 center f2">If that sounds like a thing you'd be into then follow me on Twitter you jolly loon.</p>
-
-<figure class="center w-100 w-50-l"><div class='embed-container'><iframe src='https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-l">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
+  <figure class="center w-100 w-50-l"><div class='embed-container'><iframe src='https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-l">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
 
   <ul class="list pl0 measure-l bt-m center f2 b-l b--dark-gray tc">
     <li class="lh-copy ba bn-l bl-0 bt-0 br-0 b--dark-gray dib-l"><a class="link db-m pa3 color-inherit bg-animate hover-bg-blue hover-near-white" href="https://twitter.com/edbritton">Twitter</a></li>
@@ -44,8 +36,8 @@ body { background-image: url('https://edbritton.com/assets/img/default.jpg'); }
     <li class="lh-copy ba bn-l bl-0 bt-0 br-0 b--dark-gray dib-l"><a class="link db-m pa3 color-inherit bg-animate hover-bg-blue hover-near-white" href="https://imdb.com/name/nm10740536">IMDb</a></li>
   </ul>
 
-          </main>
-        </article>
+  </main>
+</article>
 
 
 <footer class="pv4 ph3 ph5-ns tc moon-gray">
@@ -56,7 +48,7 @@ body { background-image: url('https://edbritton.com/assets/img/default.jpg'); }
     </svg>
   </a>
 
-  <p><small class="f5-l f3 db tc">&copy; <span class="tracked">{{site.time | date: "%Y"}}</span> Ed Britton (@edbritton)</small></p>
+  <p><small class="f5-l f3 db tc">&copy; {{site.time | date: "%Y"}} Ed Britton (@edbritton)</small></p>
 </footer>
 
 </body>

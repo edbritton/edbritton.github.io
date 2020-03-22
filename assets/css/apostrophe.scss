@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "twitter", "sendtoback";
+@import "mixins", "variables", "twitter", "sendtoback", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
 
 $min_width: 520px;
 $max_width: 1000px;

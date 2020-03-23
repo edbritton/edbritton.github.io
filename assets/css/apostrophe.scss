@@ -21,6 +21,8 @@ a { &, * { cursor: pointer; } }
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }*/
 
+html { background: black }
+
 body {
   background-image: url('/assets/img/default.jpg');
   background-repeat: no-repeat;

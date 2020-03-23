@@ -1,6 +1,6 @@
 ---
 layout: apostrophe
-title: <ruby>Ed’s <rp>(</rp><rt class="fw1">エドの</rt><rp>)</rp></ruby> <ruby>website <rp>(</rp><rt class="fw1">ウェブサイト</rt><rp>)</rp></ruby>
+title: <ruby>Ed’s <rp>(</rp><rt class="fw1">エドの</rt><rp>)</rp> website <rp>(</rp><rt class="fw1">ウェブサイト</rt><rp>)</rp></ruby>
 ---
 
 G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess the only IRL stuff I make are things you can ingest.

@@ -45,7 +45,7 @@
     <img class="dib dib-ns br-100 h3 w3" src="https://avatars.io/twitter/{{site.author.twitter}}">
   </a>{% endif %}{% if site.author %}
 
-  <p><small class="f5 f3-l db tc">&copy; {{site.time | date: "%Y"}} {{site.author}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+  <p><small class="f5 f3-l db tc">&copy; {{site.time | date: "%Y"}} {{site.author[0]}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
 </footer>{% if site.author.twitter %}
 {% include followers.html js="//tumblr.edbritton.com/tweets.js" %}{% endif %}{% endif %}
 

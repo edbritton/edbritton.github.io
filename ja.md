@@ -1,7 +1,7 @@
 ---
 layout: apostrophe
-alttitle: <ruby>Ed’s <rt>エドの</rt>&nbsp;website <rt>ウェブサイト</rt></ruby>
-title: エドのウェブサイト
+title: <ruby><rb>Ed’s</rb>&nbsp;<rb>website</rb><rp>(</rp><rt>エドの</rt><rt>ウェブサイト</rt><rp>)</rp></ruby>
+alt-title: エドのウェブサイト
 ---
 
 こんにちは、エドです。 物を作る。 ジョーク、ビデオ日記、ウェブサイトだけでなく、パンやビール、日本料理など、触れることができるもの。 たぶん私が作る唯一の実物は食用です。

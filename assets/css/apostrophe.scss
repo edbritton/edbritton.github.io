@@ -37,12 +37,12 @@ body::before {
 }
 
 h1, .f1 {
-  ruby > rt { font-weight: 100; visibility: visible }
+  ruby > rt { font-weight: 100; display: block }
 }
 
-p {
-  ruby > rt { visibility: hidden }
-  ruby:hover > rt { visibility: visible }
+article {
+  ruby > rt { display: none }
+  ruby:hover > rt { display: block }
 }
 
 /*h1,.f1,f-headline { font-weight: 900 }

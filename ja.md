@@ -1,7 +1,8 @@
 ---
 layout: apostrophe
-title: <ruby>Ed’s <rt>エドの</rt>&nbsp;website <rt>ウェブサイト</rt></ruby>
+title: <ruby>Ed’s website <rp>(</rp><rt>エドのウェブサイト</rt><rp>)</rp></ruby>
 alt-title: エドのウェブサイト
+published: true
 ---
 
 <!--

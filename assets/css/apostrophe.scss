@@ -36,11 +36,11 @@ body::before {
   position: fixed; /* normally absolute */
 }
 
-h1 ruby > rt { font-weight: thin; visibility: visisble }
+h1 ruby > rt { font-weight: thin; visibility: visible }
 
-p ruby {
-  rt { visibility: hidden }
-  &:hover > rt { visibility: visible }
+p {
+  ruby > rt { visibility: hidden }
+  ruby:hover > rt { visibility: visible }
 }
 
 /*h1,.f1,f-headline { font-weight: 900 }

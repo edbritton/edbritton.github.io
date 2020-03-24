@@ -41,8 +41,8 @@ h1, .f1 {
 }
 
 .ja {
-  rt { display: none; max-height: 0; transition: max-height 2s }
-  &:hover rt { display: block; max-height: 100%; }
+  rt { font-size: 0; transition: font-size 1s }
+  &:hover rt { font-size: 0.5em }
 }
 
 /*h1,.f1,f-headline { font-weight: 900 }

@@ -1,6 +1,6 @@
 ---
 layout: apostrophe
-title: <ruby>Ed’s <rt>エドの</rt> website <rt>ウェブサイト</rt></ruby>
+title: <ruby>Ed’s <rt>エドの</rt>&nbsp;website <rt>ウェブサイト</rt></ruby>
 ---
 
 こんにちは、エドです。 物を作る。 ジョーク、ビデオ日記、ウェブサイトだけでなく、パンやビール、日本料理など、触れることができるもの。 たぶん私が作る唯一の実物は食用です。

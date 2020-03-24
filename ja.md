@@ -24,6 +24,6 @@ alt-title: エドのウェブサイト
 
 <p>
 <ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<ruby><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>したことが<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きなら、Twitter で フォロー してください。<ruby><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>で<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>かれていること を<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>い<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>してください。 
-<p>
+</p>
 
 </div>

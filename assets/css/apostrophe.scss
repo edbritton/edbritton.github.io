@@ -40,9 +40,9 @@ h1, .f1 {
   ruby > rt { font-weight: 100; display: block }
 }
 
-article {
-  ruby > rt { display: none }
-  ruby:hover > rt { display: block }
+.ja {
+  rt { display: none; max-height: 0; }
+  &hover:hover rt { display: block; max-height: 100%; }
 }
 
 /*h1,.f1,f-headline { font-weight: 900 }

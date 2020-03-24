@@ -36,7 +36,9 @@ body::before {
   position: fixed; /* normally absolute */
 }
 
-h1 ruby > rt { font-weight: thin; visibility: visible }
+h1, .f1 {
+  ruby > rt { font-weight: 100; visibility: visible }
+}
 
 p {
   ruby > rt { visibility: hidden }

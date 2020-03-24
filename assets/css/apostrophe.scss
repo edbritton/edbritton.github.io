@@ -37,7 +37,7 @@ body::before {
 }
 
 h1, .f1 {
-  ruby > rt { font-weight: 100; visibility: visible }
+  ruby > rt { font-weight: 100 !important; visibility: visible }
 }
 
 p {

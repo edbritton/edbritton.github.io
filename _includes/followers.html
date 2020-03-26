@@ -22,7 +22,7 @@ recent_tweets = function(data) {
   var user = data[0].user;
   document.getElementById('followers').innerHTML = user.followers_count;
 
-{% if lastJoke %}
+{% if include.lastJoke %}
   var i = 0, tweetText, user = data[0].user, tweetsWithHashtags = [], tweetsWithSpecificHashtag = [], notReplies = [];
   while (i < data.length) {
     if (data[i].entities.hashtags[0]) {

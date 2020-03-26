@@ -51,7 +51,9 @@ for (i in lookup) {
     roman += i;
     num -= lookup[i];
   }
-}
+};
+
+document.getElementById('year').innerHTML = roman;
     
     </script>{% if include.js %}
     <script type="text/javascript" src="{{ include.js }}"></script>{% endif %}

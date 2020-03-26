@@ -37,6 +37,7 @@ recent_tweets = function(data) {
       tweetText = ((!data[i].entities.urls[0]) ? linkify(data[i].text) : linkify(data[i].text).replace('>' + data[i].entities.urls[0].url + '<', '>' + data[i].entities.urls[0].display_url + '<'));
       tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '"></div>' : '');
       document.getElementById('{{ include.tweetID }}').innerHTML = document.getElementById('{{ include.tweetID }}').innerHTML + '<p>' + tweetText + '</p>';
+      break; //hacky way of ending on first hashtag
     };
     i++;
   };

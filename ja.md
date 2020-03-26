@@ -2,7 +2,10 @@
 layout: apostrophe
 alt-title: エドのウェブサイト
 title: <ruby><rb>Ed’s website<rp> (<rt>エドのウェブサイト<rp>)</ruby>
-embed: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+embed:
+- src: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+- caption: My latest vlog.
+- cite: https://youtube.com/edbritton
 ---
 
 <!--

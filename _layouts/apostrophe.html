@@ -12,8 +12,6 @@
 <header class="pa3 pa4-ns">
   <h1 class="f1 f-headline-l lh-title-ns tc fw9 ma0">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
   <!-- div class="tc pb3">
-    <a class="link dim gray f6 f5-ns dib mr3" href="https://youtube.com/edbritton" title="Vlog">Vlog</a>
-    <a class="link dim gray f6 f5-ns dib mr3" href="https://twitter.com/" title="Jokes">Jokes</a>
     <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Store</a>
     <a class="link dim gray f6 f5-ns dib" href="#" title="Contact">Contact</a>
   </div -->
@@ -25,7 +23,7 @@
 
   <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>
 
-  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-ns">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
+  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed}}' frameborder='0' allowfullscreen></iframe></div><figcaption class="flex justify-between ph1 ph0-ns">My latest vlog. <cite><a class="link color-inherit dim" href="https://youtube.com/edbritton">youtube.com/edbritton</a></cite></figcaption></figure>
 
   <p class="dn-ns tc b f3 tracked-tight">Fantastic Tweets and where to find them</p>
   <ul class="list pl0 measure-ns bt bn-ns center f3 f3-ns f2-l b--dark-gray tc b-ns">{% for link in site.social.links %}

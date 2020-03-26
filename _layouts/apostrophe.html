@@ -44,7 +44,7 @@
     <img class="dib dib-ns br-100 h3 w3" src="https://avatars.io/twitter/{{site.author.twitter}}">
   </a>{% endif %}{% if site.author.name %}
 
-  <p><small class="f5 f3-l db tc">&copy; <small class="tracked" id="year">{{site.time | date: "%Y"}}</small> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+  <p><small class="f5 f3-l db tc">&copy; <span class="tracked" id="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
 </footer>{% if site.author.twitter %}
 {% include followers.html js="//tumblr.edbritton.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
 

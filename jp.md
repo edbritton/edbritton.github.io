@@ -1,7 +1,7 @@
 ---
 layout: apostrophe
 alt-title: エドのウェブサイト
-title: <ruby><rb>Ed’s website <rp>(<rt>エドのウェブサイト<rp>)</ruby>
+title: <ruby><rb>Ed’s website <rp>(<rt>エドのウェブサイト<rp>)</rp></ruby>
 embed:
   src: >-
     https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3

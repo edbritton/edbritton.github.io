@@ -2,7 +2,7 @@
 
 var recent_tweets;
 
-{% if include.lastJoke %}
+{% if include.tweetID %}
 var linkify;
 
 linkify = function(text) {
@@ -22,7 +22,7 @@ recent_tweets = function(data) {
   var user = data[0].user;
   document.getElementById('followers').innerHTML = user.followers_count;
 
-{% if include.lastJoke %}
+{% if include.tweetID %}
   var i = 0, tweetText, user = data[0].user, tweetsWithHashtags = [], tweetsWithSpecificHashtag = [], notReplies = [];
   while (i < data.length) {
     if (data[i].entities.hashtags[0]) {
@@ -36,7 +36,7 @@ recent_tweets = function(data) {
     if (notReplies.indexOf(i) > -1) && (tweetsWithSpecificHashtag.indexOf(i) > -1) {
       tweetText = ((!data[i].entities.urls[0]) ? linkify(data[i].text) : linkify(data[i].text).replace('>' + data[i].entities.urls[0].url + '<', '>' + data[i].entities.urls[0].display_url + '<'));
       tweetText += ((data[i].entities.media) ? '<div><img src="' + data[i].entities.media[0].media_url_https + '"></div>' : '');
-      document.getElementById('lastJoke').innerHTML = document.getElementById('lastJoke').innerHTML + '<p>' + tweetText + '</p>';
+      document.getElementById('{{ include.tweetID }}').innerHTML = document.getElementById('{{ include.tweetID }}').innerHTML + '<p>' + tweetText + '</p>';
     };
     i++;
   };

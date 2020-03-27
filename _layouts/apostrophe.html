@@ -5,7 +5,8 @@
 
 {% include head.html %}
 
-{% if page.embed %}<style>body { background-image: url('/assets/img/{{ page.image }}'); }</style>{% endif %}
+{% if page.embed %}<style>body { background-image: url('/assets/img/{{ page.image }}'); }
+  body::before { position: absolute !important; }</style>{% endif %}
 
 <body class="white bg-black">
 

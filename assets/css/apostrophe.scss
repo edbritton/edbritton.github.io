@@ -43,10 +43,6 @@ body {
 
 p { @include agents(hyphens, auto); }
 
-body::before {
-  position: fixed; /* normally absolute */
-}
-
 h1, .f1 {
   ruby > rt { font-weight: 100; display: block }
 }

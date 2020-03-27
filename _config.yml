@@ -47,7 +47,7 @@ defaults:
       duration: 1m&nbsp;80cm
       classification: MA 15+
   - scope:
-      path: "/"
+      path: ""
       type: "pages"
     values:
       layout: apostrophe
@@ -58,5 +58,6 @@ defaults:
         cite: 'https://youtube.com/edbritton'
   - scope:
       path: "404.md"
+      path: "blog.md"
     values:
       embed: false

@@ -57,6 +57,6 @@ defaults:
         caption: My latest vlog.
         cite: 'https://youtube.com/edbritton'
   - scope:
-      path: "/404.html"
+      permalink: "/404.html"
     values:
       embed: nil

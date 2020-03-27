@@ -59,4 +59,4 @@ defaults:
   - scope:
       permalink: "/404.html"
     values:
-      embed: nil
+      embed: false

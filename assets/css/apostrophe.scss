@@ -15,7 +15,14 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
-a { &, * { cursor: pointer; } }
+a {
+  color: #357edd;
+  text-decoration: none;
+  &, * { cursor: pointer; }
+  &, &:active, &:focus, &:hover, &:link, &:visited {
+    transition: color .15s ease-in;
+  }
+}
 
 /*html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);

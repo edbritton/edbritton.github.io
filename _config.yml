@@ -58,6 +58,9 @@ defaults:
         cite: 'https://youtube.com/edbritton'
   - scope:
       path: "404.md"
+    values:
+      embed: false
+  - scope:
       path: "blog.md"
     values:
       embed: false

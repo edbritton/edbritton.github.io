@@ -16,7 +16,7 @@ $max_font: 27px;
 }
 
 a {
-  color: #357edd;
+  color: gold;
   text-decoration: none;
   &, * { cursor: pointer; }
   &, &:active, &:focus, &:hover, &:link, &:visited {
@@ -24,8 +24,8 @@ a {
   }
 }
 
-.white {
-  a { color: gold; }
+.bg-white {
+  a { color: #357edd; }
 }
 
 /*html {

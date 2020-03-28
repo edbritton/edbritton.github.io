@@ -5,8 +5,5 @@ redirect_from:
   - /jokes
   - /dailyjokes
   - /daily-jokes
-  - /#joke
-  - /#jokes
-  - /#dailyjokes
 redirect_to: https://twitter.com/search?q=from%3Aedbritton%20%23joke
 ---

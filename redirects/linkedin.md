@@ -1,7 +1,7 @@
 ---
 title: Ed's Linkedin
 redirect_from:
-  - /linkedin
-  - /linkdin
+  - /linkedin/
+  - /linkdin/
 redirect_to: http://linkd.in/edbritton
 ---

@@ -44,7 +44,7 @@ defaults:
         caption: My latest vlog.
         cite: https://youtube.com/edbritton
   - scope:
-      path: "_layouts/posts.html"
+      path: "_layouts/post.html"
     values:
       layout: apostrophe
   - scope:

@@ -1,6 +1,5 @@
 ---
 title: Ed’s website
-published: true
 ---
 
 G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess the only IRL stuff I make are things you can ingest.

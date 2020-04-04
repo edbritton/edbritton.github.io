@@ -9,7 +9,7 @@
 
 <body class="white bg-black">
 
-<header class="pa3 pa4-ns">{% if page.dir != "/" or page.dir != "/jp/" %}
+<header class="pa3 pa4-ns">{% if page.dir != "/" %}
   <a class="dim" href="/"><svg class="w1 v-mid mb1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor"><title>chevronLeft icon</title><path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path></svg> Ed’s website</a>{% endif %}
   <h1 class="f1 f-headline-l lh-title-ns tc fw9 ma0">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
   <!-- div class="tc pb3">

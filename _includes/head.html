@@ -1,7 +1,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">{% if site.author.twitter %}
+    <link rel="apple-touch-icon" href="https://avatars.io/twitter/{{site.author.twitter}}">{% endif %}
     <link rel="stylesheet" href="/assets/css/{{ page.layout }}.css" />{% if include.neon %}
     <link rel="stylesheet" href="/assets/css/neon.css" />{% endif %}
     {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />

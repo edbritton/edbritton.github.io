@@ -19,9 +19,9 @@ a {
   color: #FFD700;
   text-decoration: none;
   &, * { cursor: pointer; }
-  &, &:active, &:focus, &:hover, &:link, &:visited {
+  /*&, &:active, &:focus, &:hover, &:link, &:visited {
     transition: color .15s ease-in;
-  }
+  }*/
 }
 
 #lastJoke.bg-white {

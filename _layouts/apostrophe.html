@@ -24,7 +24,7 @@
 
   <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed %}
 
-  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container br3-ns'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
+  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
 
   <p class="dn-ns tc b f3">Fantastic Tweets and where to find them</p>
   <ul class="list pl0 measure-ns bt bn-ns center f3 f3-ns f2-l b--dark-gray tc b-ns">{% for link in site.social.links %}

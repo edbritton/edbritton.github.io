@@ -5,7 +5,7 @@
 
 {% include head.html %}
 
-{% if page.embed %}<style>body { background-image: url('/assets/img/{{ page.image }}'); }</style>{% endif %}
+{% if page.embed %}<style>body { background-image: url('{{ page.image }}'); }</style>{% endif %}
 
 <body class="white bg-black">
 
@@ -20,7 +20,7 @@
 
 <article class="pa0" itemscope="" itemtype="http://schema.org/Article">
   <main itemprop="articleBody">{% if page.embed == false %}
-  <figure><img itemprop="image" width="100%" src="/assets/img/{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
+  <figure><img itemprop="image" width="100%" src="{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
 
   <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed %}
 

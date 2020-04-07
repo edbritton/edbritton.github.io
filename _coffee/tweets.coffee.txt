@@ -1,0 +1,23 @@
+parseTweet = (text) ->
+  patterns = 
+    link:
+      find: /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig
+      replace: '<a href="$1" target="_blank">$1</a>'
+    user:
+      find: /(^|\s)@(\w+)/g
+      replace: '$1<a href="http://twitter.com/$2" target="_blank">@$2</a>'
+    hash:
+      find: /(^|\s)#(\w+)/g
+      replace: '$1<a href="https://twitter.com/search?q=from:{twitterusername}%20%23$2" target="_blank">#$2</a>'
+  text.replace(patterns.link.find, patterns.link.replace).replace(patterns.user.find, patterns.user.replace).replace patterns.hash.find, patterns.hash.replace
+
+recent_tweets = (data) ->
+  i = 0
+  while i < data.length
+    if data[i].in_reply_to_user_id is null
+      document.getElementById('tweets').innerHTML = document.getElementById('tweets').innerHTML + '<li class="list-group-item bg-dark"><div>' + parseTweet(data[i].text) + '</div></li>'
+      document.getElementById('followers').innerHTML = data[1].user.followers_count
+      document.getElementById('twitter').style.display = 'block'
+      document.getElementById('followers').style.display = 'block'
+    i++
+  return

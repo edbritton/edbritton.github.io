@@ -16,12 +16,12 @@ $max_font: 27px;
 }
 
 a {
-  color: #FF4136;
+  color: #E7040F;
   text-decoration: none;
   &, * { cursor: pointer; }
-  &, &:active, &:focus, &:hover, &:link, &:visited {
+  /*&, &:active, &:focus, &:hover, &:link, &:visited {
     transition: color .15s ease-in;
-  }
+  }*/
 }
 
 #lastJoke.bg-white {

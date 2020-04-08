@@ -38,7 +38,7 @@ defaults:
       image: /assets/img/default.jpg
   - scope:
       path: "index.md"
-    value:
+    values:
       twitter:
         card: player
         player: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3

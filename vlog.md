@@ -1,16 +1,16 @@
 ---
 title: Ed’s vlog
 permalink: /vlog/index.html
-canonical_url: https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+redirect_to: https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
 author: edbritton
 twitter:
   card: player
   username: youtube
 ---
 <script>
-location = "{{page.canonical_url}}"
+location = "{{page.redirect_to}}"
 </script>
-<meta http-equiv="refresh" content="0; url={{page.canonical_url}}">
+<meta http-equiv="refresh" content="0; url={{page.credirect_tol}}">
 <meta name="robots" content="noindex">
 
-<a href="{{page.canonical_url}}">Click here if you are not redirected.</a>
+<a href="{{page.redirect_tol}}">Click here if you are not redirected.</a>

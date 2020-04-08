@@ -1,11 +1,12 @@
 ---
 ---
 <!doctype html>
-<html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
+<html lang="{{page.lang}}">
 
 {% include head.html %}
 
-{% if page.embed %}<style>body { background-image: url('{{ page.image }}'); }</style>{% endif %}
+{% if page.embed %}<meta property="twitter:player" content="{{page.embed}}">
+<style>body { background-image: url('{{ page.image }}'); }</style>{% endif %}
 
 <body class="white bg-black">
 

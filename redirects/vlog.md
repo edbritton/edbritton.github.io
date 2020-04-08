@@ -3,6 +3,8 @@ title: Ed’s vlog
 redirect_from:
   - /vlog/
 canonical_url: https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+twitter:
+  card: player
 ---
 <script>
 location = "{{page.canonical_url}}"

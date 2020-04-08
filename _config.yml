@@ -33,6 +33,10 @@ jekyll-mentions: https://twitter.com
 
 defaults:
   - scope:
+      path: "vlog.md"
+    values:
+      image: /assets/img/default.jpg
+  - scope:
       path: ""
       type: "pages"
     values:

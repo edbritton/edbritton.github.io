@@ -2,8 +2,10 @@
 title: Ed’s vlog
 permalink: /vlog/index.html
 canonical_url: https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
+author: edbritton
 twitter:
   card: player
+  username: youtube
 ---
 <script>
 location = "{{page.canonical_url}}"

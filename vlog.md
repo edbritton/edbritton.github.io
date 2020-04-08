@@ -4,9 +4,6 @@ permalink: /vlog/index.html
 canonical_url: https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
 twitter:
   card: player
-  player:
-    height: 512
-    width: 910
 ---
 <script>
 location = "{{page.canonical_url}}"

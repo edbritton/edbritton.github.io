@@ -20,7 +20,7 @@ $lightest: white;
   color: $lightest;
   @include borders;
 
-  img, figure {
+  [itemprop="image"], figure {
     opacity: .75;
     transition: opacity .5s ease-in-out;
     &:hover { opacity: 1 }

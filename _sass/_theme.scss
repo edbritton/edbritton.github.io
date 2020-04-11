@@ -21,12 +21,12 @@ $lightest: white;
 }
 
 @mixin mode-lighter {
-  background-color: $lighter;
+  background-color: $lightest;
   color: $darker;
 }
 
 @mixin mode-light {
-  background-color: $lightest;
+  background-color: $lighter;
   color: $darkest;
   @include mode-borders;
 }

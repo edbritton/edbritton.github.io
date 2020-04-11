@@ -19,6 +19,13 @@ $lightest: white;
   background-color: $darkest;
   color: $lightest;
   @include borders;
+
+  img, figure {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+    &:hover { opacity: 1 }
+  }
+
 }
 
 @mixin lighter {

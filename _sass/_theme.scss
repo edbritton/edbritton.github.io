@@ -67,3 +67,46 @@ $lightest: white;
 
   }
 }
+
+
+
+@mixin borders { &, * { border-color: $darker; } }
+
+@mixin darker {
+  background-color: $darker;
+  color: $lighter;
+}
+
+@mixin dark {
+  background-color: $darkest;
+  color: $lightest;
+  @include borders;
+}
+
+@mixin lighter {
+  background-color: $lightest;
+  color: $darker;
+}
+
+@mixin light {
+  background-color: $lighter;
+  color: $darkest;
+  @include borders;
+}
+
+@mixin theme($mode) {
+  [data-theme="#{$mode}"] {
+    @content
+  }
+}
+
+$modes: system, inverted;
+
+@each $mode in $modes {
+  @include theme($mode) {
+    @if $mode == system { @include dark } @else if $mode == inverted { @include light };
+    @media (prefers-color-scheme: light) {
+      @if $mode == system { @include light } @else if $mode == inverted { @include dark };
+    }
+  }
+}

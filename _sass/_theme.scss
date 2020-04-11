@@ -49,16 +49,16 @@ $lightest: white;
 
     @media (prefers-color-scheme: light) {
       @include mode-light;
-      &-lighter, & .bg-white { @include mode-lighter; }
+      & .bg-white { @include mode-lighter; }
     }
 
     &-invert {
       @include mode-light;
-      &-lighter, & .bg-white { @include mode-lighter; }
+      & .bg-white { @include mode-lighter; }
 
       @media (prefers-color-scheme: light) {
         @include mode-dark;
-        &-darker, & { .bg-black, .bg-near-black { @include mode-darker; } }
+        & { .bg-black, .bg-near-black { @include mode-darker; } }
       }
     }
 

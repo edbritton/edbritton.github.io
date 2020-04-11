@@ -8,68 +8,6 @@ $middle: #ccc;
 $lighter: #f4f4f4;
 $lightest: white;
 
-@mixin mode-borders { border-color: $darker; }
-
-@mixin mode-darker {
-  background-color: $darker;
-  color: $lighter;
-}
-
-@mixin mode-dark {
-  background-color: $darkest;
-  color: $lightest;
-  @include mode-borders;
-}
-
-@mixin mode-lighter {
-  background-color: $lightest;
-  color: $darker;
-}
-
-@mixin mode-light {
-  background-color: $lighter;
-  color: $darkest;
-  @include mode-borders;
-}
-
-.mode {
-
-  &-dark {
-    @include mode-dark;
-    &er, & { .bg-black, .bg-near-black { @include mode-darker; } }
-  }
-
-  &-light {
-    @include mode-light;
-    &er, & .bg-white { @include mode-lighter; }
-  }
-
-  &-system {
-    @include mode-dark;
-    & { .bg-black, .bg-near-black { @include mode-darker; } }
-
-    @media (prefers-color-scheme: light) {
-      @include mode-light;
-      & .bg-white { @include mode-lighter; }
-      & { .bg-black, .bg-near-black { @include mode-dark; } }
-    }
-
-    &-invert {
-      @include mode-light;
-      & .bg-white { @include mode-lighter; }
-
-      @media (prefers-color-scheme: light) {
-        @include mode-dark;
-        & .bg-white { @include mode-light; }
-        & { .bg-black, .bg-near-black { @include mode-darker; } }
-      }
-    }
-
-  }
-}
-
-
-
 @mixin borders { &, * { border-color: $darker; } }
 
 @mixin darker {

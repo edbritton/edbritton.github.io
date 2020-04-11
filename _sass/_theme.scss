@@ -45,11 +45,12 @@ $lightest: white;
 
   &-system {
     @include mode-dark;
-    &-darker, & { .bg-black, .bg-near-black { @include mode-darker; } }
+    & { .bg-black, .bg-near-black { @include mode-darker; } }
 
     @media (prefers-color-scheme: light) {
       @include mode-light;
       & .bg-white { @include mode-lighter; }
+      & { .bg-black, .bg-near-black { @include mode-dark; } }
     }
 
     &-invert {
@@ -58,6 +59,7 @@ $lightest: white;
 
       @media (prefers-color-scheme: light) {
         @include mode-dark;
+        & .bg-white { @include mode-light; }
         & { .bg-black, .bg-near-black { @include mode-darker; } }
       }
     }

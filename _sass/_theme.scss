@@ -1,0 +1,66 @@
+$themecolour: blue;
+$themecolourondark: bluedark;
+$themecolouronlight: bluelight;
+
+$darkest: black;
+$darker: #777;
+$lighter: #f4f4f4;
+$lightest: white;
+
+@mixin mode-borders { border-color: $darker; }
+
+@mixin mode-darker {
+  background-color: $darker;
+  color: $lighter;
+}
+
+@mixin mode-dark {
+  background-color: $darkest;
+  color: $lightest;
+  @include mode-borders;
+}
+
+@mixin mode-lighter {
+  background-color: $lighter;
+  color: $darker;
+}
+
+@mixin mode-light {
+  background-color: $lightest;
+  color: $darkest;
+  @include mode-borders;
+}
+
+.mode {
+
+  &-dark {
+    @include mode-dark;
+    &er, & & { @include mode-darker; }
+  }
+
+  &-light {
+    @include mode-light;
+    &er, & & { @include mode-lighter; }
+  }
+
+  &-system {
+    @include mode-dark;
+    &-darker, & & { @include mode-darker; }
+
+    @media (prefers-color-scheme: light) {
+      @include mode-light;
+      &-lighter, & & { @include mode-lighter; }
+    }
+
+    &-invert {
+      @include mode-light;
+      &-lighter, & & { @include mode-lighter; }
+
+      @media (prefers-color-scheme: light) {
+        @include mode-dark;
+        &-darker, & & { @include mode-darker; }
+      }
+    }
+
+  }
+}

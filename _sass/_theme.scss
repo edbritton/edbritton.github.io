@@ -35,30 +35,30 @@ $lightest: white;
 
   &-dark {
     @include mode-dark;
-    &er, & & { @include mode-darker; }
+    &er, & { .bg-black, .bg-near-black { @include mode-darker; } }
   }
 
   &-light {
     @include mode-light;
-    &er, & & { @include mode-lighter; }
+    &er, & .bg-white { @include mode-lighter; }
   }
 
   &-system {
     @include mode-dark;
-    &-darker, & & { @include mode-darker; }
+    &-darker, & { .bg-black, .bg-near-black { @include mode-darker; } }
 
     @media (prefers-color-scheme: light) {
       @include mode-light;
-      &-lighter, & & { @include mode-lighter; }
+      &-lighter, & .bg-white { @include mode-lighter; }
     }
 
     &-invert {
       @include mode-light;
-      &-lighter, & & { @include mode-lighter; }
+      &-lighter, & .bg-white { @include mode-lighter; }
 
       @media (prefers-color-scheme: light) {
         @include mode-dark;
-        &-darker, & & { @include mode-darker; }
+        &-darker, & { .bg-black, .bg-near-black { @include mode-darker; } }
       }
     }
 

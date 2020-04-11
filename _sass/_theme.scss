@@ -8,11 +8,9 @@ $middle: #ccc;
 $near-white: #f4f4f4;
 $white: white;
 
-@mixin borders { &, * { border-color: $darker; } }
+@mixin borders { &, * { border-color: $middle; } }
 
-@mixin darker {
-  background-color: $near-black;
-}
+@mixin darker { background-color: $near-black; }
 
 @mixin dark {
   background-color: $black;
@@ -24,12 +22,9 @@ $white: white;
     transition: opacity .5s ease-in-out;
     &:hover { opacity: 1 }
   }
-
 }
 
-@mixin lighter {
-  background-color: $white;
-}
+@mixin lighter { background-color: $white; }
 
 @mixin light {
   background-color: $near-white;

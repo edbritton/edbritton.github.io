@@ -30,16 +30,16 @@
   <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
 
   <p class="dn-ns tc b f3">Fantastic Tweets and where to find them</p>
-  <ul class="list pl0 measure-ns bt bn-ns center f3 f3-ns f2-l b--dark-gray tc b-ns">{% for link in site.social.links %}
-    <li class="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns grow"><a itemprop="sameAs" class="link db pa3 color-inherit bg-animate hover-bg-dark-red" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+  <ul class="list pl0 measure-ns bt bn-ns br3 br0-ns center f3 f2-l b--dark-gray tc b-ns mw6">{% for link in site.social.links %}
+    <li class="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns grow"><a itemprop="sameAs" class="link db pa3 color-inherit bg-animate hover-bg-dark-red" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}&nbsp;<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></li>{% endfor %}
   </ul>
 
   </main>
 </article>
 
 
-<footer class="pv4 ph3 ph5-ns tc moon-gray">{% if site.author.twitter %}
-  <blockquote id="lastJoke" class="bg-white black pa3 br3 measure center tl shadow-4"></blockquote>
+<footer class="pv4 ph3 ph5-ns tc gray">{% if site.author.twitter %}
+  <blockquote id="lastJoke" class="bg-white black pa3 br3 measure center tl"></blockquote>
   <a itemprop="sameAs" class="link dib nh2 nw2 br-100 color-inherit" href="https://twitter.com/{{site.author.twitter}}" title="">
     <svg class="dn" data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor" width="2em">
       <title>@{{site.author.twitter}}</title>

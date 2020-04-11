@@ -2,22 +2,21 @@ $themecolour: blue;
 $themecolourondark: bluedark;
 $themecolouronlight: bluelight;
 
-$darkest: black;
-$darker: #777;
+$black: black;
+$near-black: #777;
 $middle: #ccc;
-$lighter: #f4f4f4;
-$lightest: white;
+$near-white: #f4f4f4;
+$white: white;
 
 @mixin borders { &, * { border-color: $darker; } }
 
 @mixin darker {
-  background-color: $darker;
-  color: $lighter;
+  background-color: $near-black;
 }
 
 @mixin dark {
-  background-color: $darkest;
-  color: $lightest;
+  background-color: $black;
+  color: $white;
   @include borders;
 
   [itemprop="image"], figure {
@@ -29,13 +28,12 @@ $lightest: white;
 }
 
 @mixin lighter {
-  background-color: $lightest;
-  color: $darker;
+  background-color: $white;
 }
 
 @mixin light {
-  background-color: $lighter;
-  color: $darkest;
+  background-color: $near-white;
+  color: $black;
   @include borders;
 }
 

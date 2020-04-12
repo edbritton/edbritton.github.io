@@ -20,19 +20,19 @@ $modes: system, inverted;
 }
 
 body {
-  ::before {
+  &::before {
     @extend [itemprop="image"];
     z-index: -1;
     content: '';
     background-image: -webkit-radial-gradient(top right, rgba(0,0,0,0.2), #000 75%);
     background-image: radial-gradient(top right, rgba(0,0,0,0.2), #000 75%);
-  [data-theme="system"]::before {
+  &[data-theme="system"]::before {
     @media (prefers-color-scheme: light) {
       background-image: -webkit-radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
       background-image: radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
     }
   }
-  [data-theme="inverted"]::before {
+  &[data-theme="inverted"]::before {
     @media (prefers-color-scheme: dark) {
       background-image: -webkit-radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
       background-image: radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);

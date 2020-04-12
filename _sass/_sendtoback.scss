@@ -25,21 +25,20 @@ body::before {
   content: '';
   background-image: -webkit-radial-gradient(top right, rgba(0,0,0,0.2), #000 75%);
   background-image: radial-gradient(top right, rgba(0,0,0,0.2), #000 75%);
-}
 
-
-
-@each $mode in $modes {
-  @include theme($mode) {
-    @if $mode == inverted {
-      background-image: -webkit-radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
-      background-image: radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
-    }
-    @media (prefers-color-scheme: light) {
-      @if $mode == system {
+  @each $mode in $modes {
+    @include theme($mode) {
+      @if $mode == inverted {
         background-image: -webkit-radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
         background-image: radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
       }
+      @media (prefers-color-scheme: light) {
+        @if $mode == system {
+          background-image: -webkit-radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
+          background-image: radial-gradient(top right, rgba(255,255,255,.2), #f4f4f4 75%);
+        }
+      }
     }
   }
+
 }

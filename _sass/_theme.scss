@@ -6,7 +6,7 @@ $black: black;
 $near-black: #AAB8C2; /*#777;*/
 $near-white: #E1E8ED; /*#f4f4f4;*/
 $white: white;
-$dim-text: #14171A;
+$black-text: #14171A;
 
 .bg {
   &-near {
@@ -23,7 +23,7 @@ $dim-text: #14171A;
   &-black { color: $near-black; }
 }
 
-@mixin borders { &, * { border-color: $middle; } }
+@mixin borders { &, * { border-color: $near-white; } }
 
 @mixin darker { background-color: $near-black; }
 
@@ -43,7 +43,7 @@ $dim-text: #14171A;
 
 @mixin light {
   background-color: $near-white;
-  color: $dim-text;
+  color: $black-text;
   @include borders;
 }
 

@@ -5,7 +5,7 @@ show_downloads: false
 lang: en_GB
 
 seo:
-  type: person
+  type: website
 
 author:
   name: Ed Britton

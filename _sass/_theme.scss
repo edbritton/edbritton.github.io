@@ -9,18 +9,16 @@ $white: white;
 $black-text: #14171A;
 
 .bg {
-  &-near {
-    &-white { background-color: $near-white; }
-    &-black { background-color: $near-black; }
-  }
+  &-near-white, &-light { background-color: $near-white; }
+  &-near-black, &-dark { background-color: $near-black; }
 }
 
 .bg-gray { background-color: $near-black; }
-.gray { color: $near-black; }
+.gray { color: $near-black; fill: $near-black; }
 
 .near {
-  &-white { color: $near-white; }
-  &-black { color: $near-black; }
+  &-white { color: $near-white; fill: $near-black; }
+  &-black { color: $near-black; fill: $near-black; }
 }
 
 @mixin borders { &, * { border-color: $near-white; } }

@@ -1,6 +1,6 @@
 ---
 title: Ed’s blog
-published: true
+permalink: /blog/index.html
 ---
 <ul class="list pl0 mt0 measure center">{% for post in site.posts %}
   <li>

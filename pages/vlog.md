@@ -6,7 +6,6 @@ author: edbritton
 twitter:
   card: player
   username: youtube
-published: true
 ---
 <script>location = "{{page.seo_redirect_to}}"</script>
 <meta http-equiv="refresh" content="0; url={{page.seo_credirect_to}}">

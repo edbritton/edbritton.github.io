@@ -3,9 +3,9 @@ $themecolourondark: bluedark;
 $themecolouronlight: bluelight;
 
 $black: black;
-$near-black: #777;
+$near-black: #AAB8C2; /*#777;*/
 $middle: #ccc;
-$near-white: #f4f4f4;
+$near-white: #E1E8ED; /*#f4f4f4;*/
 $white: white;
 
 @mixin borders { &, * { border-color: $middle; } }

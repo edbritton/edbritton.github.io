@@ -8,6 +8,18 @@ $middle: #ccc;
 $near-white: #E1E8ED; /*#f4f4f4;*/
 $white: white;
 
+.bg {
+  &-near {
+    &-white { background-color: $near-white; }
+    &-black { background-color: $near-black; }
+  }
+}
+
+.near {
+  &-white { color: $near-white; }
+  &-black { color: $near-black; }
+}
+
 @mixin borders { &, * { border-color: $middle; } }
 
 @mixin darker { background-color: $near-black; }

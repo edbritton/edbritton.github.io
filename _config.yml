@@ -56,10 +56,10 @@ defaults:
     values:
       layout: apostrophe
   - scope:
-      path: "/pages/404.md"
+      path: "pages/404.md"
     values:
       embed: false
   - scope:
-      path: "/pages/blog.md"
+      path: "pages/blog.md"
     values:
       embed: false

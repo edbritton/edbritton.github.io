@@ -8,6 +8,49 @@ $near-white: #E1E8ED; /*#f4f4f4;*/
 $white: white;
 $black-text: #14171A;
 
+@mixin whenSystemIs($scheme) {
+  @media (prefers-color-scheme: $scheme) {
+    @content
+  }
+}
+
+@mixin whenThemeIs($scheme) {
+  [data-theme="#{$scheme}"] &, &[data-theme="#{$scheme}"] {
+    @content
+  }
+  @if $scheme == "dark" {
+    @include whenSystemIs(dark) {
+      [data-theme="system"] &, &[data-theme="system"] {
+         @content
+      }
+    }
+    @include whenSystemIs(light) {
+      [data-theme="inverted"] &, &[data-theme="inverted"] {
+         @content
+      }
+    }
+  }
+  @if $scheme == "light" {
+    @include whenSystemIs(light) {
+      [data-theme="system"] &, &[data-theme="system"] {
+         @content
+      }
+    }
+    @include whenSystemIs(dark) {
+      [data-theme="inverted"] &, &[data-theme="inverted"] {
+         @content
+      }
+    }
+  }
+}
+
+/* .example {
+  background: black;
+  @include whenThemeIs(light) {
+    background: white;
+  }
+} */
+
 .bg {
   &-near-white, &-light { background-color: $near-white; }
   &-near-black, &-dark { background-color: $near-black; }
@@ -55,9 +98,13 @@ $modes: system, inverted;
 
 @each $mode in $modes {
   @include theme($mode) {
-    @if $mode == system { @include dark } @else if $mode == inverted { @include light };
-    @media (prefers-color-scheme: light) {
-      @if $mode == system { @include light } @else if $mode == inverted { @include dark };
+    @if $mode == system {
+      @include dark;
+      @include whenSystemIs(light) { @include light };
+    }
+    @if $mode == inverted {
+      @include light;
+      @include whenSystemIs(light) { @include dark };
     }
   }
 }

@@ -61,7 +61,7 @@ $motifs: (
     darkMode: rgb(255,55,95),
     lightMode: rgb(255,45,85)
   ),
-  purle: (
+  purple: (
     darkMode: rgb(191,90,242),
     lightMode: rgb(175,82,222)
   ),
@@ -80,6 +80,17 @@ $motifs: (
 );
 
 @each $motif, $mode in $motifs {
+  [data-color="#{motif}"] {
+    a, .t-color {
+      color: map-get($mode, darkMode);
+      @include whenThemeIs(light) { color: map-get($mode, lightMode); }
+    }
+    .btn, button, .t-bg {
+      color: #fff !default;
+      background-color: map-get($mode, darkMode);
+      @include whenThemeIs(light) { background-color: map-get($mode, lightMode); }
+    }
+  }
   .t-#{$motif} {
     color: map-get($mode, darkMode);
     @include whenThemeIs(light) { color: map-get($mode, lightMode); }

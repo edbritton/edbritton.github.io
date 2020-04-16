@@ -73,10 +73,10 @@ $motifs: (
     darkMode: rgb(100,210,255),
     lightMode: rgb(90,200,250)
   ),
-  yellow: (
+  "yellow": (
     darkMode: rgb(255,214,10),
     lightMode: rgb(255,204,0)
-  ),
+  )
 );
 
 @each $motif, $mode in $motifs {

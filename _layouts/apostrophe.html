@@ -10,9 +10,9 @@
 <meta property="twitter:player:width" content="512px">
 <style>body { background-image: url('{{ page.image }}'); }</style>{% endif %}
 
-<body class="white bg-black" data-color="indigo">
+<body class="white bg-black">
 
-<header class="pa3 pa4-ns">{% if page.dir != "/" %}
+<header class="pa3 pa4-ns" data-color="blue">{% if page.dir != "/" %}
   <a class="dim" href="../"><svg class="w1 v-mid mb1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor"><title>chevronLeft icon</title><path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path></svg> Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a>{% endif %}
   <h1 class="f1 f-headline-l lh-title-ns tc fw9 ma0">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
   <!-- div class="tc pb3">
@@ -21,7 +21,7 @@
   </div -->
 </header>
 
-<article class="pa0" itemscope="" itemtype="http://schema.org/Article">
+<article class="pa0" itemscope="" itemtype="http://schema.org/Article" data-color="orange">
   <main itemprop="articleBody">{% if page.embed == false %}
   <figure><img itemprop="image" width="100%" src="{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
 

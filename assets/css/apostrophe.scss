@@ -20,10 +20,6 @@ a {
   &, * { cursor: pointer; }
 }
 
-#lastJoke {
-  a { color: #357edd; text-decoration: none }
-}
-
 /*html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }*/
@@ -56,7 +52,7 @@ h1, .f1 {
   @include fluid-type($min_width, $max_width, 70px, 96px);
 }*/
 
-.user-mention, footer * { color: inherit !important; text-decoration: none; }
+.user-mention { color: inherit !important; text-decoration: none; }
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 

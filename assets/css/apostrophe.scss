@@ -56,9 +56,7 @@ h1, .f1 {
   @include fluid-type($min_width, $max_width, 70px, 96px);
 }*/
 
-footer {
-  a, .user-mention, * { color: inherit !important; text-decoration: none; }
-}
+.user-mention { color: inherit !important; text-decoration: none; }
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 

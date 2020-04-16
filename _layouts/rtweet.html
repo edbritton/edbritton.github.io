@@ -55,11 +55,10 @@ article img { display: none }
 {% if page.embed == false %}
   <figure><img itemprop="image" width="100%" src="{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
   </main>
-  {% include tweet-footer.html username="edbritton" tweedid="1250348000213258240" tweetdate="2020.4.15" likes="1" %}
+  {% include tweet-footer.html username="edbritton" tweetid="1250348000213258240" tweetdate="2020.4.15" likes="1" %}
 </article>
 
-{% if site.author.twitter %}
-{% include followers.html js="//edbritton.tumblr.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
+{% if site.author.twitter %}{% include followers.html js="//edbritton.tumblr.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
 
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
   <script>twemoji.parse(document.body);</script>

@@ -15,16 +15,13 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
-.a {
-  text-decoration: none !important;
+a {
+  text-decoration: none;
   &, * { cursor: pointer; }
-  /*&, &:active, &:focus, &:hover, &:link, &:visited {
-    transition: color .15s ease-in;
-  }*/
 }
 
 #lastJoke.bg-white {
-  a { color: #357edd; }
+  a { color: #357edd; text-decoration: none }
 }
 
 /*html {
@@ -59,7 +56,9 @@ h1, .f1 {
   @include fluid-type($min_width, $max_width, 70px, 96px);
 }*/
 
-footer .user-mention { color: inherit; text-decoration: none; }
+footer {
+  a, .user-mention, * { color: inherit; text-decoration: none; }
+}
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 

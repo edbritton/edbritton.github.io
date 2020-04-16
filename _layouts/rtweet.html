@@ -12,15 +12,6 @@
 
 <body class="bg-gray pa4-ns dt vh-100 center">
 
-<header class="dtc pa3 pa4-ns">{% if page.dir != "/" %}
-  <a class="dim" href="../"><svg class="w1 v-mid mb1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor"><title>chevronLeft icon</title><path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path></svg> Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a>{% endif %}
-  <h1 class="f1 f-headline-l lh-title-ns tc fw9 ma0">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
-  <!-- div class="tc pb3">
-    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Store</a>
-    <a class="link dim gray f6 f5-ns dib" href="#" title="Contact">Contact</a>
-  </div -->
-</header>
-
 <article data-theme="system" class="br4-ns pa4 w-100" itemscope="" itemtype="http://schema.org/Article">
   {% include tweet-header.html name="Ed Britton" username="edbritton" %}
   <main itemprop="articleBody" style="max-height:27.4rem" class="dtc v-mid">

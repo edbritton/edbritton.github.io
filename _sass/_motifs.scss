@@ -81,8 +81,7 @@ $motifs: (
 
 @each $motif, $mode in $motifs {
   [data-color="#{$motif}"] {
-    .t-ignore { background-color: inherit !important; color: inherit !important; }
-    a, .t-color {
+    a:not(.t-ignore), .t-color {
       color: map-get($mode, darkMode) !important;
       @include whenThemeIs(light) { color: map-get($mode, lightMode) !important; }
     }

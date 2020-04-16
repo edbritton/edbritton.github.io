@@ -81,7 +81,7 @@ $motifs: (
 
 @each $motif, $mode in $motifs {
   [data-color="#{$motif}"] {
-    a:not(.t-ignore), .t-color {
+    a:not(.t-ignore), a:not(footer .user-mention), .t-color {
       color: map-get($mode, darkMode) !important;
       @include whenThemeIs(light) { color: map-get($mode, lightMode) !important; }
     }

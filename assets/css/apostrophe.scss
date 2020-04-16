@@ -16,7 +16,7 @@ $max_font: 27px;
 }
 
 .a {
-  text-decoration: none;
+  text-decoration: none !important;
   &, * { cursor: pointer; }
   /*&, &:active, &:focus, &:hover, &:link, &:visited {
     transition: color .15s ease-in;

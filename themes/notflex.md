@@ -9,8 +9,6 @@ title: E<span class="blink">d</span> <span class="blink">Br</span>it<span class=
 
 showname: Trying to <span class="blink">make you</span> laugh
 
-image: default.jpg
-
 greentext: 92% British
 duration: 1m&nbsp;80cm
 classification: MA 15+

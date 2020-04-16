@@ -31,7 +31,7 @@
 
   <p class="dn-ns tc b f3">Fantastic Tweets and where to find them</p>
   <ul class="list pl0 measure bt bn-ns center f3 f2-l b--dark-gray tc-ns b-ns">{% for link in site.social.links %}
-    <li class="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns"><a itemprop="sameAs" class="link db pa3 color-inherit bg-animate hover-bg-dark-red" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+    <li class="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns"><a itemprop="sameAs" class="link db pa3 color-inherit t-hover" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
   </ul>
 
   </main>
@@ -48,7 +48,7 @@
     <img class="dib dib-ns br-100 h3 w3" src="https://avatars.io/twitter/{{site.author.twitter}}">
   </a>{% endif %}{% if site.author.name %}
 
-  <p><small class="f5 f4-l db tc">&copy; <span class="tracked" id="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+  <p><small class="f5 f4-l db tc t-ignore">&copy; <span class="tracked" id="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
 </footer>{% if site.author.twitter %}
 {% include followers.html js="//edbritton.tumblr.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
 

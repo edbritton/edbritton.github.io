@@ -80,7 +80,7 @@ $motifs: (
 );
 
 @each $motif, $mode in $motifs {
-  [data-color="#{motif}"] {
+  [data-color="#{$motif}"] {
     a, .t-color {
       color: map-get($mode, darkMode);
       @include whenThemeIs(light) { color: map-get($mode, lightMode); }

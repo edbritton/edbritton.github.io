@@ -82,8 +82,8 @@ $motifs: (
 @each $motif, $mode in $motifs {
   [data-color="#{$motif}"] {
     a, .t-color {
-      color: map-get($mode, darkMode);
-      @include whenThemeIs(light) { color: map-get($mode, lightMode); }
+      color: map-get($mode, darkMode) !important;
+      @include whenThemeIs(light) { color: map-get($mode, lightMode) !important; }
     }
     .btn, button, .t-bg, .t-hover:hover, .t-hover:focus {
       color: #fff !important;

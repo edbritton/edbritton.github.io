@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "theme", "sendtoback", "pax", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
+@import "mixins", "variables", "theme", "pax", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 

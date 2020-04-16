@@ -57,7 +57,7 @@ h1, .f1 {
 }*/
 
 footer {
-  a, .user-mention, * { color: inherit; text-decoration: none; }
+  a, .user-mention, * { color: inherit !important; text-decoration: none; }
 }
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }

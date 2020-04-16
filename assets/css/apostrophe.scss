@@ -15,8 +15,8 @@ $max_font: 27px;
   @include agents(user-select, none);
 }
 
-.old-a {
-  color: #E7040F;
+.a {
+  /*color: #E7040F;*/
   text-decoration: none;
   &, * { cursor: pointer; }
   /*&, &:active, &:focus, &:hover, &:link, &:visited {

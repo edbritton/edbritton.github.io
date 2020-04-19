@@ -1,8 +1,4 @@
----
----
-
-@import "mixins", "variables", "theme", "sendtoback", "pax";
-@import "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css";
+@import "mixins", "variables", "theme", "sendtoback", "pax", "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css";
 
 $min_width: 520px;
 $max_width: 1000px;

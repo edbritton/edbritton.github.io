@@ -1,4 +1,5 @@
 ---
+theme: apostrophe
 layout: apostrophe
 title: Ed’s website
 ---

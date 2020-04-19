@@ -1,0 +1,71 @@
+---
+---
+
+@import "mixins", "variables", "theme", "sendtoback", "pax", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
+
+$min_width: 520px;
+$max_width: 1000px;
+$min_font: 20px;
+$max_font: 27px;
+
+* {
+  cursor: default;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "ss01", "ss07";
+  @include agents(user-select, none);
+}
+
+a {
+  text-decoration: none;
+  &, * { cursor: pointer; }
+}
+
+/*html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}*/
+
+body {
+  background-color: black;
+  background-image: url('/assets/img/default.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  font-family: pax, $sans-serif !important;
+}
+
+p { @include agents(hyphens, auto); }
+
+h1, .f1 {
+  ruby > rt { font-weight: 100; display: block }
+}
+
+.ja {
+  rt { font-size: 0; transition: font-size 1s }
+  &:hover rt { font-size: 0.5em }
+}
+
+/*h1,.f1,f-headline { font-weight: 900 }
+
+.f-headline { 
+  font-size: 14vw;
+  font-size: calc(70px + (96 - 70) * ((100vw - 520px) / (1000 - 520)));
+  @include fluid-type($min_width, $max_width, 70px, 96px);
+}*/
+
+.user-mention { color: inherit !important; text-decoration: none; }
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  
+.embed-responsive {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 200%;
+  min-height: 200%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  @include agents(transform, translateX(-50%) translateY(-50%));
+}

@@ -2,9 +2,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">{% if site.author.twitter %}
-    <link rel="apple-touch-icon" href="https://avatars.io/twitter/{{site.author.twitter}}">{% endif %}
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    {% if layout.css %}{% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
-    {% endfor %}{% endif %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
+    <link rel="apple-touch-icon" href="https://avatars.io/twitter/{{site.author.twitter}}">{% endif %}{% if page.theme == false }
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />{% endif %}
+    {% for css in layout.css %}<link rel="stylesheet" href="{{ css }}" />
+    {% endfor %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
 {% seo title=false %}
   </head>

@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "mixins", "variables", "twitter", "sendtoback" {%if page.neon %},"neon"{% endif %};
+@import "mixins", "variables", "twitter", "sendtoback";
 
 * {
   cursor: default;

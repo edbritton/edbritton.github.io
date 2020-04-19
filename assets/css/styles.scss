@@ -2,4 +2,4 @@
 layout: null
 ---
 
-@import "theme-{% if page.theme %}{{page.theme}}{% else %}{{site.theme}}{% endif %}";
+@import "themes/{% if page.theme %}{{page.theme}}{% else %}{{site.theme}}{% endif %}";

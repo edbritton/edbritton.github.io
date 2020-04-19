@@ -85,11 +85,11 @@ $motifs: (
 
 @each $motif, $mode in $motifs {
   [data-color="#{$motif}"] {
-    a:not(.t-ignore), .t-color, t-color& {
+    a:not(.t-ignore), .t-color, .t-color& {
       color: map-get($mode, darkMode);
       @include whenThemeIs(light) { color: map-get($mode, lightMode); }
     }
-    .t-hover, t-hover& { color: inherit !important }
+    .t-hover, .t-hover& { color: inherit !important }
     .btn, button, .t-bg, .t-hover:hover, .t-hover:focus, t-hover:active {
       color: #fff !important;
       background-color: map-get($mode, darkMode) !important;

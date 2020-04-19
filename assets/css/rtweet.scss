@@ -1,37 +1,7 @@
 ---
 ---
-.{{page.name}} { color: blue }
 
-
-@import "mixins", "variables", "theme", "pax", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
-
-.embed-container { 
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-
-  iframe, object, embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-  
-.embed-responsive {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 200%;
-  min-height: 200%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  @include agents(transform, translateX(-50%) translateY(-50%));
-}
+@import "mixins", "variables", "theme", "pax", "embed", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;

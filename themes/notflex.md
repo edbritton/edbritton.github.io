@@ -1,5 +1,6 @@
 ---
 layout: notflex
+theme: notflex
 
 neon: true
 

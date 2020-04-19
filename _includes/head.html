@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">{% if site.author.twitter %}
     <link rel="apple-touch-icon" href="https://avatars.io/twitter/{{site.author.twitter}}">{% endif %}
     <link rel="stylesheet" href="/assets/css/{% if page.theme %}{{ page.theme }}{% else %}{{ site.theme }}{% endif %}.css" />
-    <!-- {{ page.theme }} -->
-    {% for url in layout.css %}<link rel="stylesheet" href="{{ url }}" />
+    {% for url in layout.css %}<link rel="stylesheet" href="{{ url }}" />{% include.neon %}
+    <style>{{ '@include "neon";' scssify }}</style>
     {% endfor %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
 {% seo title=false %}
   </head>

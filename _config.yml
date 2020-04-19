@@ -3,6 +3,7 @@ description: Ed Britton (@edbritton) is a comedian.
 google_analytics: 
 show_downloads: false
 lang: en_GB
+theme: apostrophe
 
 seo:
   type: website

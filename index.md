@@ -7,4 +7,4 @@ G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can 
 
 If and when people are allowed to sit in confined, dark, beer-soaked spaces I sometimes appear there to make them chuckle.
 
-If that sounds like a thing you'd be into then follow me on Twitter you crazy thing.
+Should that sounds like a thing you'd be into then follow me on Twitter you crazy thing.

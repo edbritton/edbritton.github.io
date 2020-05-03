@@ -10,3 +10,14 @@ permalink: /blog/index.html
     </a>
   </li>{% endfor %}
 </ul>
+
+{% for post in site.posts %}
+  {% unless post.draft %}
+    {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentdate != thedate %}
+      ### {{ currentdate }} ###
+      {% capture thedate %}{{currentdate}}{% endcapture %}
+    {% endif %}
+    - {{ post.date | date: "%B %e, %Y" }} [{{ post.title }}]({{ post.url }})
+  {% endunless %}
+{% endfor %}

@@ -7,7 +7,7 @@ published: true
 <ul class="list pl0 mt0 measure center">{% for post in site.posts %}{% unless post.draft %}
 {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
 {% if currentdate != thedate %}
-<h2 class"center">{{ currentdate }}</h2>{% capture thedate %}{{currentdate}}{% endcapture %}
+<h2 class="center">{{ currentdate }}</h2>{% capture thedate %}{{currentdate}}{% endcapture %}
 {% endif %}
   <li>
   	<a class="flex items-center lh-copy pa3 bb b--black-10 hover-bg-dark-gray white" href="{{post.url}}">

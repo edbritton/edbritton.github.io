@@ -1,5 +1,4 @@
 ---
-theme: rtweet
 layout: rtweet
 ---
 

@@ -21,6 +21,7 @@ linkify = function(text) {
 recent_tweets = function(data) {
   var user = data[0].user;
   document.getElementById('followers').innerHTML = user.followers_count;
+  document.getElementById('profilepic').src = user.profile_image_url_https;
 
 {% if include.tweetID %}
   var i = 0, tweetText, user = data[0].user, tweetsWithHashtags = [], tweetsWithSpecificHashtag = [], notReplies = [];

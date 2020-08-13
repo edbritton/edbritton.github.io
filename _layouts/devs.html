@@ -1,0 +1,62 @@
+---
+---
+<!doctype html>
+<html lang="{{page.lang}}">
+
+{% include head.html %}
+
+{% if page.embed %}<meta property="twitter:player" content="{{page.embed.src}}">
+<meta property="twitter:player:height" content="288px">
+<meta property="twitter:player:width" content="512px">
+<style>body { background-image: url('{{ page.image }}'); }</style>{% endif %}
+
+<body>
+
+<header data-color="red">{% if page.dir != "/" %}
+  <a href="../"><svg class="w1 v-mid mb1" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor"><title>chevronLeft icon</title><path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path></svg> Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a>{% endif %}
+  <h1 class="f1 f-headline-l lh-title-ns tc fw9 ma0">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
+  <!-- div class="tc pb3">
+    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Store</a>
+    <a class="link dim gray f6 f5-ns dib" href="#" title="Contact">Contact</a>
+  </div -->
+</header>
+
+<article itemscope="" itemtype="http://schema.org/Article" data-color="orange">
+  <main itemprop="articleBody">{% if page.embed == false %}
+  <figure><img itemprop="image" width="100%" src="{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
+
+  <div>{{content}}</div>{% if page.embed %}
+
+  <figure><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption>{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
+
+  <p>Fantastic Tweets and where to find them</p>
+  <ul>{% for link in site.social.links %}
+    <li><a itemprop="sameAs" href="{{link}}">{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+  </ul>
+
+  </main>
+</article>
+
+
+<footer>{% if site.author.twitter %}
+  <blockquote id="lastJoke" data-color="twitter"></blockquote>
+  <a itemprop="sameAs" href="https://twitter.com/{{site.author.twitter}}" title="">
+    <svg class="dn" data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor" width="2em">
+      <title>@{{site.author.twitter}}</title>
+      <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
+    </svg>
+    <img id="profilepic" class="dib dib-ns br-100 h3 w3" src="http://twivatar.glitch.me/{{site.author.twitter}}">
+  </a>{% endif %}{% if site.author.name %}
+
+  <p><small class="f5 f4-l db tc">&copy; <span class="tracked" id="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+</footer>{% if site.author.twitter %}
+{% include followers.html js="//edbritton.tumblr.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
+
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+  <script>twemoji.parse(document.body);</script>
+
+<!--
+{{page.url}}, {{page.date}}, {{page.id}}, {{page.categories}}, {{page.collection}}, {{page.tags}}, {{page.dir}}, {{page.name}}, {{page.path}}.
+-->
+
+</body>

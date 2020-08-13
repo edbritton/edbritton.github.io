@@ -1,0 +1,119 @@
+---
+---
+
+@import "mixins", "variables", "theme", "sendtoback", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
+
+@font-face{font-family:"SF Display";font-weight:900;src:url(https://sf.abarba.me/SF-UI-Display-Black.otf)}@font-face{font-family:"SF Display";font-weight:700;src:url(https://sf.abarba.me/SF-UI-Display-Bold.otf)}@font-face{font-family:"SF Display";font-weight:800;src:url(https://sf.abarba.me/SF-UI-Display-Heavy.otf)}@font-face{font-family:"SF Display";font-weight:200;src:url(https://sf.abarba.me/SF-UI-Display-Light.otf)}@font-face{font-family:"SF Display";font-weight:500;src:url(https://sf.abarba.me/SF-UI-Display-Medium.otf)}@font-face{font-family:"SF Display";font-weight:400;src:url(https://sf.abarba.me/SF-UI-Display-Regular.otf)}@font-face{font-family:"SF Display";font-weight:600;src:url(https://sf.abarba.me/SF-UI-Display-Semibold.otf)}@font-face{font-family:"SF Display";font-weight:300;src:url(https://sf.abarba.me/SF-UI-Display-Thin.otf)}@font-face{font-family:"SF Display";font-weight:100;src:url(https://sf.abarba.me/SF-UI-Display-Ultralight.otf)}@font-face{font-family:"SF Text";font-weight:700;src:url(https://sf.abarba.me/SF-UI-Text-Bold.otf)}@font-face{font-family:"SF Text";font-weight:700;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-BoldItalic.otf)}@font-face{font-family:"SF Text";font-weight:800;src:url(https://sf.abarba.me/SF-UI-Text-Heavy.otf)}@font-face{font-family:"SF Text";font-weight:800;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf)}@font-face{font-family:"SF Text";font-weight:200;src:url(https://sf.abarba.me/SF-UI-Text-Light.otf)}@font-face{font-family:"SF Text";font-weight:200;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-LightItalic.otf)}@font-face{font-family:"SF Text";font-weight:500;src:url(https://sf.abarba.me/SF-UI-Text-Medium.otf)}@font-face{font-family:"SF Text";font-weight:500;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-MediumItalic.otf)}@font-face{font-family:"SF Text";font-weight:400;src:url(https://sf.abarba.me/SF-UI-Text-Regular.otf)}@font-face{font-family:"SF Text";font-weight:400;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-RegularItalic.otf)}@font-face{font-family:"SF Text";font-weight:600;src:url(https://sf.abarba.me/SF-UI-Text-Semibold.otf)}@font-face{font-family:"SF Text";font-weight:600;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-SemiboldItalic.otf)}@font-face{font-family:"SF Text";font-weight:100;src:url(https://sf.abarba.me/SF-UI-Text-Ultrathin.otf)}@font-face{font-family:"SF Text";font-weight:100;font-style:italic;src:url(https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf)}@font-face{font-family:"SF Mono";font-weight:700;src:url(https://sf.abarba.me/SFMono-Bold.otf)}@font-face{font-family:"SF Mono";font-weight:700;font-style:italic;src:url(https://sf.abarba.me/SFMono-BoldItalic.otf)}@font-face{font-family:"SF Mono";font-weight:800;src:url(https://sf.abarba.me/SFMono-Heavy.otf)}@font-face{font-family:"SF Mono";font-weight:800;font-style:italic;src:url(https://sf.abarba.me/SFMono-HeavyItalic.otf)}@font-face{font-family:"SF Mono";font-weight:200;src:url(https://sf.abarba.me/SFMono-Light.otf)}@font-face{font-family:"SF Mono";font-weight:200;font-style:italic;src:url(https://sf.abarba.me/SFMono-LightItalic.otf)}@font-face{font-family:"SF Mono";font-weight:500;src:url(https://sf.abarba.me/SFMono-Medium.otf)}@font-face{font-family:"SF Mono";font-weight:500;font-style:italic;src:url(https://sf.abarba.me/SFMono-MediumItalic.otf)}@font-face{font-family:"SF Mono";font-weight:400;src:url(https://sf.abarba.me/SFMono-Regular.otf)}@font-face{font-family:"SF Mono";font-weight:400;font-style:italic;src:url(https://sf.abarba.me/SFMono-RegularItalic.otf)}@font-face{font-family:"SF Mono";font-weight:600;src:url(https://sf.abarba.me/SFMono-Semibold.otf)}@font-face{font-family:"SF Mono";font-weight:600;font-style:italic;src:url(https://sf.abarba.me/SFMono-SemiboldItalic.otf)}
+
+$min_width: 520px;
+$max_width: 1000px;
+$min_font: 20px;
+$max_font: 27px;
+
+* {
+  cursor: default;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "ss01", "ss07";
+  @include agents(user-select, none);
+
+  font-style: normal;
+  font-size: 12pt;
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  &, * { cursor: pointer; }
+}
+
+body {
+  background-color: #222;
+  color: #aaa;
+  font-family: SF MONO;
+  line-height: 2em;
+  @include agents(columns, 800px);
+}
+
+body > *, h1, h2, h3, h4, h5, h6, p {
+  @include agents(hyphens, auto);
+  margin: 2em auto;
+  max-width: 43em;
+  padding: 0 1em;
+-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+}
+
+figcaption {
+  margin: 0 auto !important;
+  &::before {
+    content: '\003E\0020';
+    margin-left: -1em;
+  }
+}
+
+.e2e, .embed-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.title {
+  letter-spacing: 1em;
+  margin: 1em auto 3em;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, a, strong {
+  color: #fff;
+  text-decoration: none;
+}
+
+em {
+  color: rgba(255,255,255,0.6);
+  text-shadow: 1px 0 0 rgba(255,255,255,0.6);
+}
+
+a:hover {
+  background: #fff;
+  color: #222;
+  margin: -0.2em;
+  padding: 0.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform:  uppercase;
+}
+
+ul {
+  list-style: none outside none;
+  li::before {
+    content: '\00D7';
+  }
+}
+
+ul, ol {
+  padding: 0 0 0 1em;
+}
+
+li::before {
+  padding-right: 1em;
+}
+
+.user-mention { color: inherit !important; text-decoration: none; }
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  
+.embed-responsive {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 200%;
+  min-height: 200%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  @include agents(transform, translateX(-50%) translateY(-50%));
+}

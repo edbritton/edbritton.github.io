@@ -54,7 +54,7 @@ defaults:
   - scope:
       type: "posts"
     values:
-      layout: apostrophe
+      layout: devs
   - scope:
       path: "pages/404.md"
     values:

@@ -35,7 +35,7 @@ body {
   @include agents(columns, 800px);
 }
 
-body > *, h1, h2, h3, h4, h5, h6, p {
+body *, h1, h2, h3, h4, h5, h6, p {
   @include agents(hyphens, auto);
   margin: 2em auto;
   max-width: 43em;

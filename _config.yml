@@ -52,7 +52,7 @@ defaults:
         caption: My latest vlog.
         cite: https://youtube.com/edbritton
   - scope:
-      type: "posts"
+      path: "_posts"
     values:
       layout: devs
   - scope:

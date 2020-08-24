@@ -25,7 +25,7 @@
   <main itemprop="articleBody">{% if page.embed == false %}
   <figure><img itemprop="image" width="100%" src="{{page.image}}"><figcaption class="d-none d-print"></figcaption></figure>{% endif %}
 
-  <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed %}
+  <div class="measure ph3 ph4-ns center f4 f3-l lh-copy">{{content}}</div>{% if page.embed %}
 
   <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim t-ignore" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
 

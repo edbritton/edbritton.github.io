@@ -1,10 +1,9 @@
 ---
 ---
 
-@import "mixins", "variables", "theme", "chicago", "garamond";
+@import "mixins", "variables", "theme", "chicago", "garamond", url("//unpkg.com/tachyons@4.10.0/css/tachyons.min.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-/*@import url('https://mbtype.com/core/font-styles.css');*/
 
 * {
   font-size: 17px; /*12pt*/

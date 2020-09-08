@@ -1,7 +1,6 @@
 ---
 title: Ed’s website
 image: nul
-layout: devs
 ---
 
 G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess I make things either in jest or to ingest.

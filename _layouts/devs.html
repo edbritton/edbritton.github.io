@@ -27,7 +27,7 @@
 
   <div class="measure ph3 ph4-ns center f4 f3-l">{{content}}</div>{% if page.embed %}
 
-  <figure><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim t-ignore" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
+  <figure class="center w-100 w-75-ns w-50-l"><div class='embed-container'><iframe src='{{page.embed.src}}' frameborder='0' allowfullscreen></iframe></div>{% if page.embed.caption %}<figcaption class="flex justify-between ph1 ph0-ns">{{ page.embed.caption }} {% endif %}{% if page.embed.cite %}<cite><a class="link color-inherit dim t-ignore" href="{{page.embed.cite}}">{{page.embed.cite | replace: 'https://', ''}}</a></cite>{% endif %}</figcaption></figure>{% endif %}
 
   <ul class="list pl0 measure bt bn -ns center f3 f2-l b--dark-gray tc-ns b-ns flex justify-around justify-center-ns">{% for link in site.social.links %}
     <li altclass="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns" class="lh-copy dib"><a itemprop="sameAs" class="link db pa3 t-hover t-ignore" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}

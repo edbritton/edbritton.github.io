@@ -2,8 +2,8 @@
 title: Ed’s website
 ---
 
-G’day I'm Ed. I make stuff. Jokes, vlogs, websites, as well as things you can actually touch like bread and beer and Japanese food. I guess I make things either in jest or to ingest.
+G’day I'm Ed. I make stuff. Stories, videos, jokes, and websites. As well as things you can actually touch like bread, beer, and Japanese food. I guess I make things either in jest or to ingest.
 
-If and when people are allowed to sit in confined, dark, beer-soaked spaces I sometimes appear there to make them chuckle.
+When breathing onto a shared microphone isn’t risky again, I do standup too.
 
 Should that sound like a thing you'd be into then follow me on Twitter you crazy thing.

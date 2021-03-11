@@ -48,7 +48,7 @@
     <img id="profilepic" class="dib dib-ns br-100 h3 w3" src="http://twivatar.glitch.me/{{site.author.twitter}}">
   </a>{% endif %}{% if site.author.name %}
 
-  <p><small class="f5 f4-l db tc">&copy; <span class="tracked" id="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
+  <p><small class="f5 f4-l db tc">&copy; <span class="tracked" nid="year">{{site.time | date: "%Y"}}</span> {{site.author.name}}{% if site.author.twitter %} (@{{site.author.twitter}})</small>{% endif %}</p>
 </footer>{% if site.author.twitter %}
 {% include followers.html js="//edbritton.tumblr.com/tweets.js" tweetID="lastJoke" %}{% endif %}{% endif %}
 

@@ -46,7 +46,7 @@ recent_tweets = function(data) {
 
 };
 
-var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1}, roman = '', i, num = {{site.time | date: "%Y"}};
+var lookup = {Ⅿ:1000,ⅭⅯ:900,Ⅾ:500,ⅭⅮ:400,Ⅽ:100,ⅩⅭ:90,Ⅼ:50,ⅩⅬ:40,Ⅹ:10,Ⅸ:9,Ⅷ:8,Ⅶ:7,Ⅵ:6,Ⅴ:5,Ⅳ:4,Ⅲ:3,Ⅱ:2,Ⅰ:1}, roman = '', i, num = {{site.time | date: "%Y"}};
 for (i in lookup) {
   while (num >= lookup[i]) {
     roman += i;

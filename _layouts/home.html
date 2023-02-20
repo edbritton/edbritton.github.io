@@ -21,13 +21,13 @@
 
 {% case link %}
   {% when "https://twitter.com/edbritton" %}
-     { "ツイッター" page.lang == "ja" else "Twitter" }
+     {% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %}
   {% when "https://imdb.com/name/nm10740536" %}
      IMDb
   {% when "https://printables.com/social/176036-ted" %}
      Printables
   {% else %}
-     {{link | remove: "http://" | remove: "www."}}
+     {{link | remove: "http://" | remove: "https://" | remove: "www."}}
 {% endcase %}
 </a></p>
 {% endfor %}

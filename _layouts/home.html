@@ -31,7 +31,7 @@
   {% when contains "printables" %}
      Printables
   {% else %}
-     {{link}}
+     {{link | remove: "https?:\\"}}
 {% endcase %}
 </a></p>
 {% endfor %}

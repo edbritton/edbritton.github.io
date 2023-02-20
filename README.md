@@ -4,5 +4,3 @@ description: Making stuff, and divesting.
 ---
 
 My GitHub hosted website currently being updated.
-
-@edbritton

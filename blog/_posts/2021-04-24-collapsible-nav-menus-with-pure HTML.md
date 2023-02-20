@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="noCSS.css">
-</head>
-
-<body bgcolor="#222222" text="white" link="#409CFF" alink="#FF6961" vlink="#DA8FFF">
-
-<nav>
-<a href="blog.html" accesskey="b" aria-label="Return to list of blog posts.">← Blog</a>
-</nav>
-
-<p align="center"><time datetime="2021-04-24">2021-04-24</time></p>
-
-<h1 align="center" id="top">Collapsible nav menus with pure HTML</a></h1>
-
+---
+title:Collapsible nav menus with pure HTML
+---
 <p align="center"><big itemprop="description">Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
 
 <p>All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.</p>
@@ -49,5 +34,3 @@
 </ol>
 
 <a href="#top" id="bottom" accesskey="g" aria-label="Back to top of page">Top of page</a>
-
-</body>

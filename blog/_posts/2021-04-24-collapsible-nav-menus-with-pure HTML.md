@@ -14,6 +14,7 @@ title: Collapsible nav menus with pure HTML
 &lt;a href="/blog"&gt;Blog&lt;/a&gt;
 &lt;a href="/about"&gt;About&lt;/a&gt;
 &lt;/details&gt;</pre>
+</dd>
 
 <dt>Result</dt>
 <dd>

@@ -13,7 +13,7 @@
 
 <h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% else %}{{site.title|upcase}}{% endif %}</font></h1>
 
-<center><p align="center"><big itemprop="description">{{content}}</big></p></center>
+<article itemprop="description">{{content}}</article
 
 <nav align="center">
 {% for link in site.social.links %}

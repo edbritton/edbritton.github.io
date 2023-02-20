@@ -1,9 +1,8 @@
 ---
 ---
 @import 'podcasts, varColours';
-
-@media print { @import 'aria'; }
-@media (prefers-reduced-motion) and (inverted-colors) { @import 'gemini'; }
+@import '_aria.scss' screen and print;
+@import '_gemini.scss' (prefers-reduced-motion) and (inverted-colors);
 
 *{
   text-rendering: optimizeLegibility;

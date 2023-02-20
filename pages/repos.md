@@ -9,8 +9,8 @@ redirect_from:
 
 <p align="center"><img src="{{site.github.owner.avatar_url}}" height="148"></p>
 
-{% for repository in site.github.public_repositories | sort: "pushed_at" %}
-<h2>{{ repository.name }} <small><time>{{ repository.pushed_at | date: "%Y-%m-%d" }}</time></small>
+{% for repository in site.github.public_repositories | sort: "repository.pushed_at" %}
+<h2>{{ repository.name }} <small><time>{{ repository.pushed_at | date: "%Y-%m-%d" }}</time></small></h2>
 
 {{ repository.description }}
 

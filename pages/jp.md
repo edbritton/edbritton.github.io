@@ -5,6 +5,7 @@ embed:
   caption: 私の最新のヴログ。
 lang: ja
 permalink: /jp/index.html
+layout: home
 ---
 
 <!--

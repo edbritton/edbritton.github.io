@@ -31,7 +31,7 @@
 
   <p class="dn tc b f3">Fantastic Tweets and where to find them</p>
   <ul class="list pl0 measure bt bn -ns center f3 f2-l b--dark-gray tc-ns b-ns flex justify-around justify-center-ns">{% for link in site.social.links %}
-    <li altclass="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns" class="lh-copy dib"><a itemprop="sameAs" class="link db pa3 t-hover t-ignore" href="{{link}}">{% if link contains "twitter" %}<ruby>{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} <rt class="fw1">&#x300C;<span id="followers">146</span>&#x300D;</rt></ruby>{% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
+    <li altclass="lh-copy ba bn-ns bl-0 bt-0 br-0 b--dark-gray dib-ns" class="lh-copy dib"><a itemprop="sameAs" class="link db pa3 t-hover t-ignore" href="{{link}}">{% if link contains "twitter" %}{% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %} {% endif %}{% if link contains "imdb" %}IMDb{% endif %}{% if link contains "youtu" %}YouTube{% endif %}</a></li>{% endfor %}
   </ul>
 
   </main>

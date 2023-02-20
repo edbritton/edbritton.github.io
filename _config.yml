@@ -47,5 +47,5 @@ defaults:
       type: "pages"
     values:
       lang: en_GB
-      layout: brutal
+      layout: noCSS
       image: /assets/img/default.jpg

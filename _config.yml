@@ -41,13 +41,6 @@ jekyll-mentions: https://twitter.com
 
 defaults:
   - scope:
-      path: ""
-      type: "pages"
-    values:
-      lang: en_GB
-      layout: noCSS
-      image: /assets/img/default.jpg
-  - scope:
       path: "blog"
     values:
       layout: post

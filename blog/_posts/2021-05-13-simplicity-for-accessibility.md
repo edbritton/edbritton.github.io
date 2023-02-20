@@ -5,7 +5,7 @@ description: If you make a website that is mainly text, it will be easier for vi
 
 In a previous blog post of mine…
 
-<a href="./21123" accesskey="1" aria-label="Read that article here">Tablephobia ruined tables</a>
+<a href="../21123" accesskey="1" aria-label="Read that article here">Tablephobia ruined tables</a>
 
 …I lamented the lack of correct markup use when making tables of data on websites.
 

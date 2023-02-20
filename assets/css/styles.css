@@ -1,3 +1,5 @@
+---
+---
 @import '_podcasts.css';
 @import '_aria.css' screen and print;
 @import '_gemini.css' (prefers-reduced-motion) and (inverted-colors);
@@ -54,7 +56,14 @@ code{background:var(--black,#f2f2f2);color:var(--white,#222);font-size:.9em}
 
 :focus{background:var(--yellow,#fc0);color:var(--white,#222) !important;text-decoration-color:transparent}
 
-@media screen, (prefers-reduced-motion) {
+a[href]:not([href^="#fn"]), summary{
+  cursor: pointer;
+  display: block;
+  margin: 1.5ch 0 0 0;
+  text-decoration: none
+}
+
+@media screen and (prefers-reduced-motion) {
 a[href]:not([href^="#fn"]), summary{
   border: 1px solid;
   cursor: pointer;

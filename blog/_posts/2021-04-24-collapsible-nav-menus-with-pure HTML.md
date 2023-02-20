@@ -1,5 +1,5 @@
 ---
-title:Collapsible nav menus with pure HTML
+title: Collapsible nav menus with pure HTML
 ---
 <p align="center"><big itemprop="description">Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
 

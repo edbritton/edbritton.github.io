@@ -13,7 +13,7 @@
 
 <h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% else %}{{site.title|upcase}}{% endif %}</font></h1>
 
-<p itemprop="description" align="center">{{content}}</p>
+<p itemprop="description" align="center">{{site.github.owner.bio}}<br><small>{{site.github.owner.location}}</small></p>
 
 <nav align="center">
 {% for link in site.social.links %}

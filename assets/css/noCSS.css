@@ -1,0 +1,83 @@
+@import '_podcasts.css';
+@import '_aria.css' screen and print;
+@import '_gemini.css' (prefers-reduced-motion) and (inverted-colors);
+@import '_varColours.css';
+
+*{
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "ss01", "ss07";
+  box-sizing: border-box;
+  quotes: "“" "”"
+}
+
+html,body,body>:first-child{margin:0;padding:0}body{background:var(--white,#222);color:var(--black,#f2f2f2);font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:65ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
+
+p:not([align="center"]){-webkit-hyphens:auto}
+
+a[href]{color:var(--yellow,#fc0)}
+
+li>a[href]:first-child:last-child{display:block}
+
+h1,h2,h3,h4,h5,h6{line-height:initial}
+
+mark{background-color:#fc0}
+
+hr{border:.5px solid}
+
+em,i,cite{font-family:ui-serif,serif}
+
+[datetime]{font-feature-settings:"ss01","ss06"}
+
+html:not(.paper) pre,body>:is(picture,img){margin-left:0;margin-right:0;max-width:100%;overflow:auto}
+
+figure>*{margin-left:auto;margin-right:auto}
+
+blockquote{padding-inline-left:1ch}
+
+blockquote>q{margin-inline-start:-1ch}
+
+table{border:1.5px solid;border-collapse:collapse;max-width:100%}
+
+table[align="center"]{margin-left:auto;margin-right:auto}
+
+thead{border-bottom:4px double}
+
+tfoot{border-top:3px double}
+
+tr+tr{border-top:1.5px solid}
+
+th,td{border-left:1.5px solid;overflow:auto;padding:0.5rem;white-space:nowrap}
+
+code{background:var(--black,#f2f2f2);color:var(--white,#222);font-size:.9em}
+
+:focus{background:var(--yellow,#fc0);color:var(--white,#222) !important;text-decoration-color:transparent}
+
+@media screen, (prefers-reduced-motion) {
+a[href]:not([href^="#fn"]), summary{
+  border: 1px solid;
+  cursor: pointer;
+  display: block;
+  margin: 1.5ch 0 0 0;
+  padding: 1ch;
+  text-align: center;
+  text-decoration: none
+}
+
+:focus, :is(a[href], summary):hover {
+  background: var(--yellow, #fc0);
+  border-color: var(--yellow, #fc0);
+  color: var(--white, #222) !important
+}
+}
+
+pre{letter-spacing:-1px;line-height:1;overflow:hidden !important }
+
+blink { animation: blink 2s linear infinite }
+@keyframes blink {
+  from, 50% { visibility: hidden }
+  to { visibility: visible }
+}
+
+/*[accesskey]:before{content:'['attr(accesskey)']';font-family:monospace;margin-inline-end:.5ch}*/
+
+nav summary{text-align:left}nav summary::-webkit-details-marker{display:none}nav summary::after{content:' +';float:right}nav [open] summary::after{content:' -';float:right}

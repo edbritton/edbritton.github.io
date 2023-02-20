@@ -1,0 +1,12 @@
+[aria-label],[aria-hidden]{color:var(--red) !important}
+[aria-label]:before{color:var(--green);content:attr(aria-label)}
+[aria-label]>*{color:var(--black)}
+
+[accesskey]:before{content:'['attr(accesskey)'] 'attr(aria-label)' ';font-family:monospace}
+
+time[datetime]:after{color:var(--green);content:' 'attr(datetime)}
+
+img{border: 3px solid var(--orange)}
+[alt]{border:3px solid var(--green)}
+
+time[datetime]:after{color:var(--green);content:' 'attr(datetime)}

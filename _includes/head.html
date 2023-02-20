@@ -1,10 +1,28 @@
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">{% if site.author.twitter %}
-    <link rel="apple-touch-icon" href="https://pbs.twimg.com/profile_images/1367838713745608707/GwuZ1o8y_400x400.jpg" althref="http://twivatar.glitch.me/{{site.author.twitter}}">{% endif %}
-    <link rel="stylesheet" href="/assets/css/{% if page.layout %}{{ page.layout }}{% else %}{{ site.layout }}{% endif %}.css" />
-    {% for url in layout.css %}<link rel="stylesheet" href="{{ url }}" />
-    {% endfor %}<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222222" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#000000">
+
+<link rel="stylesheet" href="/assets/css/{% if page.layout %}{{ page.layout }}{% else %}{{ site.layout }}{% endif %}.css">
+{% if site.author.twitter %}<link rel="me" href="https://twitter.com/{{site.author.twitter}}">{% endif %}
+{% for url in layout.css %}<link rel="stylesheet" href="{{ url }}" />{% endfor %}
+
+{% capture favicon_path %}{{ '/assets/img/favicons' | relative_url }}{% endcapture %}
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_path }}/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ favicon_path }}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ favicon_path }}/favicon-16x16.png">
+<link rel="manifest" href="{{ favicon_path }}/site.webmanifest">
+<link rel="shortcut icon" href="{{ favicon_path }}/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="application-name" content="{{ site.title }}">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="{{ favicon_path }}/browserconfig.xml">
+
+<title>{{site.title}}{% if page.shortdescription %} &middot; {{page.shortdescription}}{% endif %}</title>
+
 {% seo title=false %}
-  </head>
+
+</head>

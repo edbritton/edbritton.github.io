@@ -1,0 +1,51 @@
+/* DARKMODE COLOURS (DEFAULT) */
+:root{--black:#f2f2f2;--white:#222;--green:rgb(48,209,88);--teal:rgb(100,210,255);--blue:rgb(10,132,255);--indigo:rgb(94,92,230);--purple:rgb(191,90,242);--pink:rgb(255,55,95);--red:rgb(255,69,58);--orange:rgb(255,150,10);--yellow:rgb(255,214,10);
+
+--brown:rgb(178,80,0);
+--watermelon:#FC6C85;
+--volt:#CEFF00;
+--fitness:#A6FF00;
+--logo:white;
+--transparent-white: rgba(34,34,34,0);
+--transparent-black:rgba(255,255,255,0);
+--highlight-fg: rgba(153,153,153,.8);
+--highlight-bg: rgba(153,153,153,.2);}
+
+/* LIGHTMODE COLOURS */
+@media(prefers-color-scheme:light){:root{--black:#222;--white:white;--green:rgb(52,199,89);--teal:rgb(90,200,250);--blue:rgb(0,122,255);--indigo:rgb(88,86,214);--purple:rgb(175,82,222);--pink:rgb(255,45,85);--red:rgb(255,59,48);--orange:rgb(255,149,0);--yellow:#efad04;--logo:#1DA1F2;--transparent-white:rgba(255,255,255,0);--transparent-black:rgba(0,0,0,0);}}
+
+/* FORCED COLOURS WHEN INVERTED */
+@media(inverted-colors) {:root{
+--black: black;
+--white: white
+}}
+
+/* DARKMODE + ACCESSIBILITY */
+@media(prefers-reduced-motion) {:root{
+--green:rgb(48,218,91);
+--teal:rgb(112,215,255);
+--blue:rgb(64,156,255);
+--indigo:rgb(125,122,255);
+--purple:rgb(218,143,255);
+--pink:rgb(255,100,130);
+--red:rgb(255,105,97);
+--orange:rgb(255,179,64);
+--yellow:rgb(255,212,38);
+--brown:rgb(178,80,0);
+}}
+
+/* LIGHTMODE + ACCESSIBILITY */
+@media(prefers-color-scheme:light) and (prefers-reduced-motion) {:root{
+--green:rgb(36,138,61);
+--teal:rgb(0,113,164);
+--blue:rgb(0,64,221);
+--indigo:rgb(54,52,163);
+--purple:rgb(137,68,171);
+--pink:rgb(211,15,69);
+--red:rgb(215,0,21);
+--orange:rgb(201,52,0);
+--yellow:rgb(178,80,0);
+}}
+
+/* OLED BLACK */
+@media(-webkit-device-pixel-ratio:3) and (prefers-color-scheme:dark){:root{--white:black;--transparent-white:rgba(0,0,0,0)}}

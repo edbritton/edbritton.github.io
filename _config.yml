@@ -1,5 +1,5 @@
 title: Ed Britton
-description: Ed Britton (@edbritton) is a comedian.
+description: My stuff online.
 google_analytics: 
 show_downloads: false
 lang: en_GB
@@ -19,6 +19,8 @@ social:
   name: Ed Britton
   links:
     - https://twitter.com/edbritton
+    - https://github.com/edbritton
+    - https://www.printables.com/social/176036-ted
     - https://youtube.com/edbritton
     - https://imdb.com/name/nm10740536
 
@@ -45,21 +47,5 @@ defaults:
       type: "pages"
     values:
       lang: en_GB
-      layout: apostrophe
+      layout: brutal
       image: /assets/img/default.jpg
-      embed:
-        src: https://www.youtube.com/embed/videoseries?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3
-        caption: My latest vlog.
-        cite: https://youtube.com/edbritton
-  - scope:
-      path: "blog"
-    values:
-      layout: devs
-  - scope:
-      path: "pages/404.md"
-    values:
-      embed: false
-  - scope:
-      path: "pages/blog.md"
-    values:
-      embed: false

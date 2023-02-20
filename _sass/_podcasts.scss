@@ -1,0 +1,107 @@
+[data-podcast] body {
+font-size: 1rem;
+max-width: 50em;
+margin: auto;
+
+display: grid;
+grid-gap: 0 1em;
+grid-template-columns: repeat(2,minmax(17vmin,1fr)) repeat(4,1fr) ;
+grid-template-areas:
+  "nav         nav         nav         nav         nav         nav"
+  "picture     picture     header      header      header      header"
+  "picture     picture     actions     actions     actions     actions"
+  "description description description description description description"
+  "list        list        list        list        list        list";
+}
+[data-podcast] p { margin: 0; -webkit-hyphens: none !important }
+[data-podcast] hr { display: none }
+[data-podcast] nav { grid-area: nav; padding-block-end: 1em !important }
+[data-podcast] [datetime] { font-feature-settings: "none" }
+
+[data-podcast] :is(nav + p,img) { grid-area: picture; margin-top: 0; width: 100% }
+
+[data-podcast] header { grid-area: header }
+[data-podcast] header * { margin: 0; text-align: inherit }
+[data-podcast] header h1 { font-size: 1.5em }
+[data-podcast] header :last-child { margin-top: 1.5em; text-align: inherit }
+
+[data-podcast] [itemprop="description"] + p { grid-area: actions; display: flex; justify-content: space-between; padding-block: 1em }
+[data-podcast] [itemprop="description"] + p a { background: var(--purple,purple); border-color: var(--purple,purple); color: white; line-height: 1.5; padding: .4em }
+[data-podcast] [itemprop="description"] + p a:is(:focus,:hover) { border-color: var(--purple,purple); box-shadow: 0 0 0 2px var(--white,#222), 0 0 0 4px var(--purple); color: var(--white,#222) !important }
+
+[data-podcast] [itemprop="description"] { grid-area: description }
+[data-podcast] ol { grid-area: list; list-style: none; padding: 0 }
+
+[data-podcast] :is([itemprop="description"], li) { border-top: 1px solid var(--highlight-fg,silver); padding-top: 1em }
+
+[data-podcast] li:not(:first-child) { border-top-style: dotted; }
+[data-podcast] body :not(nav) a { border-radius: 9999px; padding: .3em .5em; text-decoration: none; font-weight: 600; overflow: hidden; line-height: 1; margin-block-start: .5em; max-height: 2.5em; white-space: nowrap; text-overflow: ellipsis }
+
+[data-podcast] li { padding-bottom: 1em; border-color: var(--highlight-fg,silver) }
+[data-podcast] li a { background: var(--highlight-bg,transparent); color: var(--purple,purple); border-color: var(--purple,purple) !important; display: inline-block }
+[data-podcast] li a:is(:focus,:hover) { background: var(--purple,purple); color: var(--white,#222) }
+[data-podcast] li big { text-transform: uppercase; letter-spacing: .05em; font-weight: bold; font-size: smaller; }
+
+@media (min-width: 376px) {
+
+[data-podcast] body {
+grid-template-areas:
+  "nav         nav         nav          nav         nav         nav"
+  "picture     picture     header       header      header      header"
+  "description description description  description description description"
+  "actions     actions     actions      actions     actions     actions"
+  "list        list        list         list        list        list";
+}
+
+}
+
+@media (min-width: 567px) {
+
+[data-podcast] body {
+grid-template-areas:
+  "nav         nav         nav     nav     nav     nav"
+  "picture     picture     header  header  header  header"
+  "picture     picture     actions actions actions actions"
+  "picture     picture     list    list    list    list"
+  "description description list    list    list    list"
+  "description description list    list    list    list"
+  ".           .           list    list    list    list";
+}
+
+@media (min-width: 1024px) {
+[data-podcast] body {
+grid-template-areas:
+  "nav     nav     nav         nav         nav         nav"
+  "picture picture description description description description"
+  "picture picture list        list list list"
+  "header  header  list        list list list"
+  "actions actions list        list list list"
+  ".       .       list        list list list";
+}
+
+[data-podcast] [itemprop="description"] {
+  border: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+[data-podcast] header { text-align: center; margin-top: 1em }
+[data-podcast] [itemprop="description"] + p { justify-content: space-around }
+}
+
+@media (min-width: 588px) and (min-height: 1080px) {
+
+[data-podcast] body {
+grid-template-areas:
+  "nav         nav         nav         nav         nav         nav"
+  ".           picture     picture picture .       ."
+  ".           header      header  header  .       ."
+  ".           actions     actions actions .       ."
+  "description description description description description description"
+  "list list list    list    list    list";
+}
+
+[data-podcast] header { text-align: center; margin-top: 1em }
+[data-podcast] [itemprop="description"] + p { justify-content: space-around }
+
+}

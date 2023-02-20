@@ -16,7 +16,25 @@
 <p itemprop="description" align="center">{{content}}</p>
 
 <nav align="center">
-<p><a href="/blog" accesskey="1" aria-label="Read my blog posts.">Blog</a></p>
+{% for link in site.social.links %}
+<p><a itemprop="sameAs" href="{{link}}">
+
+{% case link %}
+  {% when contains "twitter" %}
+     { "ツイッター" page.lang == "ja" else "Twitter" }
+  {% when contains "imdb" %}
+     IMDb
+  {% when contains "github" %}
+     GitHub
+  {% when contains "youtu" %}
+     YouTube
+  {% when contains "printables" %}
+     Printables
+  {% else %}
+     {{link}}
+{% endcase %}
+</a></p>
+{% endfor %}
 </nav>
 
 <blockquote><q>The safest way of not being very miserable is to not expect to be very happy.</q><br>

@@ -20,18 +20,14 @@
 <p><a itemprop="sameAs" href="{{link}}">
 
 {% case link %}
-  {% when "twitter" %}
+  {% when "https://twitter.com/edbritton" %}
      { "ツイッター" page.lang == "ja" else "Twitter" }
-  {% when "imdb" %}
+  {% when "https://imdb.com/name/nm10740536" %}
      IMDb
-  {% when "github" %}
-     GitHub
-  {% when "youtu" %}
-     YouTube
-  {% when "printables" %}
+  {% when "https://printables.com/social/176036-ted" %}
      Printables
   {% else %}
-     {{link | remove: "https?:\/\/(www\.)?"}}
+     {{link | remove: "http://" | remove: "www."}}
 {% endcase %}
 </a></p>
 {% endfor %}

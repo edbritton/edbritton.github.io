@@ -1,9 +1,8 @@
 ---
 ---
-@import '_podcasts.css';
-@import '_aria.css' screen and print;
-@import '_gemini.css' (prefers-reduced-motion) and (inverted-colors);
-@import '_varColours.css';
+@import 'podcasts, varColours';
+@import 'aria' screen and print;
+@import 'gemini' (prefers-reduced-motion) and (inverted-colors);
 
 *{
   text-rendering: optimizeLegibility;

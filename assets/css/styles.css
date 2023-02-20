@@ -12,7 +12,7 @@
 
 html,body,body>:first-child{margin:0;padding:0}body{background:var(--white,#222);color:var(--black,#f2f2f2);font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:65ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
 
-pre,code,samp,kbd,xmp,plaintext,listing { font-family: ui-monospace, monospace }
+pre,code,samp,kbd,xmp,plaintext,listing{font-family:ui-monospace,monospace}
 
 p:not([align="center"]){-webkit-hyphens:auto}
 

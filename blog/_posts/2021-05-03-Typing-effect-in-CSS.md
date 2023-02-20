@@ -1,3 +1,6 @@
+---
+title: Typing effect in CSS
+---
 <p><u>This page requires CSS to view properly.</u></p>
 
 <p>I love my typewriter, it’s easily the best productivity tool I have because it does one thing, and it does it really well.</p>

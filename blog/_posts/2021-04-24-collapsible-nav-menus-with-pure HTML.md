@@ -23,7 +23,6 @@ title: Collapsible nav menus with pure HTML
 <a href="/about">About</a>
 </details>
 </dl>
-</p>
 
 <p>It may not be perfect, and in Safari it seems to render as a full width block, but if you don’t care about brutalist web design, you  could always throw in some CSS to make it look more like you’d prefer.</p>
 

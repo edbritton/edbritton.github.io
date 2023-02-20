@@ -3,7 +3,6 @@ title: Ed’s Projects
 permalink: /repos/index.html
 redirect_from:
   - /projects/
-  - /repos/
   - /repositories/
   - /github/
 ---

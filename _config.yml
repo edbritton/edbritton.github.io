@@ -24,7 +24,7 @@ social:
     - https://youtube.com/edbritton
     - https://imdb.com/name/nm10740536
 
-permalink: /:categories/:short_year:y_day/
+permalink: /:categories/:short_year:y_day:hour:minute/
 
 sass:
   style: compressed # possible values: nested expanded compact compressed

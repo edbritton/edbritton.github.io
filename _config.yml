@@ -38,9 +38,3 @@ plugins:
   - jekyll-seo-tag
 
 jekyll-mentions: https://twitter.com
-
-defaults:
-  - scope:
-      path: "blog"
-    values:
-      layout: post

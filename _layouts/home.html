@@ -27,7 +27,7 @@
   {% when "https://printables.com/social/176036-ted" %}
      Printables
   {% else %}
-     {{link | remove: "http://" | remove: "https://" | remove: "www."}}
+     {{link | remove: "http://" | remove: "https://" | remove: "www." | remove: ".com/" | remove: "edbritton" | replace: "github", "GitHub" | replace: "youtube", "YouTube"}}
 {% endcase %}
 </a></p>
 {% endfor %}

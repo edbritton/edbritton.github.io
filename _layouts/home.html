@@ -22,16 +22,16 @@
 {% case link %}
   {% when "twitter" %}
      { "ツイッター" page.lang == "ja" else "Twitter" }
-  {% when contains "imdb" %}
+  {% when "imdb" %}
      IMDb
-  {% when contains "github" %}
+  {% when "github" %}
      GitHub
-  {% when contains "youtu" %}
+  {% when "youtu" %}
      YouTube
-  {% when contains "printables" %}
+  {% when "printables" %}
      Printables
   {% else %}
-     {{link | remove: "https:\\"}}
+     {{link | remove: "https"}}
 {% endcase %}
 </a></p>
 {% endfor %}

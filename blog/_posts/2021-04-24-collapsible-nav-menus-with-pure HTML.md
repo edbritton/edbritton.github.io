@@ -5,9 +5,9 @@ title: Collapsible nav menus with pure HTML
 
 <p>All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.</p>
 
-<p>
 <dl>
-<dt>HTML<dd>
+<dt>HTML</dt>
+<dd>
 <pre>&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
 &lt;summary&gt;Menu&lt;/summary&gt;
 &lt;a href="/"&gt;Home&lt;/a&gt;
@@ -15,13 +15,15 @@ title: Collapsible nav menus with pure HTML
 &lt;a href="/about"&gt;About&lt;/a&gt;
 &lt;/details&gt;</pre>
 
-<dt>Result<dd>
+<dt>Result</dt>
+<dd>
 <details open>
 <summary>Menu <mark>← <em>click here</em>&nbsp;</mark></summary>
 <a href="/">Home</a>
 <a href="/blog">Blog</a>
 <a href="/about">About</a>
 </details>
+</dd>
 </dl>
 
 <p>It may not be perfect, and in Safari it seems to render as a full width block, but if you don’t care about brutalist web design, you  could always throw in some CSS to make it look more like you’d prefer.</p>

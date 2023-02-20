@@ -1,0 +1,22 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{page.lang}}" style="display:flex;place-items:center;min-height:100vh">
+
+{% include head.html %}
+
+<body bgcolor="#222222" text="white" link="#FFD426" alink="#FF6482" vlink="#B25000">
+
+{% if page.dir != "/" %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
+
+<p align="center"><time datetime="{{page.date}}">{{page-date}}</time></p>
+
+<h1 align="center"><a name="top">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</a></h1>
+
+{{content}}
+
+</body>
+
+<!--
+{{page.url}}, {{page.date}}, {{page.id}}, {{page.categories}}, {{page.collection}}, {{page.tags}}, {{page.dir}}, {{page.name}}, {{page.path}}.
+-->

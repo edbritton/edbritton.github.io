@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="noCSS.css">
+</head>
+
+<body bgcolor="#222222" text="white" link="#409CFF" alink="#FF6961" vlink="#DA8FFF">
+
+<nav>
+<a href="blog.html" accesskey="b" aria-label="Return to list of blog posts.">← Blog</a>
+</nav>
+
+<p align="center"><time datetime="2021-04-24">2021-04-24</time></p>
+
+<h1 align="center" id="top">Collapsible nav menus with pure HTML</a></h1>
+
+<p align="center"><big itemprop="description">Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
+
+<p>All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.</p>
+
+<p>
+<dl>
+<dt>HTML<dd>
+<pre>&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
+&lt;summary&gt;Menu&lt;/summary&gt;
+&lt;a href="/"&gt;Home&lt;/a&gt;
+&lt;a href="/blog"&gt;Blog&lt;/a&gt;
+&lt;a href="/about"&gt;About&lt;/a&gt;
+&lt;/details&gt;</pre>
+
+<dt>Result<dd>
+<details open>
+<summary>Menu <mark>← <em>click here</em>&nbsp;</mark></summary>
+<a href="/">Home</a>
+<a href="/blog">Blog</a>
+<a href="/about">About</a>
+</details>
+</dl>
+</p>
+
+<p>It may not be perfect, and in Safari it seems to render as a full width block, but if you don’t care about brutalist web design, you  could always throw in some CSS to make it look more like you’d prefer.</p>
+
+<hr color="silver" size="0.5px">
+
+<ol aria-label="Footnotes">
+<li id="fn:1">Adding <code>open</code> to the element makes it “open” on load. <a href="#fnref:1">↩</a></li>
+</ol>
+
+<a href="#top" id="bottom" accesskey="g" aria-label="Back to top of page">Top of page</a>
+
+</body>

@@ -30,18 +30,16 @@ sass:
   style: compressed # possible values: nested expanded compact compressed
 
 plugins:
+  - jekyll-default-layout
+  - jekyll-github-metadata
   - jekyll-mentions
-  - jekyll-seo-tag
+  - jekyll-readme-index
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 jekyll-mentions: https://twitter.com
 
 defaults:
-  - scope:
-      path: "index.md"
-    values:
-      twitter:
-        card: player
   - scope:
       path: ""
       type: "pages"
@@ -49,3 +47,7 @@ defaults:
       lang: en_GB
       layout: noCSS
       image: /assets/img/default.jpg
+  - scope:
+      path: "blog"
+    values:
+      layout: post

@@ -9,7 +9,7 @@
 {% if site.author.twitter %}<link rel="me" href="https://twitter.com/{{site.author.twitter}}">{% endif %}
 {% for url in layout.css %}<link rel="stylesheet" href="{{ url }}" />{% endfor %}
 
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+{% feed_meta %}
 
 <link rel="apple-touch-icon" sizes="180x180" href="{{site.github.owner_gravatar_url}}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.github.owner_gravatar_url}}">

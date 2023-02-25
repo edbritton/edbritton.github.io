@@ -20,4 +20,3 @@ redirect_from:
 ---
 
 {{ site.github }}
-{% site.github %}

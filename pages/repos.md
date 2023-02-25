@@ -1,6 +1,6 @@
 ---
 title: Ed’s Projects
-permalink: /repos
+permalink: /repos/
 redirect_from:
   - /projects/
   - /repositories/

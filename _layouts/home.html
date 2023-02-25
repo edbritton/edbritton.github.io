@@ -17,7 +17,9 @@
 
 <nav align="center">
 {% for link in site.social.links %}
-<p><a itemprop="sameAs" href="{{link}}">
+{% if forloop.first %}<details>
+<summary>Socials</summary>{% endif %}
+<a itemprop="sameAs" href="{{link}}">
 
 {% case link %}
   {% when "https://twitter.com/edbritton" %}
@@ -29,7 +31,8 @@
   {% else %}
      {{link | remove: "http://" | remove: "https://" | remove: "www." | remove: ".com/" | remove: "edbritton" | replace: "github", "GitHub" | replace: "youtube", "YouTube"}}
 {% endcase %}
-</a></p>
+</a>
+{% if forloop.last %}</details>{% endif %}
 {% endfor %}
 </nav>
 

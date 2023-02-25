@@ -4,7 +4,7 @@ title: <ruby><rb>Ed’s website <rp>(<rt>エドのウェブサイト<rp>)</ruby>
 embed:
   caption: 私の最新のヴログ。
 lang: ja
-permalink: /jp/index.html
+permalink: /jp
 layout: home
 ---
 

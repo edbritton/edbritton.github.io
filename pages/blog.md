@@ -1,6 +1,6 @@
 ---
 title: Ed’s blog
-permalink: /blog/index.html
+permalink: /blog
 published: true
 ---
 

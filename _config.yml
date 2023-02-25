@@ -33,6 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-github-metadata
   - jekyll-mentions
+  - jekyll-octicons
   - jekyll-redirect-from
   - jekyll-seo-tag
 

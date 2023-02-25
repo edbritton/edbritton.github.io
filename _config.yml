@@ -30,6 +30,7 @@ sass:
 
 plugins:
   - jekyll-default-layout
+  - jekyll-feed
   - jekyll-github-metadata
   - jekyll-mentions
   - jekyll-redirect-from

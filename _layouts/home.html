@@ -16,9 +16,9 @@
 <article itemprop="description">{{content}}</article
 
 <nav align="center">
-{% for page in site.pages %}
+{% for page in site.pages %}{% unless page.layout == "home" or page.permalink == "/404/" or page.name == "README.md" %}
 <a href="{{page.url}}">{{page.title}}</a>{% unless forloop.last %} {% endunless %} 
-{% endfor %}
+{% endunless %}{% endfor %}
 {% for link in site.social.links %}
 {% if forloop.first %}<details>
 <summary>Socials</summary>{% endif %}

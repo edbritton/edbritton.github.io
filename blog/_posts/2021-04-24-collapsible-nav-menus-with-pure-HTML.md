@@ -1,19 +1,17 @@
 ---
 description: Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
 ---
-All you need to do is surround your would-be menu with `&lt;details&gt;` and insert `&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;` as the first child. Easy.
+All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.
 
 <dl>
 <dt>HTML</dt>
 <dd>
-```
-&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
+<pre>&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
 &lt;summary&gt;Menu&lt;/summary&gt;
 &lt;a href="/"&gt;Home&lt;/a&gt;
 &lt;a href="/blog"&gt;Blog&lt;/a&gt;
 &lt;a href="/about"&gt;About&lt;/a&gt;
-&lt;/details&gt;
-```
+&lt;/details&gt;</pre>
 </dd>
 
 <dt>Result</dt>

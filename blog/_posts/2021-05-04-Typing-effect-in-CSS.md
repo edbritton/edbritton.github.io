@@ -10,8 +10,7 @@ Which is why I’ve made a bad design choice in this post, and I’ll show you h
 
 <samp>I love my <mark>typewriter</mark>!</samp>
 
-```
-samp {
+<pre>samp {
   --WPM: 50;
   --secsToType100ch: calc(1200s / var(--WPM));
   display: block;
@@ -33,7 +32,6 @@ samp {
 @keyframes caret {
   from, to { border-color: transparent }
   50% { border-color: dodgerblue }
-}
-```
+}</pre>
 
 <style>samp{--WPM:50;--secsToType100ch:calc(1200s/var(--WPM));display:inline-block;overflow:hidden;font-family: ui-monospace,monospace;border-right:.15em solid dodgerblue;white-space:nowrap;animation:typing var(--secsToType100ch) steps(100, end) infinite,caret 1s step-end infinite;}@keyframes typing {from,to{max-width:0}50%{max-width:100ch}}@keyframes caret{from,to{border-color:transparent}50%{border-color:dodgerblue}}</style>

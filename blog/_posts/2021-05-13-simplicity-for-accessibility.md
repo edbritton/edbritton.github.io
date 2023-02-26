@@ -1,5 +1,4 @@
 ---
-title: Simplicity for accessibility
 description: If you make a website that is mainly text, it will be easier for visually impared users. But there’s more we can do.
 ---
 

@@ -1,5 +1,5 @@
 ---
-Description: Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
+description: Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
 ---
 <p>All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.</p>
 

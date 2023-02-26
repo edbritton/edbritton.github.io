@@ -1,5 +1,4 @@
 ---
-title: Tablephobia ruined tables
 description: Once upon a time nearly every website was an invisible spreadsheet table, now not even a table is a table anymore.
 ---
 

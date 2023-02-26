@@ -1,5 +1,5 @@
 ---
-title: Ed’s Projects
+title: Ed’s projects
 permalink: /repos/
 redirect_from:
   - /projects/

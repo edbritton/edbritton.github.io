@@ -11,7 +11,7 @@
 
 <p align="center"><time datetime="{{page.date|date:'%Y-%m-%d'}}">{{page.date|date:"%Y-%m-%d"}}</time></p>
 
-<h1 align="center"><a name="top">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</a></h1>
+<h1 align="center"><a name="top">{% if page.title %}{{page.title | capitalize}}{% else %}{{site.title}}{% endif %}</a></h1>
 
 {% if page.description %}<p align="center"><big itemprop="description">{{page.description}}</big></p>{% endif %}
 

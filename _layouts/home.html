@@ -29,7 +29,7 @@
      {% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %}
   {% when "https://imdb.com/name/nm10740536" %}
      IMDb
-  {% when "https://www.printables.com/social/176036-ted" %}
+  {% when "https://www.printables.com/social/176036-ted/about" %}
      Printables
   {% else %}
      {{link | remove: "http://" | remove: "https://" | remove: "www." | remove: ".com/" | remove: "edbritton" | replace: "github", "GitHub" | replace: "youtube", "YouTube"}}

@@ -1,4 +1,4 @@
-@media speech and print {
+@media print and speech {
 
 [aria-label],[aria-hidden]{color:var(--red) !important}
 [aria-label]:before{color:var(--green);content:attr(aria-label)}

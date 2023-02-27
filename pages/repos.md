@@ -16,3 +16,5 @@ redirect_from:
 
 {% unless forloop.last %}<hr color="silver" size="0.5px">{% endunless %}
 {% endfor %}
+
+{% gist %}

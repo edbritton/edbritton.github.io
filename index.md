@@ -1,1 +1,1 @@
-Making money so I can make other things.
+Making money, so I can make other things.

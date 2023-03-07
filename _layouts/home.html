@@ -16,7 +16,7 @@
 <article itemprop="description">{{content}}</article
 
 <nav align="center">
-{% for page in site.pages %}{% unless page.layout == "home" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}
+{% for page in site.pages %}{% unless page.layout != "page" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}
 <a href="{{page.url}}">{{page.title | remove: "Ed’s " | capitalize }}</a> 
 {% endunless %}{% endfor %}
 {% for link in site.social.links %}
@@ -62,5 +62,5 @@
 </body>
 
 <!--
-{{page.url}}, {{page.date}}, {{page.id}}, {{page.categories}}, {{page.collection}}, {{page.tags}}, {{page.dir}}, {{page.name}}, {{page.path}}.
+[{{page.url}},{{page.date}},{{page.id}},{{page.categories}},{{page.collection}},{{page.tags}},{{page.dir}},{{page.name}},{{page.path}},{{page.layout}}
 -->

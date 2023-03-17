@@ -1,3 +1,5 @@
+{% if site.github.owner.bio %}{{ site.github.owner.bio }} {% endif %}
+
 {% assign repos = site.github.public_repositories | sort: "pushed_at" | reverse | where_exp: "repos", "repos.homepage" | where_exp: "repos", "repos.homepage != ''"%}
 
 {% for repo in repos %}

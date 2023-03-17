@@ -1,5 +1,6 @@
 ---
 description: Once upon a time nearly every website was an invisible spreadsheet table, now not even a table is a table anymore.
+tags: webdev, html
 ---
 
 In the 90s websites were simple, often they were either ugly but full of very informative text, or they were pretty and full of big picture files which your dial-up modem would struggle to load for you.

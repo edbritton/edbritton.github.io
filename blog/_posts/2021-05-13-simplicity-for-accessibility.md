@@ -1,5 +1,6 @@
 ---
 description: If you make a website that is mainly text, it will be easier for visually impared users. But there’s more we can do.
+tags: webdev, html, accessibility
 ---
 
 In a previous blog post of mine…

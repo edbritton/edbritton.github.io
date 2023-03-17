@@ -78,7 +78,7 @@ a[href]:not([href^="#fn"]), summary{
 }
 }
 
-pre{letter-spacing:-1px;line-height:1;overflow:hidden !important }
+pre{letter-spacing:-1px;line-height:1;no-overflow:hidden !important }
 
 blink { animation: blink 2s linear infinite }
 @keyframes blink {

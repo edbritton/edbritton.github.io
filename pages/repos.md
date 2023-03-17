@@ -8,11 +8,11 @@ redirect_from:
 ---
 
 {% assign repos = site.github.public_repositories | sort: "pushed_at" | reverse %}
-{% for repository in repos %}
-**[{% if repository.fork %}{% octicon repo-forked height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{% endif %}{{ repository.name }}]({% if repository.homepage or repository.homepage <> "" %}{{ repository.homepage }}{% else %}{{ repository.html_url }}{% endif %})** 
-<small><time datetime="{{ repository.pushed_at | date: '%Y-%m-%d' }}">{{ repository.pushed_at | date: "%Y-%m-%d" }}</time></small>
+{% for repo in repos %}
+**[{% if repo.fork %}{% octicon repo-forked height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{% endif %}{{ repo.name }}]({% if repo.homepage or repo.homepage != "" %}{{ repo.homepage }}{% else %}{{ repo.html_url }}{% endif %})** 
+<small><time datetime="{{ repo.pushed_at | date: '%Y-%m-%d' }}">{{ repo.pushed_at | date: "%Y-%m-%d" }}</time></small>
 
-{{ repository.description }}
+{{ repo.description }}
 
 {% unless forloop.last %}<hr color="silver" size="0.5px">{% endunless %}
 {% endfor %}

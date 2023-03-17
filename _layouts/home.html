@@ -13,9 +13,12 @@
 
 <h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% else %}{{site.title|upcase}}{% endif %}</font></h1>
 
-<p align="center" itemprop="description">{{content}}</p>
+{% assign profile = site.github.owner %}
 
-<pre>{{ site.github }}</pre>
+{% octicon repo-forked height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;
+<pre>{{ profile }}</pre>
+
+<p align="center" itemprop="description">{{content}}</p>
 
 <nav align="center">
 {% for page in site.pages %}{% unless page.layout != "page" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}

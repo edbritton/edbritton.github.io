@@ -19,9 +19,10 @@
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }}</br>{% endif %}
 {% if profile.location %}<a href="https://maps.apple.com/?q={{profile.location}}">{% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}</a><br>{% endif %}
 {% for link in site.social.links %}
-{% case link|slice:8,7 %}
+{% assign domain = link | slice: 8, 7 %}
+{% case domain %}
   {% when "twitter" %}
-    {% octicon twitter height:16 aria-label:"Twitter: " fill:currentcolor %}&nbsp;@{{ link | remove: "https://twitter.com/" }}
+    <a href="{{ link }}">@{{ link | remove: "https://twitter.com/" }}</a>
   {% else %}
 {% endcase %}
 {% endfor %}

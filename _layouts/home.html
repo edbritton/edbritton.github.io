@@ -20,6 +20,7 @@
 {% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}<br>
 {% for link in site.socials.links %}
 {% if {link|slice:8,14} == "twitter" %}{% octicon twitter height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;@{{ link | remove: "https://twitter.com" | remove: "http://twitter.com" }}{% endif %}
+{% endfor %}
 </p>
 
 <p align="center" itemprop="description">{{content}}</p>

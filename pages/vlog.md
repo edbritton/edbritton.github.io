@@ -1,6 +1,7 @@
 ---
 title: Ed’s vlog
 permalink: /vlog/
+hide_home: true
 seo_redirect_to: 'https://www.youtube.com/playlist?list=PLvO7_P5xOL8VK0G9HfZ8OL2oVdIh0gkT3'
 author: edbritton
 twitter:

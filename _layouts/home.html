@@ -30,7 +30,7 @@
 <a href="https://github.com/{{ profile.login }}">{% octicon logo-github height:16 aria-label:"GitHub" fill:currentcolor %}</a>
 </p>
 
-<p align="center" itemprop="description">{{content}}</p>
+<center itemprop="description">{{content}}</center>
 
 <nav align="center">
 {% for page in site.pages %}{% unless page.layout != "page" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}

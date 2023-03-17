@@ -24,7 +24,7 @@
 
 <hr color="silver" size="0.5px">
 
-<p>
+<section>
 {% if profile.bio %}{{ profile.bio }} {% endif %}
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
 {% for link in site.social.links %}
@@ -35,7 +35,7 @@
   {% else %}
 {% endcase %}
 {% endfor %}
-</p>
+</section>
 
 <!-- hr color="silver" size="0.5px">
 

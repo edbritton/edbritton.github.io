@@ -12,22 +12,7 @@
 
 <p align="center"><img src="http://github.com/edbritton.png" height="148"></p>
 
-<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% elsif site.title %}{{site.title|upcase}}{% else %}{{profile.name}}{% endif %}</font></h1>
-
-<table>
-{% if profile.bio %}<tr><td colspan="2">{{ profile.bio }}</td></tr>{% endif %}
-{% if profile.company %}<tr><th>{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}</th><td>{{ profile.company }}</td></tr>{% endif %}
-{% if profile.location %}<tr><th>{% octicon location height:16 aria-label:"Location: " fill:currentcolor %}</th><td><a href="https://maps.apple.com/?q={{profile.location}}">{{ profile.location }}</a></td></tr> {% endif %}
-{% for link in site.social.links %}
-{% assign domain = link | slice: 8, 7 %}
-{% case domain %}
-  {% when "twitter" %}
-    <tr><th></th><td><a href="{{ link }}">@{{ link | remove: "https://twitter.com/" }}</a></td></tr>
-  {% else %}
-{% endcase %}
-{% endfor %}
-</table>
-</p>
+<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>
 
 <section itemprop="description">{{content}}</section>
 
@@ -39,8 +24,18 @@
 
 <hr color="silver" size="0.5px">
 
-<blockquote><q>The safest way of not being very miserable is to not expect to be very happy.</q><br>
-— Arthur Schopenhauer</blockquote>
+<p>
+{% if profile.bio %}{{ profile.bio }} {% endif %}
+{% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
+{% for link in site.social.links %}
+{% assign domain = link | slice: 8, 7 %}
+{% case domain %}
+  {% when "twitter" %}
+    <a href="{{ link }}">@{{ link | remove: "https://twitter.com/" }}</a>
+  {% else %}
+{% endcase %}
+{% endfor %}
+</p>
 
 <!-- hr color="silver" size="0.5px">
 

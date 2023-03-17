@@ -12,7 +12,7 @@
 
 <p align="center"><img src="http://github.com/edbritton.png" height="148"></p>
 
-<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% elseif site.title %}{{site.title|upcase}}{% else %}{{profile.name}}{% endif %}</font></h1>
+<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% elsif site.title %}{{site.title|upcase}}{% else %}{{profile.name}}{% endif %}</font></h1>
 
 <p>
 {% if profile.bio %}{{ profile.bio }}<br>{% endif %}

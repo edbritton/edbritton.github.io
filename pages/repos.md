@@ -9,7 +9,7 @@ redirect_from:
 
 {% assign repos = site.github.public_repositories | sort: "pushed_at" | reverse %}
 {% for repository in repos %}
-**[{% if repository.fork %}{% octicon repo-forked height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{% endif %}{{ repository.name }}]({% if repository.homepage or repository.homepage <> "" %}{{ repository.homepage }}{% else %}{{ repository.html_url }}{% endif %})** 
+**[{% if repository.fork %}{% octicon repo-forked height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{% endif %}{{ repository.name }}]({% if repository.homepage and repository.homepage <> "" %}{{ repository.homepage }}{% else %}{{ repository.html_url }}{% endif %})** 
 <small><time datetime="{{ repository.pushed_at | date: '%Y-%m-%d' }}">{{ repository.pushed_at | date: "%Y-%m-%d" }}</time></small>
 
 {{ repository.description }}

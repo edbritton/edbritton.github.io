@@ -20,16 +20,16 @@
 {{ profile.bio }}<br>
 {{ profile.company }}</br>
 {% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}<br>
-{% for link in site.socials.links %}
+{% for link in site.social.links %}
 {{link}}
-{% case link %}
+{% case link|slice:8,15 %}
   {% when "twitter" %}
     {% octicon twitter height:16 aria-label:"Twitter: " fill:currentcolor %}&nbsp;@{{ link | remove: "https://twitter.com/" }}
   {% else %}
 {% endcase %}
 {% endfor %}
 
-<a href="https://github.com/{{ profile.login }}">{% octicon mark-github height:16 aria-label:"GitHub: " fill:currentcolor %}&nbsp;@{{ profile.login }}</a>
+<a href="https://github.com/{{ profile.login }}">{% octicon logo-github height:16 aria-label:"GitHub" fill:currentcolor %}</a>
 </p>
 
 <p align="center" itemprop="description">{{content}}</p>

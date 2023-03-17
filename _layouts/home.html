@@ -19,9 +19,8 @@
 {{ profile.bio }}<br>
 {% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}<br>
 {% for link in site.socials.links %}
-{% assign gitwit = link|slice:8,15 %}
-{{ gitwit }}
-{% case gitwit %}
+{{ link }}
+{% case link|slice:8,15 %}
   {% when "twitter" %}
     {% octicon twitter height:16 aria-label:"Twitter: " fill:currentcolor %}&nbsp;@{{ link | remove: "https://twitter.com/" }}
   {% when "github." %}

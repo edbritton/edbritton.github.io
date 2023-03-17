@@ -4,6 +4,7 @@
 <html lang="{{page.lang}}" style="display:flex;place-items:center;min-height:100vh">
 
 {% include head.html %}
+{% assign profile = site.github.owner %}
 
 <body bgcolor="#222222" text="white" link="#409CFF" alink="#FF6961" vlink="#DA8FFF">
 
@@ -11,17 +12,14 @@
 
 <p align="center"><img src="http://github.com/edbritton.png" height="148"></p>
 
-<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% else %}{{site.title|upcase}}{% endif %}</font></h1>
-
-{% assign profile = site.github.owner %}
+<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title|upcase}}{% elseif site.title %}{{site.title|upcase}}{% else %}{{profile.name}}{% endif %}</font></h1>
 
 <p>
-{{ profile.name }}<br>
-{{ profile.bio }}<br>
-{{ profile.company }}</br>
-{% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}<br>
+{% if profile.bio %}{{ profile.bio }}<br>{% endif %}
+{% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }}</br>{% endif %}
+{% if profile.location %}<a href="https://maps.apple.com/?q={{profile.location}}">{% octicon location height:16 aria-label:"Forked repo: " fill:currentcolor %}&nbsp;{{ profile.location }}</a><br>{% endif %}
 {% for link in site.social.links %}
-{{link}}
+{{link|slice:8,15}}
 {% case link|slice:8,15 %}
   {% when "twitter" %}
     {% octicon twitter height:16 aria-label:"Twitter: " fill:currentcolor %}&nbsp;@{{ link | remove: "https://twitter.com/" }}

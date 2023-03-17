@@ -2,6 +2,8 @@
 ---
 @import 'varColours';
 
+:root { --accent:var(--yellow,AccentColor); color-sheme: light dark }
+
 *{
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern", "ss01", "ss07";
@@ -15,7 +17,7 @@ pre,code,samp,kbd,xmp,plaintext,listing{font-family:ui-monospace,monospace}
 
 p:not([align="center"]){-webkit-hyphens:auto}
 
-a[href]{color:var(--yellow,#fc0)}
+a[href]{color:var(--accent,AccentColor)}
 
 li>a[href]:first-child:last-child{display:block}
 
@@ -51,7 +53,7 @@ th,td{border-left:1.5px solid;overflow:auto;padding:0.5rem;white-space:nowrap}
 
 code{background:var(--black,#f2f2f2);color:var(--white,#222);font-size:.9em}
 
-:focus{background:var(--yellow,#fc0);color:var(--white,#222) !important;text-decoration-color:transparent}
+:focus{background:var(--accent,AccentColor);color:var(--white,#222) !important;text-decoration-color:transparent}
 
 a[href]:not([href^="#fn"]), summary{
   cursor: pointer;
@@ -72,8 +74,8 @@ a[href]:not([href^="#fn"]), summary{
 }
 
 :focus, :is(a[href], summary):hover {
-  background: var(--yellow, #fc0);
-  border-color: var(--yellow, #fc0);
+  background: var(--accent, AccentColor);
+  border-color: var(--accent, AccentColor);
   color: var(--white, #222) !important
 }
 }

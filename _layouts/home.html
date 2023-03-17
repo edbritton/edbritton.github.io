@@ -36,24 +36,6 @@
 {% for page in site.pages %}{% unless page.layout != "page" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}
 <a href="{{page.url}}">{{page.title | remove: "Ed’s " | capitalize }}</a> 
 {% endunless %}{% endfor %}
-{% for link in site.social.links %}
-{% if forloop.first %}<details>
-<summary>Socials</summary>{% endif %}
-<a itemprop="sameAs" href="{{link}}">
-
-{% case link %}
-  {% when "https://twitter.com/edbritton" %}
-     {% if page.lang == "ja" %}ツイッター{% else %}Twitter{% endif %}
-  {% when "https://imdb.com/name/nm10740536" %}
-     IMDb
-  {% when "https://www.printables.com/social/176036-ted/about" %}
-     Printables
-  {% else %}
-     {{link | remove: "http://" | remove: "https://" | remove: "www." | remove: ".com/" | remove: "edbritton" | replace: "github", "GitHub" | replace: "youtube", "YouTube"}}
-{% endcase %}
-</a>
-{% if forloop.last %}</details>{% endif %}
-{% endfor %}
 </nav>
 
 <hr color="silver" size="0.5px">

@@ -2,6 +2,8 @@
 ---
 @import 'varColours';
 
+:root { color-scheme: light dark }
+
 *{
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern", "ss01", "ss07";
@@ -9,7 +11,7 @@
   quotes: "“" "”"
 }
 
-html,body,body>:first-child{margin:0;padding:0}body{background:var(--white,#222);color:var(--black,#f2f2f2);font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:65ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
+html,body,body>:first-child{margin:0;padding:0}body{font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:65ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
 
 pre,code,samp,kbd,xmp,plaintext,listing{font-family:ui-monospace,monospace}
 
@@ -49,7 +51,7 @@ tr+tr{border-top:1.5px solid}
 
 th,td{border-left:1.5px solid;overflow:auto;padding:0.5rem;white-space:nowrap}
 
-code{background:var(--black,#f2f2f2);color:var(--white,#222);font-size:.9em}
+code{color-scheme:dark;font-size:.9em}
 
 :focus{background:var(--yellow,#fc0);color:var(--white,#222) !important;text-decoration-color:transparent}
 

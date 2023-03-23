@@ -1,8 +1,11 @@
 ---
 ---
-@import 'varColours';
 
-:root { --accent: var(--yellow, AccentColor) }
+:root {
+  --pink: rgb(211,15,69);
+  --pink: -apple-system-pink;
+  --accent: var(--pink, AccentColor)
+}
 
 *{
   text-rendering: optimizeLegibility;
@@ -25,7 +28,7 @@ h1,h2,h3,h4,h5,h6{line-height:initial}
 
 mark{background-color:#fc0}
 
-hr{border:.5px solid}
+hr{border: .5px solid; border-color: silver; border-color: -apple-system-tertiary-label }
 
 i, cite, em, var, address, dfn {font-family:ui-serif,serif}
 

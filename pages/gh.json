@@ -1,4 +1,5 @@
 ---
 hide_home: true
+permalink: /gh.json
 ---
 {{ site.github }}

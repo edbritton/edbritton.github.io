@@ -1,7 +1,7 @@
 ---
 title: Ed’s blog
 permalink: /blog/
-published: true
+hide_home: true
 ---
 
 <ol aria-label="Posts listed in reverse order, newest first." reversed>

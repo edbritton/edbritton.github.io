@@ -86,7 +86,7 @@ a[href]:not([href^="#fn"]), summary{
 :focus, :is(a[href], summary):hover {
   background: var(--accent, AccentColor);
   border-color: var(--accent, AccentColor);
-  color: var(--white, #222) !important
+  color: canvas !important
 }
 }
 

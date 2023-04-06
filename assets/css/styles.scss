@@ -60,12 +60,14 @@ code{color-scheme:dark;font-size:.9em}
 
 :focus{background:var(--accent,AccentColor);color:var(--white,#222) !important;text-decoration-color:transparent}
 
-:not(dl) a[href]:not([href^="#fn"]), summary{
+a[href]:not([href^="#fn"]), summary{
   cursor: pointer;
   display: block;
   margin: 1.5ch 0 0 0;
   text-decoration: none
 }
+
+dl a[href]:not([href^="#fn"]) { margin: initial }
 
 svg { vertical-align: middle }
 

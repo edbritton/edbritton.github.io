@@ -68,7 +68,7 @@ a[href]:not([href^="#fn"]), summary{
   text-decoration: none
 }
 
-dl a[href]:not([href^="#fn"]) { margin: initial }
+dl a[href]:not([href^="#fn"]) { margin: 0 0 1.5ch 0 }
 
 svg { vertical-align: middle }
 

@@ -15,7 +15,7 @@
 
 <h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>{% endunless %}
 
-<section itemprop="description">{{content}}</section>
+{{content}}
 
 <nav>
 {% for page in site.pages %}{% unless page.layout != "page" or page.permalink == "/404" or page.name == "README.md" or page.hide_home %}

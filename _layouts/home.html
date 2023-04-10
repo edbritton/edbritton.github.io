@@ -1,18 +1,19 @@
 ---
 ---
+{% assign profile = site.github.owner %}
+
 <!DOCTYPE html>
-<html lang="{{page.lang}}" style="display:flex;place-items:center;min-height:100vh">
+<html lang="{{page.lang if page.lang else site.lang}}" style="display:flex;place-items:center;min-height:100vh">
 
 {% include head.html %}
-{% assign profile = site.github.owner %}
 
 <body>
 
 {% if page.dir != "/" %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
 
-<p align="center"><img src="http://github.com/edbritton.png" height="148"></p>
+{% unless page.path == "README.md" %}<p align="center"><img src="http://github.com/{{ profile.login }}.png" height="148"></p>
 
-<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>
+<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>{% endunless %}
 
 <section itemprop="description">{{content}}</section>
 

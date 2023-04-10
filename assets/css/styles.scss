@@ -61,19 +61,17 @@ code{color-scheme:dark;font-size:.9em}
 
 :focus{background:var(--accent,AccentColor);color:var(--white,#222) !important;text-decoration-color:transparent}
 
-a[href]:not([href^="#fn"]), summary{
+a[href]:not([href^="#fn"]):not(.user-mention), summary{
   cursor: pointer;
   display: block;
-  margin: 1.5ch 0 0 0;
+  margin: .75ch 0;
   text-decoration: none
 }
-
-dl a[href]:not([href^="#fn"]) { margin: 0 0 1.5ch 0 }
 
 svg { vertical-align: middle }
 
 @media screen and (prefers-reduced-motion) {
-a[href]:not([href^="#fn"]), summary{
+a[href]:not([href^="#fn"]):not(.user-mention), summary{
   border: 1px solid;
   cursor: pointer;
   display: block;

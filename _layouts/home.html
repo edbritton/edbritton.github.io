@@ -9,11 +9,11 @@
 
 <body>
 
-{% if page.dir != "/" or page.path == "README.md" %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
+{% if page.dir != "/" or site.github.is_user_page == false %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
 
-{% unless page.path == "README.md" %}<p align="center"><img src="{{ site.github.owner_gravatar_url }}" height="148"></p>
+{% if site.github.is_user_page %}<p align="center"><img src="{{ site.github.owner_gravatar_url }}" height="148"></p>
 
-<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>{% endunless %}
+<h1 align="center"><font face="ui-sans-serif,sans-serif">{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</font></h1>{% endif %}
 
 {{content}}
 
@@ -23,14 +23,12 @@
 {% endunless %}{% endfor %}
 </nav>
 
-<!-- {{ site.github.is_user_page }}, {{ site.github.licence }} -->
-
 <hr size="0.5px">
 <section>
-{% if page.path == "README.md" %}
+{% unless site.github.is_user_page %}
 <a href="">{% octicon mark-github height:16 fill:currentColor %}&nbsp;View&nbsp;on GitHub
-<a href="{{ site.github.issues_url }})">{% octicon issue-opened height:16 fill:currentColor %}&nbsp;Contribute</a>
-{% endif %}
+<a href="{{ site.github.issues_url }}">{% octicon issue-opened height:16 fill:currentColor %}&nbsp;Contribute</a>
+{% endunless %}
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
 {% for link in site.social.links %}
 {% assign domain = link | slice: 8, 7 %}
@@ -42,25 +40,14 @@
 {% endfor %}
 </section>
 
-<!-- hr color="silver" size="0.5px">
-
-<details>
-<summary accesskey="4" align="center"><em>Facts about this website</em></summary>
-
-<ol>
-<li>Designed and made in TextEdit on a Mac.</li>
-<li>Created without any CSS first, before adding brutally basic CSS at the end.</li>
-<li>3Kb in size without images,<br>15Kb with 1× resolution image,<br>and 171Kb with 2× resolution image. <em>If the photo is in colour you got this one.</em></li>
-<li>There is not even a whiff of JavaScript in here.</li>
-<li>Dark mode works by default, so you’ll only get a white background if your using a modern device.</li>
-<li>The fonts are default, therefore quick and lightweight.</li>
-</ol>
-</details -->
+{% unless site.github.is_user_page %}
+<pre>
+{{ site.github }}
+</pre>
+{% endunless %}
 
 </body>
 
 <!--
 [{{page.url}},{{page.date}},{{page.id}},{{page.categories}},{{page.collection}},{{page.tags}},{{page.dir}},{{page.name}},{{page.path}},{{page.layout}}]
-
-{{ site.github }}
 -->

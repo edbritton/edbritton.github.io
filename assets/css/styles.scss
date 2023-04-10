@@ -14,11 +14,11 @@
   quotes: "“" "”"
 }
 
-html,body,body>:first-child{margin:0;padding:0}body{font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:65ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
+html,body,body>:first-child{margin:0;padding:0}body{font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:72ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
 
 body { padding-top: 2em }
 body > nav:first-child { background: canvas; position: fixed; top: 0; left: 0; z-index: 100; width: 100%; display: block; border-bottom: thin solid graytext; border-bottom: thin solid -apple-system-tertiary-label }
-body > nav:first-child > * { max-width: 65ch; margin: auto !important; padding: 1ch 2ch }
+body > nav:first-child > * { max-width: 72ch; margin: auto !important; padding: 1ch 2ch }
 
 tt, code, kbd, samp, pre, xmp, plaintext, listing{font-family:ui-monospace,monospace}
 

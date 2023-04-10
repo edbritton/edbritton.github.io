@@ -23,8 +23,9 @@
 {% endunless %}{% endfor %}
 </nav>
 
-{% if profile.company or site.social.links %}<hr size="0.5px">
 <!-- {{ site.github.is_user_page }}, {{ site.github.licence }} -->
+
+<hr size="0.5px">
 <section>
 {% if page.path == "README.md" %}
 <a href="">{% octicon mark-github height:16 fill:currentColor %}&nbsp;View&nbsp;on GitHub
@@ -39,7 +40,7 @@
   {% else %}
 {% endcase %}
 {% endfor %}
-</section>{% endif %}
+</section>
 
 <!-- hr color="silver" size="0.5px">
 

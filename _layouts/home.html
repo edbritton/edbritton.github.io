@@ -26,7 +26,7 @@
 <hr size="0.5px">
 <section>
 {% unless site.github.is_user_page %}
-<a href="">{% octicon mark-github height:16 fill:currentColor %}&nbsp;View&nbsp;on GitHub
+<a href="{{ site.github.repository_url }}">{% octicon mark-github height:16 fill:currentColor %}&nbsp;View&nbsp;on GitHub
 <a href="{{ site.github.issues_url }}">{% octicon issue-opened height:16 fill:currentColor %}&nbsp;Contribute</a>
 {% endunless %}
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
@@ -39,12 +39,6 @@
 {% endcase %}
 {% endfor %}
 </section>
-
-{% unless site.github.is_user_page %}
-<pre>
-{{ site.github }}
-</pre>
-{% endunless %}
 
 </body>
 

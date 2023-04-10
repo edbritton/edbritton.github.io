@@ -9,7 +9,7 @@
 
 <body>
 
-{% if page.dir != "/" %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
+{% if page.dir != "/" or page.path == "README.md" %}<nav><a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a></nav>{% endif %}
 
 {% unless page.path == "README.md" %}<p align="center"><img src="http://github.com/{{ profile.login }}.png" height="148"></p>
 
@@ -23,7 +23,7 @@
 {% endunless %}{% endfor %}
 </nav>
 
-<hr size="0.5px">
+{% if profile.company or site.social.links %}<hr size="0.5px">
 
 <section>
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
@@ -35,7 +35,7 @@
   {% else %}
 {% endcase %}
 {% endfor %}
-</section>
+</section>{% endif %}
 
 <!-- hr color="silver" size="0.5px">
 

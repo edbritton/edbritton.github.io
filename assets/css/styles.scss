@@ -25,7 +25,7 @@ tt, code, kbd, samp, pre, xmp, plaintext, listing{font-family:ui-monospace,monos
 p:not([align="center"]){-webkit-hyphens:auto}
 
 a[href] {
-  color: var(--accent,AccentColor);
+  color: var(--accent);
   text-decoration: none
 }
 
@@ -66,7 +66,7 @@ dd{margin-inline-start:0}
 
 code{color-scheme:dark;font-size:.9em}
 
-:focus{background:var(--accent,AccentColor);color:var(--white,#222) !important;text-decoration-color:transparent}
+:focus{background:var(--accent);color: canvas !important; text-decoration-color: transparent}
 
 a[href]:not([href^="#fn"]):not(.user-mention), summary{
   cursor: pointer;

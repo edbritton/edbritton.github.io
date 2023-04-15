@@ -36,29 +36,13 @@ Tables were extremely useful, not only because tables used to be space-bar punch
 <small><figcaption>There are also specific box-building characters in unicode which make everything look a like a real table. But VoiceOver on my iPhone changes to Japanese when these characters are read.</figcaption></small>
 </figure>
 
-<hr color="silver" size="0.5px">
+---
 
-<table align="center" border bordercolor="#f2f2f2" cellspacing="0" cellpadding="8" rules="groups">
-<caption>Resume</caption>
-<colgroup></colgroup>
-<colgroup></colgroup>
-<thead>
-<tr>
-<th>Date</th>
-<th>Job title</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2021</td>
-<td>Webmaster of this site</td>
-</tr>
-<tr>
-<td>2020</td>
-<td>What did you do that year?</td>
-</tr>
-</tbody>
-</table>
+| Date | Job title                  |
+|-----:|----------------------------|
+| 2021 | Webmaster of this site     |
+| 2020 | What did you do that year? |
+
 <p align="center"><small>New way of making a table, doing real tabley things.</small></p>
 
 However, the people at “big internet” were mad at us for using tables for anything other than listing the capital cities of the world, so they told us to “stop using tables like that!” And instead gave us another way of placing our dancing baby animation in just the right spot on the page. They gave us CSS.

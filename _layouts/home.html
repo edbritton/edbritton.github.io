@@ -27,8 +27,9 @@
 {% endunless %}{% endfor %}
 </nav -->
 
+{% if site.github.is_user_page %}
 <hr size="0.5px">
-<addr>
+<address>
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
 {% for link in site.social.links %}
 {% assign domain = link | slice: 8, 7 %}
@@ -38,7 +39,8 @@
   {% else %}
 {% endcase %}
 {% endfor %}
-</addr>
+</address>
+{% endif %}
 
 </body>
 

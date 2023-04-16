@@ -156,8 +156,6 @@ a[href]:not([href^="#fn"]):not(.user-mention), summary{
 }
 }
 
-pre{letter-spacing:-1px;no-overflow:hidden !important }
-
 blink { animation: blink 2s linear infinite }
 @keyframes blink {
   from, 50% { visibility: hidden }

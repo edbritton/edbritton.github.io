@@ -26,7 +26,7 @@ body {
   max-width: 72ch;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2em 2ch 1ch 2ch;
+  padding-top: 2em;
   > nav:first-child {
     background: canvas;
     position: fixed;
@@ -34,14 +34,18 @@ body {
     left: 0;
     z-index: 100;
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     border-bottom: thin solid GrayText;
     border-color: -apple-system-tertiary-label;
     > * {
-      max-width: 72ch; margin: auto !important; padding: 1ch 2ch
+      max-width: 72ch; margin: auto !important; padding: .5em 0;
+      &:first-child { flex-grow: 1 }
     }
   }
 }
+
+i, cite, em, var, address, dfn { font-family: ui-serif, serif }
 
 tt, code, kbd, samp, pre, xmp, plaintext, listing { font-family: ui-monospace, monospace }
 
@@ -53,7 +57,7 @@ a {
     text-decoration: none
   }
   &[href^="#fn"] {
-    font-family: ui-monospace
+    @extend plaintext
   }
 }
 
@@ -79,8 +83,6 @@ hr {
   border: .5px solid GrayText;
   border-color: -apple-system-tertiary-label
 }
-
-i, cite, em, var, address, dfn { font-family: ui-serif,serif }
 
 [datetime] { font-feature-settings: "ss01", "ss06" }
 

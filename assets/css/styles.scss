@@ -99,6 +99,7 @@ blockquote>q{margin-inline-start:-1ch}
 table {
   border-style: solid;
   border-collapse: collapse;
+  margin: auto;
   max-width:100%;
   &, * {
     border-width: .06em;

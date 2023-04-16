@@ -1,6 +1,6 @@
 {% if site.github.owner.bio %}{{ site.github.owner.bio }} {% endif %}
 
-{% assign pinned = site.github.public_repositories | sort: "pushed_at" | reverse | where_exp: "pinned", "pinned.homepage" | where_exp: "pinned", "pinned.homepage != ''"%}
+{% assign pinned = site.github.public_repositories | sort: "stargazers_count" | reverse | where_exp: "pinned", "pinned.homepage" | where_exp: "pinned", "pinned.homepage != ''"%}
 {% assign remaining = site.github.public_repositories | sort: "pushed_at" | reverse | where_exp: "remaining", "remaining.has_pages == false" %}
 
 <dl>{% for repo in pinned %}{% if forloop.first %}<dt>{% octicon pin height:16 aria-label:"Pinned repos" fill:currentcolor %}</dt>{% endif %}<dd>

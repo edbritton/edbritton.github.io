@@ -12,7 +12,7 @@
 {% if page.dir != "/" or site.github.is_user_page == false %}
 <nav>
 <a href="../" accesskey="b" aria-label="Go back to the main page.">← Ed’s {{page.categories[0]}}{% unless page.categories[0] %}website{% endunless %}</a>
-{% unless site.github.is_user_page %}<a href="{{ site.github.repository_url }}">{% octicon mark-github height:16 fill:currentColor aria-label:"View on GitHub" %}</a>{% endunless %}
+{% unless site.github.is_user_page %}<br><a href="{{ site.github.repository_url }}">{% octicon mark-github height:16 fill:currentColor %}<span style="display:none">&nbsp;View this page on GitHub</span></a>{% endunless %}
 </nav>{% endif %}
 
 {% if site.github.is_user_page %}<p align="center"><img src="{{ site.github.owner_gravatar_url }}" height="148"></p>
@@ -29,7 +29,7 @@
 
 {% if site.github.is_user_page %}
 <hr size="0.5px">
-<address>
+<section>
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
 {% for link in site.social.links %}
 {% assign domain = link | slice: 8, 7 %}
@@ -39,7 +39,7 @@
   {% else %}
 {% endcase %}
 {% endfor %}
-</address>
+</section>
 {% endif %}
 
 </body>

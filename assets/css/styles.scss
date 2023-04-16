@@ -14,10 +14,19 @@
   quotes: "“" "”"
 }
 
-html,body,body>:first-child{margin:0;padding:0}body{font-family:ui-sans-serif,sans-serif;font-size:13pt;line-height:1.5;max-width:72ch;margin-left:auto;margin-right:auto;padding:1ch 2ch}
+html, body, body >:first-child {
+  margin:0;
+  padding:0
+}
 
 body {
-  padding-top: 2em;
+  font-family: ui-sans-serif, sans-serif;
+  font-size: 13pt;
+  line-height: 1.5;
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em 2ch 1ch 2ch;
   > nav:first-child {
     background: canvas;
     position: fixed;
@@ -26,7 +35,7 @@ body {
     z-index: 100;
     width: 100%;
     display: block;
-    border-bottom: thin solid graytext;
+    border-bottom: thin solid GrayText;
     border-color: -apple-system-tertiary-label;
     > * {
       max-width: 72ch; margin: auto !important; padding: 1ch 2ch
@@ -38,22 +47,42 @@ tt, code, kbd, samp, pre, xmp, plaintext, listing { font-family: ui-monospace, m
 
 p:not([align="center"]) { -webkit-hyphens: auto }
 
-a[href] {
-  color: var(--accent);
-  text-decoration: none
+a {
+  &[href] {
+    color: var(--accent);
+    text-decoration: none
+  }
+  &[href^="#fn"] {
+    font-family: ui-monospace
+  }
 }
 
-li>a[href]:first-child:last-child{display:block}
+:not(td,nav,li) > a[href]:not(.user-mention):not([href^="https://twitter.com/"]):not([href^="#fn"]),
+summary,
+img:not([src^="https://github.com/"]) {
+  /*margin: 0 -2ch;
+  padding: 1em 2ch;*/
+  padding: .75ch 0;
+  /*background: rgba(170,170,170,.2);*/
+  display: flex;
+  align-items: center;
+  cursor: pointer
+}
 
-h1,h2,h3,h4,h5,h6{line-height:initial}
+li > a[href]:first-child:last-child { display:block }
 
-mark{background-color:#fc0}
+h1, h2, h3, h4, h5, h6 { line-height: initial }
 
-hr{border: .5px solid; border-color: GrayText }
+mark { background-color: #fc0 }
 
-i, cite, em, var, address, dfn {font-family:ui-serif,serif}
+hr {
+  border: .5px solid GrayText;
+  border-color: -apple-system-tertiary-label
+}
 
-[datetime]{font-feature-settings:"ss01","ss06"}
+i, cite, em, var, address, dfn { font-family: ui-serif,serif }
+
+[datetime] { font-feature-settings: "ss01", "ss06" }
 
 html:not(.paper) pre,body>:is(picture,img){margin-left:0;margin-right:0;max-width:100%;overflow:auto}
 
@@ -63,17 +92,35 @@ blockquote{padding-inline-left:1ch}
 
 blockquote>q{margin-inline-start:-1ch}
 
-table{border:1.5px solid;border-collapse:collapse;max-width:100%}
-
-table[align="center"]{margin-left:auto;margin-right:auto}
-
-thead{border-bottom:4px double}
-
-tfoot{border-top:3px double}
-
-tr+tr{border-top:1.5px solid}
-
-th,td{border-left:1.5px solid;overflow:auto;padding:0.5rem;ignore-white-space:nowrap}
+table {
+  border-style: solid;
+  border-collapse: collapse;
+  max-width:100%;
+  &, * {
+    border-width: .06em;
+    border-color: silver
+  }
+  &[align="center"] {
+    margin-left: auto;
+    margin-right: auto
+  }
+  thead {
+    border-bottom: .18em double
+  }
+  tfoot {
+    border-top: .18em double
+  }
+  tr + tr {
+    border-top-style: solid
+  }
+  th { background: rgba(170,170,170,.15) }
+  th, td {
+    overflow: auto;
+    padding: .5rem;
+    ignore-white-space: nowrap;
+    & + th, & + td { border-left-style: solid }
+  }
+}
 
 dt{margin: 2em 0 -1.4em 0; text-align: right}
 dd{margin-inline-start:0}
@@ -81,12 +128,6 @@ dd{margin-inline-start:0}
 code{color-scheme:dark;font-size:.9em}
 
 :focus{background:var(--accent);color: canvas !important; text-decoration-color: transparent}
-
-a[href]:not([href^="#fn"]):not(.user-mention), summary{
-  cursor: pointer;
-  display: block;
-  margin: .75ch 0;
-}
 
 svg { vertical-align: middle }
 

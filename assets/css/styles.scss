@@ -73,6 +73,8 @@ img:not([src^="https://github.com/"]) {
   cursor: pointer
 }
 
+.footnotes ol p { display: inline-flex; align-items: center; gap: 1ch; overflow-wrap: anywhere }
+
 li > a[href]:first-child:last-child { display:block }
 
 h1, h2, h3, h4, h5, h6 { line-height: initial }

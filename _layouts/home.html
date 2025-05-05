@@ -3,7 +3,7 @@
 {% assign profile = site.github.owner %}
 
 <!DOCTYPE html>
-<html lang="{{page.lang if page.lang else site.lang}}" style="display:flex;place-items:center;min-height:100vh">
+<html lang="{{ page.lang | default: site.lang }}" style="display:flex;place-items:center;min-height:100vh">
 
 {% include head.html %}
 

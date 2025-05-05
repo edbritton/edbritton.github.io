@@ -11,7 +11,7 @@ Regardless of the text-to-pictures ratio, nearly every webpage arranged elements
 
 Tables were extremely useful, not only because tables used to be space-bar punching bags, but also for the afore mentioned page layout method.
 
-<pre align="center">
+<pre align="center" aria-label="On screen: a table of example resume info drawn with lots of dots, dashes, and equals equals equals. A screen reader version will be heard further dien the page.">
 [ RESUME ]
 .------+----------------------------.
 | DATE |         JOB TITLE          |
@@ -20,7 +20,7 @@ Tables were extremely useful, not only because tables used to be space-bar punch
 | 2020 | What did you do that year? |
 '------+----------------------------'
 </pre>
-<p align="center"><small>The old way of making “tables.”</small></p>
+<p align="center"><small>This was the old way of making “tables.”</small></p>
 
 <hr color="silver" size="0.5px">
 
@@ -43,7 +43,7 @@ Tables were extremely useful, not only because tables used to be space-bar punch
 | 2021 | Webmaster of this site     |
 | 2020 | What did you do that year? |
 
-<p align="center"><small>New way of making a table, doing real tabley things.</small></p>
+<p align="center"><small>This is the new way of making a table, doing real tabley things.</small></p>
 
 However, the people at “big internet” were mad at us for using tables for anything other than listing the capital cities of the world, so they told us to “stop using tables like that!” And instead gave us another way of placing our dancing baby animation in just the right spot on the page. They gave us CSS.
 
@@ -52,15 +52,16 @@ However, the people at “big internet” were mad at us for using tables for an
 
 I’m getting to it, calm down.
 
-Basically, everyone was being told <em>tables are bad</em> and *CSS is good* and if you used tables you were a bad webmaster. <aside>We really did use the word <dfn>webmaster</dfn>.</aside>
+Basically, everyone was being told <em>tables are bad</em> and *CSS is good* and if you used tables you were a bad webmaster.
+<aside>We really did use the word <dfn>webmaster</dfn>.</aside>
 
 Eventually it seems that everyone forgot about tables completely, which is where we are ruined.
 
 Last week I went to a website looking for a list of roles an actor had credits for. I found what I needed, presented in columns of *year*, *role*, *medium*, *director*, and so on.
 
-“Wonderful” I thought. I selected them all. <kbd>Cmd&nbsp;+&nbsp;C</kbd>. Open a spreadsheet. <kbd>Cmd&nbsp;+&nbsp;V</kbd> and… oh dear.
+“Wonderful” I thought. I selected them all. <kbd aria-label="Command C">Cmd&nbsp;+&nbsp;C</kbd>. Open a spreadsheet. <kbd aria-label="Command V">Cmd&nbsp;+&nbsp;V</kbd> and… oh dear.
 
-What I had found was not a table, but a series of <code>div</code>s which were being styled to arrange like a table. It would have been hours of work to build the damn thing. What a waste of time.
+What I had found was not a table, but a series of <code>divs</code> which were being styled to arrange like a table. It would have been hours of work to build the damn thing. What a waste of time.
 
 
 ## Why is this even a problem?

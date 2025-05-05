@@ -11,7 +11,7 @@ Regardless of the text-to-pictures ratio, nearly every webpage arranged elements
 
 Tables were extremely useful, not only because tables used to be space-bar punching bags, but also for the afore mentioned page layout method.
 
-<pre align="center" lang="en" transkate="no" aria-label="On screen: a table of example resume info drawn with lots of dots, dashes, and equals equals equals. A screen reader version will be heard further dien the page.">
+<pre align="center" lang="en" translate="no" aria-label="On screen: a table of example resume info drawn with lots of dots, dashes, and equals equals equals. A screen reader version will be heard further dien the page.">
 [ RESUME ]
 .------+----------------------------.
 | DATE |         JOB TITLE          |

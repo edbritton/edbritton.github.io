@@ -31,6 +31,7 @@
 <hr size="0.5px">
 <section>
 {% if profile.company %}{% octicon organization height:16 aria-label:"Company: " fill:currentcolor %}&nbsp;{{ profile.company }} {% endif %}
+{% if site.twitter.username %}<a href="https://twitter.com/{{site.twitter.username}}">@{{site.twitter.username}}</a>{% endif %}
 {% for link in site.social.links %}
 {% assign domain = link | slice: 8, 7 %}
 {% case domain %}

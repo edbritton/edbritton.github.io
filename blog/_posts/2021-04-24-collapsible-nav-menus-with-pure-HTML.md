@@ -2,12 +2,12 @@
 description: Looking for a way to have a drop-down style menu but also want to remain a card carrying member of the #nocss club? Then you’ll want to look after the details.</big></p>
 tags: webdev, html
 ---
-All you need to do is surround your would-be menu with <code>&lt;details&gt;</code> and insert <code>&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.
+All you need to do is surround your would-be menu with <code lang="en" translate="no">&lt;details&gt;</code> and insert <code lang="en" translate="no">&lt;summary&gt;<var title="Or something else">Menu</var>&lt;/summary&gt;</code> as the first child. Easy.
 
 <dl>
 <dt>HTML</dt>
 <dd>
-<pre>&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
+<pre lang="en" translate="no">&lt;details open<sup><a href="#fn:1" name="fnref:1">1</a></sup>&gt;
 &lt;summary&gt;Menu&lt;/summary&gt;
 &lt;a href="/"&gt;Home&lt;/a&gt;
 &lt;a href="/blog"&gt;Blog&lt;/a&gt;

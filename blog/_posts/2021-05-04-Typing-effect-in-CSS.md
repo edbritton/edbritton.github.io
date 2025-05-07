@@ -11,7 +11,7 @@ Which is why I’ve made a bad design choice in this post, and I’ll show you h
 
 <samp>I love my <mark>typewriter</mark>!</samp>
 
-<pre>samp {
+<pre lang="en" translate="no">samp {
   --WPM: 50;
   --secsToType100ch: calc(1200s / var(--WPM));
   display: block;

@@ -55,11 +55,11 @@ tt, code, kbd, samp, pre, xmp, plaintext, listing {
   font-family: 'Fira Code', ui-monospace, monospace;
 }
 
-:not(center) pre {
+:not(center) > pre {
   background: #282A36;
   border: thin solid #8BE9FD;
   border-radius: 0.4em;
-  padding: 1em 1ch;
+  padding: 0.5em 1ch;
 }
 
 p:not([align="center"]) { -webkit-hyphens: auto }

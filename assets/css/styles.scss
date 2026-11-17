@@ -23,7 +23,7 @@ html, body, body >:first-child {
 }
 
 body {
-  font-family: 'Fira Code', ui-sans-serif, sans-serif;
+  font-family: ui-sans-serif, sans-serif;
   font-size: 13pt;
   line-height: 1.5;
   max-width: 72ch;
@@ -48,7 +48,7 @@ body {
   }
 }
 
-i, cite, em, var, address, dfn { font-family: 'Fira Code', ui-serif, serif }
+i, cite, em, var, address, dfn { font-family: ui-serif, serif }
 
 tt, code, kbd, samp, pre, xmp, plaintext, listing { font-family: 'Fira Code', ui-monospace, monospace }
 

@@ -50,13 +50,13 @@ body {
 
 i, cite, em, var, address, dfn { font-family: ui-serif, serif }
 
-tt, code, kbd, samp, pre, xmp, plaintext, listing {
+tt, code, kbd, samp, pre, xmp, plaintext, listing { font-family: 'Fira Code', ui-monospace, monospace }
+
+pre {
   background: #282A36;
   border: thin solid #BD93F9;
-  border-radius: 1em;
-  font-family: 'Fira Code', ui-monospace, monospace;
-  padding-left: 1ch;
-  padding-right: 1ch;
+  border-radius: 0.4em;
+  padding: 1em 1ch;
 }
 
 p:not([align="center"]) { -webkit-hyphens: auto }

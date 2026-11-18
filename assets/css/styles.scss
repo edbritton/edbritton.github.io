@@ -4,10 +4,19 @@
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
 
 :root {
-  --orange: #e0af68;
-  --pink: -apple-system-pink;
-  --pink: #D30F45;
-  --accent: var(--orange, AccentColor)
+  --background: #282A36;
+  --current-line: #6272A4;
+  --selection: #44475A;
+  --foreground: #F8F8F2;
+  --comment: #6272A4;
+  --red: #FF5555;
+  --orange: #FFB86C;
+  --yellow: #F1FA8C;
+  --green: #50FA7B;
+  --cyan: #8BE9FD;
+  --purple: #BD93F9;
+  --pink: #FF79C6;
+  --accent: var(--cyan, AccentColor)
 }
 
 * {
@@ -51,13 +60,13 @@ body {
 i, cite, em, var, address, dfn { font-family: ui-serif, serif }
 
 tt, code, kbd, samp, pre, xmp, plaintext, listing {
-  color: #9ece6a;
+  color: var(--purple);
   font-family: 'Fira Code', ui-monospace, monospace;
 }
 
 :not(center) > pre {
-  background: #282A36;
-  border: thin solid #8BE9FD;
+  background: var(--background);
+  border: thin solid var(--comment);
   border-radius: 0.4em;
   padding: 0.5em 1ch;
 }
